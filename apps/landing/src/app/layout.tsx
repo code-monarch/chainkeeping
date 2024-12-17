@@ -21,12 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <RollbarProvider config={clientConfig}>
+    // <RollbarProvider config={clientConfig}>
       <html lang="en">
-        <body className={`${sen.variable} ${inter.variable} antialiased relative bg-background w-screen min-h-screen h-fit m-0 p-0 overflow-hidden`} >
+        <body className={`${sen.variable} ${inter.variable} antialiased relative bg-background w-screen min-h-svh h-fit m-0 p-0 overflow-x-hidden`} >
           <Providers>{children}</Providers>
         </body>
       </html>
-    </RollbarProvider >
+    // </RollbarProvider >
   );
 }

@@ -5,7 +5,7 @@ import { Button } from '@chainkeeping/ui'
 
 const ComponentsPage = () => {
     return (
-        <div className='w-full min-h-screen h-fit flex flex-col items-center justify-center py-[200px]'>
+        <div className='w-full min-h-full h-fit flex flex-col items-center justify-center py-[200px]'>
             <div className='w-[200px] h-full flex flex-col justify-between'>
                 <Button size="xs">Xtra Small button</Button>
                 <Button size="sm">Small button</Button>
