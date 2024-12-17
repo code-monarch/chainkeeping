@@ -1,0 +1,9 @@
+{
+  "extends": "@chainkeeping/typescript-config/react-library.json",
+  "include": ["."],
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler"
+  },
+  "exclude": ["node_modules"]
+}

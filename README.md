@@ -1,81 +1,154 @@
-# Turborepo starter
+# chainkeeping
 
-This is an official starter Turborepo.
+Welcome to the chainkeeping! This project is designed to provide a scalable and maintainable architecture for building modern web applications. It is structured to support efficient development and deployment of features such as a customer portal, utilizing technologies like Next.js, Tailwind CSS, and Turborepo.
 
-## Using this example
+## Table of Contents
 
-Run the following command:
+- [Installation](#installation)
+- [Commands](#commands)
+  - [Clean the Project](#clean-the-project)
+  - [Run Storybook](#run-storybook)
+  - [Lint the Code](#lint-the-code)
+  - [Build UI Package](#build-ui-package)
+  - [Run landing app](#run-landing-app)
+  - [Run saas app](#run-saas-app)
+  - [Run customer portal app](#run-customer-portal-app)
+  - [install all packages](#install-all-packages)
+  - [install into single workspace](#install-all-packages)
+- [Project workspaces](#project-workspaces)
+- [Project Architecture](#project-architecture)
+- [Contributing](#contributing)
 
-```sh
-npx create-turbo@latest
-```
+## Installation
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
+ 1. To get started with the project, clone the repository and install the dependencies using [pnpm](https://pnpm.io/)
+ 2. Run install command [install all packages](#install-all-packages)
+ 3. Build UI package [Build UI Package](#build-ui-package)
 
 ```
-cd my-turborepo
-pnpm build
+
+## Commands
+
+Here are some useful commands you can run in this project:
+
+### Clean the Project
+
+Delete all `node_modules` directories and `pnpm-lock.yaml` files:
+
+```bash
+pnpm run cleanup
 ```
 
-### Develop
+### Run Storybook
 
-To develop all apps and packages, run the following command:
+Start the Storybook server to view and develop UI components:
 
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```bash
+turbo run dev --filter storybook
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### Lint the Code
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+Run ESLint to check for code quality issues:
 
+```bash
+turbo run lint
 ```
-npx turbo link
+
+### Build UI Package
+
+You can build the UI package using Tsup:
+
+```bash
+turbo run build --filter @chainkeeping/ui
 ```
 
-## Useful Links
+### Run landing app
 
-Learn more about the power of Turborepo:
+You can spin up the landing application dev server by running:
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+```bash
+turbo run dev --filter landing
+```
+
+### Run saas app
+
+You can spin up the saas application dev server by running:
+
+```bash
+turbo run dev --filter saas
+```
+
+### Run customer portal app
+
+Spin up the customer-portal app dev server by running:
+
+```bash
+turbo run dev --filter customer-portal
+```
+
+### install all packages
+
+You can install all project packages by running:
+
+```bash
+pnpm install
+```
+
+### install into single workspace
+
+You can install a package into a single workspace by running:
+
+```bash
+pnpm add [package-name] --filter [workspace-name]
+```
+
+or for dev dependencies
+
+```bash
+pnpm add -D [package-name] --filter [workspace-name]
+```
+
+## Project workspaces
+
+The project is made up of the following workspaces:
+
+- **`apps`:** where all of our applications live
+  - **`landing`:** Oloom landing application
+  - **`saas`:** Oloom saas application
+  - **`storybook`:** storybook documentation for oloom design system
+  - **`customer-portal`:** chainkeeping customer portal application
+
+- **`packages`:** Contains Configuration files/folders, project's design system and components
+  - **`@chainkeeping/ui`:** project's design system and components are all found here
+  - **`@chainkeeping/typescript-config`:** contains typescript configuration settings
+  - **`@chainkeeping/tailwind-config`:** contains project's tailwind configuration settings
+  - **`@chainkeeping/eslint-config`:** contains project's eslint configuration settings
+
+
+## Project Architecture
+
+The project is organized into the following main directories:
+
+- **`apps/storybook`:** Contains the Storybook setup and stories for UI components.
+  - **`src/stories/atoms`:** Contains Storybook stories for atomic UI components, such as `Avatar.stories.tsx`.
+  - **`src/stories/molecules`:** Contains Storybook stories for atomic UI components.
+  - **`src/stories/organisms`:** Contains Storybook stories for atomic UI components.
+  - **`src/stories/templates`:** Contains Storybook stories for atomic UI components.
+  - **`src/data`:** Contains mock data used in stories, such as `payments.ts` and `invoices.ts`.
+  - **`.storybook`:** Configuration files for Storybook, including:
+    - **`style.css`:** Custom styles for Storybook.
+    - **`preview.ts`:** Configuration for Storybook previews.
+    - **`preview-head.html`:** HTML head configuration for Storybook.
+    - **`main.ts`:** Main configuration file for Storybook.
+
+- **`scripts`:** Contains utility scripts for project maintenance.
+  - **`clean-project.mjs`:** Script to delete all `node_modules` directories and `pnpm-lock.yaml` files.
+
+- **`packages/ui`:** Contains the UI components and related code.
+  - **`src`:** Source code for UI components.
+  - **`dist`:** Compiled output of the UI components.
+
+## Contributing
+
+Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute to this project.
