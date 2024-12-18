@@ -8,27 +8,29 @@ import GlossaryIcon from '../atoms/nav-icons/glossary-icon'
 
 const ResourcesNavContent = () => {
     return (
-        <div className='bg-inherit w-full h-[280px] grid grid-cols-3 gap-12 mx-auto'>
-            <div className='w-full flex flex-col items-center gap-y-9'>
-                {/* Crypto Tax guide */}
-                <NavListItem icon={<CryptoTaxGuideIcon />} href='/' title='Crypto tax guide' description='Learn how crypto taxes work in your country of residence.Computation, filing, optimization and consultation' />
-                
-                {/* Blog */}
-                <NavListItem icon={<BlogIcon />} href='/' title='Blog' description='Articles on cryptocurrency taxation, accounting, industry regulations etc.' />
-            </div>
+        <div className='bg-white md:w-[1100px] lg:w-[1100px] h-[280px] flex items-center justify-center p-9 data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 transition-all'>
+            <ul className='bg-inherit w-full h-full grid grid-cols-3 gap-12 mx-auto'>
+                <li className='w-full flex flex-col items-center gap-y-9'>
+                    {/* Crypto Tax guide */}
+                    <NavListItem icon={<CryptoTaxGuideIcon />} href='/' title='Crypto tax guide' description='Learn how crypto taxes work in your country of residence.Computation, filing, optimization and consultation' />
 
-            <div className='w-full flex flex-col items-center gap-y-9'>
-                {/* Financial reporting guide */}
-                <NavListItem icon={<FinancialReportingGuide />} href='/' title='Financial reporting guide' description='Everything you need to know about crypto financial reporting.' />
+                    {/* Blog */}
+                    <NavListItem icon={<BlogIcon />} href='/' title='Blog' description='Articles on cryptocurrency taxation, accounting, industry regulations etc.' />
+                </li>
 
-                {/* Support */}
-                <NavListItem icon={<SupportIcon />} href='/' title='Support' description='More information about Chainkeeping, get answers to your questions.' />
-            </div>
+                <li className='w-full flex flex-col items-center gap-y-9'>
+                    {/* Financial reporting guide */}
+                    <NavListItem icon={<FinancialReportingGuide />} href='/' title='Financial reporting guide' description='Everything you need to know about crypto financial reporting.' />
 
-            <div className='w-full flex flex-col items-center gap-y-9'>
-                {/* Glossary */}
-                <NavListItem icon={<GlossaryIcon />} href='/' title='Glossary' description='Get informed, A-Z of crypto, crytpo taxation and more.' />
-            </div>
+                    {/* Support */}
+                    <NavListItem icon={<SupportIcon />} href='/' title='Support' description='More information about Chainkeeping, get answers to your questions.' />
+                </li>
+
+                <li className='w-full flex flex-col items-center gap-y-9'>
+                    {/* Glossary */}
+                    <NavListItem icon={<GlossaryIcon />} href='/' title='Glossary' description='Get informed, A-Z of crypto, crytpo taxation and more.' />
+                </li>
+            </ul>
         </div>
     )
 }

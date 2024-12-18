@@ -9,30 +9,32 @@ import CryptoFinancialReportingIcon from '../atoms/nav-icons/crypto-financial-re
 
 const SolutionsNavContent = () => {
   return (
-    <div className='bg-inherit w-full h-[280px] grid grid-cols-3 gap-12 mx-auto'>
-      <div className='w-full flex flex-col items-center gap-y-9'>
-        {/* Crypto tax computation */}
-        <NavListItem icon={<CryptoTaxComputationIcon />} href='/' title='Crypto tax computation' description='Computation, filing, optimization and consultation' />
+    <div className='bg-white md:w-[1100px] lg:w-[1100px] h-[280px] flex items-center justify-center p-9 data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 transition-all'>
+      <ul className='bg-inherit w-full h-full grid grid-cols-3 gap-12 mx-auto'>
+        <li className='w-full flex flex-col items-center gap-y-9'>
+          {/* Crypto tax computation */}
+          <NavListItem icon={<CryptoTaxComputationIcon />} href='/' title='Crypto tax computation' description='Computation, filing, optimization and consultation' />
 
-        {/* For accounting practitioners */}
-        <NavListItem icon={<ForAccountingPractitionersIcon />} href='/' title='For accounting practitioners' description='Enable your clients stay compliant with crypto tax regulations.' />
-      </div>
+          {/* For accounting practitioners */}
+          <NavListItem icon={<ForAccountingPractitionersIcon />} href='/' title='For accounting practitioners' description='Enable your clients stay compliant with crypto tax regulations.' />
+        </li>
 
-      <div className='w-full flex flex-col items-center gap-y-9'>
-        {/* Crypto payroll */}
-        <NavListItem icon={<CryptoPayrollIcon />} href='/' title='Crypto payroll' description='Employee records, PAYE, Pension figure, NHIS, NHF, Life insurance.' />
+        <li className='w-full flex flex-col items-center gap-y-9'>
+          {/* Crypto payroll */}
+          <NavListItem icon={<CryptoPayrollIcon />} href='/' title='Crypto payroll' description='Employee records, PAYE, Pension figure, NHIS, NHF, Life insurance.' />
 
-        {/* Crypto payments */}
-        <NavListItem icon={<CryptoPaymentsIcon />} href='/' title='Crypto payments' description='Pay vendors, Bills, Bulk and Single payments.' />
-      </div>
+          {/* Crypto payments */}
+          <NavListItem icon={<CryptoPaymentsIcon />} href='/' title='Crypto payments' description='Pay vendors, Bills, Bulk and Single payments.' />
+        </li>
 
-      <div className='w-full flex flex-col items-center gap-y-9'>
-        {/* Crypto invoicing */}
-        <NavListItem icon={<CryptoInvoicingIcon />} href='/' title='Crypto invoicing' description='Bill customers with Sales invoice and record purchases' />
+        <li className='w-full flex flex-col items-center gap-y-9'>
+          {/* Crypto invoicing */}
+          <NavListItem icon={<CryptoInvoicingIcon />} href='/' title='Crypto invoicing' description='Bill customers with Sales invoice and record purchases' />
 
-        {/* Crypto financial reporting */}
-        <NavListItem icon={<CryptoFinancialReportingIcon />} href='/' title='Crypto financial reporting' description='Integration with accounting softwares for proper reporting, consulting.' />
-      </div>
+          {/* Crypto financial reporting */}
+          <NavListItem icon={<CryptoFinancialReportingIcon />} href='/' title='Crypto financial reporting' description='Integration with accounting softwares for proper reporting, consulting.' />
+        </li>
+      </ul>
     </div>
   )
 }

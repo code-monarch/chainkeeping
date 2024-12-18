@@ -41,12 +41,13 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-    "inline-flex h-10 w-max items-center justify-center rounded-none bg-background px-[12px] pt-[8px] pb-[24px] text-sm font-medium transition-colors hover:bg-accent hover:text-secondary hover:border-b-[1.5px] hover-border-secondary focus:bg-accent focus:text-secondary focus:outline-none focus:border-b-[1.5px] focus-border-secondary disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 data-[active]:border-b-[1.5px] [active]:border-secondary data-[state=open]:border-b-[1.5px] data-[state=open]:border-secondary"
+    "group inline-flex h-10 w-max items-center justify-center rounded-none bg-background px-[12px] pt-[8px] pb-[24px] text-sm font-medium transition-colors hover:bg-accent hover:text-secondary hover:border-b-[1.5px] hover-border-secondary focus:bg-accent focus:text-secondary focus:outline-none focus:border-b-[1.5px] focus-border-secondary disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 data-[active]:border-b-[1.5px] [active]:border-secondary data-[state=open]:border-b-[1.5px] data-[state=open]:border-secondary"
 )
 
 const navigationMenulinkStyle = cva(
-    "inline-flex h-fit min-w-[74px] w-fit items-center justify-center rounded-none bg-background px-[12px] py-[8px] text-sm font-medium transition-colors hover:bg-accent hover:text-secondary hover:border-b-[1.5px] hover-border-secondary focus:bg-accent focus:text-secondary focus:outline-none focus:border-b-[1.5px] focus-border-secondary disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 data-[active]:border-b-[1.5px] [active]:border-secondary data-[state=open]:border-b-[1.5px] data-[state=open]:border-secondary"
+    "inline-flex h-fit min-w-[74px] w-fit items-center justify-center rounded-none bg-background px-[12px] py-[8px] text-sm font-medium transition-colors whitespace-nowrap hover:bg-accent hover:text-secondary hover:border-b-[1.5px] hover:border-secondary focus:bg-accent focus:text-secondary focus:outline-none focus:border-b-[1.5px] focus:border-secondary disabled:pointer-events-none disabled:opacity-50"
 )
+
 const navigationMenuListItemStyle = cva(
     "flex h-[92px] w-[314px] items-start justify-center bg-background p-[12px] text-sm font-normal transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent data-[state=open]:bg-accent rounded-[8px]"
 )
@@ -76,7 +77,7 @@ const NavigationMenuContent = forwardRef<
     <NavigationMenuPrimitive.Content
         ref={ref}
         className={cn(
-            "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute",
+            "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto",
             className
         )}
         {...props}

@@ -1,11 +1,11 @@
-"use client";
-
 import { ReactElement } from "react"
 
-import { BrandLogo, Hidden, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@chainkeeping/ui";
+import { BrandLogo, Button, Hidden, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@chainkeeping/ui";
 import SolutionsNavContent from "../organisms/solutions-nav-content";
 import IntegrationsNavContent from "../organisms/integrations-nav-content";
 import CustomNavLink from "../molecules/custom-nav-link";
+import ResourcesNavContent from "../organisms/resources-nav-content";
+import { CountrySelect } from "../organisms/country-selector";
 
 interface INavigation {
     title: string;
@@ -21,6 +21,10 @@ const navigation: INavigation[] = [
     {
         title: "Integrations",
         content: <IntegrationsNavContent />
+    },
+    {
+        title: "Resources",
+        content: <ResourcesNavContent />
     },
     {
         title: "Pricing",
@@ -43,29 +47,37 @@ const Topbar = () => {
                 {/* Logo */}
                 <BrandLogo />
 
-                {/* Navigation */}
-                <NavigationMenu>
-                    <NavigationMenuList>
-                        {navigation.map(({ title, content, href }, idx) => (
-                            <div key={idx} className="w-ful" >
-                                <Hidden isVisible={content ? true : false} >
-                                    <NavigationMenuItem>
-                                        <NavigationMenuTrigger className="py-2 px-3">{title}</NavigationMenuTrigger>
-                                        <NavigationMenuContent className="bg-white md:w-[1100px] lg:w-[1100px] h-fit flex items-center justify-center p-9 z-50">
-                                            {content}
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
-                                </Hidden>
+                <div className="flex items-center gap-[27px]">
+                    {/* Navigation */}
+                    <NavigationMenu>
+                        <NavigationMenuList>
+                            {navigation.map(({ title, content, href }, idx) => (
+                                <div key={idx}>
+                                    <Hidden isVisible={content ? true : false} >
+                                        <NavigationMenuItem>
+                                            <NavigationMenuTrigger className="py-2 px-3">{title}</NavigationMenuTrigger>
+                                            <NavigationMenuContent asChild>
+                                                {content}
+                                            </NavigationMenuContent>
+                                        </NavigationMenuItem>
+                                    </Hidden>
 
-                                <Hidden isVisible={!content} >
-                                    <NavigationMenuItem>
-                                        <CustomNavLink href={href as string} title={title} />
-                                    </NavigationMenuItem>
-                                </Hidden>
-                            </div>
-                        ))}
-                    </NavigationMenuList>
-                </NavigationMenu>
+                                    <Hidden isVisible={!content} >
+                                        <NavigationMenuItem>
+                                            <CustomNavLink href={href as string} title={title} />
+                                        </NavigationMenuItem>
+                                    </Hidden>
+                                </div>
+                            ))}
+                        </NavigationMenuList>
+                    </NavigationMenu>
+
+                    <div className="flex items-center gap-1">
+                        <Button variant="ghost" size="sm" className="w-fit font-semibold" >Log In</Button>
+                        <Button variant="secondary" size="sm" >Sign up</Button>
+                        <CountrySelect />
+                    </div>
+                </div>
             </div>
         </div>
     )

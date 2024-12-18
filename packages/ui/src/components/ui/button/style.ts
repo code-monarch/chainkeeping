@@ -1,5 +1,5 @@
 export const ButtonStyle = {
-    base: "w-fit inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors disabled:opacity-35 disabled:text-muted disabled:pointer-events-none ring-offset-background cursor-pointer disabled:cursor-not-allowed",
+    base: "w-fit inline-flex items-center justify-center rounded-md text-sm font-semibold whitespace-nowrap transition-colors disabled:opacity-35 disabled:text-muted disabled:pointer-events-none ring-offset-background cursor-pointer disabled:cursor-not-allowed",
     variants: {
         default: "bg-primary text-primary-foreground hover:border-[hsla(0,0%,0%,0.1)] hover:ring-2 hover:ring-[hsla(240,14%,9%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(240,14%,9%,1)] focus-visible:border-[hsla(0,0%,0%,0.1)] focus-visible:ring-2 focus-visible:ring-[hsla(240,14%,9%,0.25)] shadow",
         secondary:

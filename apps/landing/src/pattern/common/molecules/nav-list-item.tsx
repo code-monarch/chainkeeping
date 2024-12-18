@@ -18,8 +18,8 @@ const NavListItem = ({
     return (
         <>
             <Link href={href} legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuListItemStyle()} active={false} >
-                    <div className='w-full h-full flex items-start gap-x-[9px]'>
+                <NavigationMenuLink className={navigationMenuListItemStyle()} active={false}  >
+                    <div className='w-full h-full flex items-start gap-x-[9px] hover:mt-1 transition-all'>
                         <div>
                             {icon}
                         </div>
