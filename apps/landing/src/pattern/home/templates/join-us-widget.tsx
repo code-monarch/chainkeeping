@@ -3,7 +3,7 @@ import { Button, Typography } from '@chainkeeping/ui'
 import HeaderLabel from '@/pattern/common/atoms/header-label'
 import CheckIcon from '../atoms/check-icon'
 
-const list = ["Crypto Tax computation, filing, compliance", "Crypto & Fiat Invoicing, Payroll and Payments", "Crypto Portfolio management"]
+export const list = ["Crypto Tax computation, filing, compliance", "Crypto & Fiat Invoicing, Payroll and Payments", "Crypto Portfolio management"]
 
 const JoinUsWidget = () => {
     return (
