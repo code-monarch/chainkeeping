@@ -26,8 +26,8 @@ export const shadcnPlugin = plugin(
                 "--primary-disabled": "0, 0%, 97%, 1",
                 "--secondary": "0, 69%, 51%, 1",
                 "--secondary-foreground": "0, 0%, 100%, 1",
-                "--accent": "0, 0%, 97%, 1",
-                "--accent-foreground": "222.2 47.4% 11.2%",
+                "--accent": "204, 33%, 97%, 1",
+                "--accent-foreground": "216, 30%, 18%, 1",
                 "--label": "221, 9%, 37%, 1",
                 "--header-foreground": "227, 54%, 18%, 1",
                 "--destructive": "0, 86%, 61%, 1",
@@ -78,8 +78,8 @@ export const shadcnPlugin = plugin(
                 "--primary-disabled": "0, 0%, 97%, 1",
                 "--secondary": "0, 69%, 51%, 1",
                 "--secondary-foreground": "0, 0%, 100%, 1",
-                "--accent": "0, 0%, 97%, 1",
-                "--accent-foreground": "222.2 47.4% 11.2%",
+                "--accent": "204, 33%, 97%, 1",
+                "--accent-foreground": "216, 30%, 18%, 1",
                 "--label": "221, 9%, 37%, 1",
                 "--header-foreground": "227, 54%, 18%, 1",
                 "--destructive": "0, 86%, 61%, 1",
@@ -196,8 +196,9 @@ export const shadcnPlugin = plugin(
                     sm: "calc(var(--radius) - 4px)",
                 },
                 fontFamily: {
-                    san: ["var(--font-dmsans)", ...fontFamily.sans],
-                    corsa: ["var(--font-corsa)", ...fontFamily.serif],
+                    sen: "var(--font-sen)",
+                    dmsans: "var(--font-dmsans)",
+                    inter: "var(--font-inter)",
                 },
                 keyframes: {
                     "accordion-down": {
