@@ -1,5 +1,5 @@
 // import localFont from 'next/font/local';
-import { DM_Sans, Inter, Sen } from 'next/font/google';
+import { DM_Sans, Inter, Rubik, Sen, Space_Grotesk } from 'next/font/google';
 
 
 // export const corsa = localFont({
@@ -24,6 +24,18 @@ export const sen = Sen({
     style: 'normal',
     subsets: ['latin-ext', 'latin'],
     variable: '--font-sen',
+});
+export const rubik = Rubik({
+    weight: ['400', '500', '600', '700', '800'],
+    style: 'normal',
+    subsets: ['latin-ext', 'latin'],
+    variable: '--font-rubik',
+});
+export const space_Grotesk = Space_Grotesk({
+    weight: ['400', '500', '600', '700'],
+    style: 'normal',
+    subsets: ['latin-ext', 'latin'],
+    variable: '--font-space_Grotesk',
 });
 export const dmsans = DM_Sans({
     weight: ['300', '400', '700'],

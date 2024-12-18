@@ -6,6 +6,7 @@ import IntegrationsNavContent from "../organisms/integrations-nav-content";
 import CustomNavLink from "../molecules/custom-nav-link";
 import ResourcesNavContent from "../organisms/resources-nav-content";
 import { CountrySelect } from "../organisms/country-selector";
+import Link from "next/link";
 
 interface INavigation {
     title: string;
@@ -42,10 +43,12 @@ const navigation: INavigation[] = [
 
 const Topbar = () => {
     return (
-        <div className="bg-background fixed inset-0 w-full h-[var(--topbar-height)] flex items-center justify-between pt-[24px] pb-[16px] px-[24px] md:px-[120px] shadow z-[25]">
+        <div className="bg-background fixed inset-0 w-full h-[var(--topbar-height)] flex items-center justify-between pt-[24px] pb-[16px] px-[24px] md:px-0 shadow z-[25]">
             <div className='relative md:container flex items-center justify-between'>
                 {/* Logo */}
-                <BrandLogo />
+                <Link href="/" legacyBehavior>
+                    <BrandLogo />
+                </Link>
 
                 <div className="flex items-center gap-[27px]">
                     {/* Navigation */}
@@ -72,7 +75,7 @@ const Topbar = () => {
                         </NavigationMenuList>
                     </NavigationMenu>
 
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-2">
                         <Button variant="ghost" size="sm" className="w-fit font-semibold" >Log In</Button>
                         <Button variant="secondary" size="sm" >Sign up</Button>
                         <CountrySelect />

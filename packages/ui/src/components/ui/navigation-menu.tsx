@@ -49,7 +49,7 @@ const navigationMenulinkStyle = cva(
 )
 
 const navigationMenuListItemStyle = cva(
-    "flex h-[92px] w-[314px] items-start justify-center bg-background p-[12px] text-sm font-normal transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent data-[state=open]:bg-accent rounded-[8px]"
+    "flex min-h-[92px] h-fit w-[314px] items-start justify-center bg-background p-[12px] text-sm font-normal transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent data-[state=open]:bg-accent rounded-[8px]"
 )
 
 const NavigationMenuTrigger = forwardRef<

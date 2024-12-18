@@ -2,7 +2,7 @@ import "@chainkeeping/ui/dist/index.css";
 import "./styles/globals.css";
 
 import type { Metadata } from "next";
-import { dmsans, inter, sen } from "./fonts";
+import { dmsans, inter, rubik, sen, space_Grotesk } from "./fonts";
 import { Providers } from "../redux/provider";
 
 
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     // <RollbarProvider config={clientConfig}>
       <html lang="en">
-      <body className={`${sen.variable} ${inter.variable} ${dmsans.variable} antialiased relative bg-background w-screen min-h-svh h-fit m-0 p-0 overflow-x-hidden`} >
+      <body className={`${sen.variable} ${inter.variable} ${dmsans.variable} ${rubik.variable} ${space_Grotesk.variable} antialiased relative bg-background w-screen min-h-svh h-fit m-0 p-0 overflow-x-hidden`} >
           <Providers>{children}</Providers>
         </body>
       </html>

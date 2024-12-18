@@ -92,9 +92,11 @@ export * from './components/ui/toggle-group';
 export * from './components/ui/toggle';
 
 export * from './components/ui/toast';
+export * from './components/ui/typography';
 
 // Utils
 export * from './lib/utils';
 
 // Icons
 export * from "./components/icons/brand-logo"
+export * from "./components/icons/brand-logo-white"
