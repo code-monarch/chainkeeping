@@ -21,7 +21,7 @@ const getStatesCitiesApiSlice = baseAPI.injectEndpoints({
                     method: 'GET',
                 };
             },
-            providesTags: ['getStatesCities'],
+            // providesTags: ['getStatesCities'],
         }),
     }),
 });

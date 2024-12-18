@@ -20,7 +20,7 @@ const getStateCitiesBySearchApiSlice = baseAPI.injectEndpoints({
                 url: `country/${countryId}/state/${stateId}/city/?name__icontains=${searchKeyword}`,
                 method: 'GET',
             }),
-            providesTags: ['getStateCitiesBySearch'],
+            // providesTags: ['getStateCitiesBySearch'],
         }),
     }),
 });

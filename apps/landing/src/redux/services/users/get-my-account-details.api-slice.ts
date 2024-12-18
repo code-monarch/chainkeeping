@@ -15,7 +15,7 @@ const getMyAccountDetailsApiSlice = baseAPI.injectEndpoints({
                 url: 'users/me/',
                 method: 'GET',
             }),
-            providesTags: ['getMyAccountDetails'],
+            // providesTags: ['getMyAccountDetails'],
         }),
     }),
 });

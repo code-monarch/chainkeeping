@@ -18,7 +18,7 @@ const getCountryStatesApiSlice = baseAPI.injectEndpoints({
                 url: `country/${countryId}/state/`,
                 method: 'GET',
             }),
-            providesTags: ['getCountryStates'],
+            // providesTags: ['getCountryStates'],
         }),
     }),
 });

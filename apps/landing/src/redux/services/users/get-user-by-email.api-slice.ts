@@ -18,7 +18,7 @@ const getUserByEmailApiSlice = baseAPI.injectEndpoints({
                 url: `users/${email}/`,
                 method: 'GET',
             }),
-            providesTags: ['getUserByEmail'],
+            // providesTags: ['getUserByEmail'],
         }),
     }),
 });

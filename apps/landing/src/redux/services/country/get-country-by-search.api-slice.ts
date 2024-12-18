@@ -17,7 +17,7 @@ const getCountriesBySearchApiSlice = baseAPI.injectEndpoints({
                 url: `country/?name__icontains=${q}`,
                 method: 'GET',
             }),
-            providesTags: ['getCoutriesBySearch'],
+            // providesTags: ['getCoutriesBySearch'],
         }),
     }),
 });
