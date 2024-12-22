@@ -17,8 +17,8 @@ const HeroSection = () => {
 
                 {/* List */}
                 <div className='w-full flex flex-col items-start gap-4'>
-                    {list.map((item, idx) => (
-                        <div className='w-full flex justify-start items-center gap-3'>
+                    {list?.map((item, idx) => (
+                        <div key={idx} className='w-full flex justify-start items-center gap-3'>
                             <BulletListIcon />
                             <p className='text-label text-base font-rubik font-normal'>{item}</p>
                         </div>
