@@ -6,7 +6,7 @@ import FacebookIcon from '../atoms/social-icons.tsx/facebook-icon';
 import LinkedInIcon from '../atoms/social-icons.tsx/linkedIn-icon';
 import TwitterIcon from '../atoms/social-icons.tsx/twitter-icon';
 import YoutubeIcon from '../atoms/social-icons.tsx/youtube-icon';
-import { RESOURCES_ROUTES, SOLUTIONS_ROUTES } from '@/lib/routes';
+import { APP_ROUTES, RESOURCES_ROUTES, SOLUTIONS_ROUTES } from '@/lib/routes';
 
 const navlinks = [
     // Solutions
@@ -148,7 +148,7 @@ const Footer = () => {
         <div className='bg-primary w-full h-[420px]'>
             <div className='w-full h-full md:container flex flex-col justify-between pt-[56px]'>
                 <div className='w-full h-[180px] flex items-start gap-x-[50px]'>
-                    <Link href="/" legacyBehavior>
+                    <Link href={APP_ROUTES.index}>
                         <BrandLogoWhite />
                     </Link>
                     {/* Solutions */}

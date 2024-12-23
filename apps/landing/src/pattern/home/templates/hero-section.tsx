@@ -8,7 +8,7 @@ import ArrowRightBtnIcon from '../atoms/arrow-right-btn-icon';
 
 const HeroSection = () => {
     return (
-        <div className='h-[563px] md:container flex items-center justify-between'>
+        <div className='h-[563px] md:container flex items-center justify-between pt-[88px]'>
             <div className='max-w-[546px] h-full max-h-[506px] flex flex-col gap-y-6'>
                 <div className='w-full flex flex-col gap-y-3'>
                     <h2 className='w-full text-[2.75rem] leading-[52.14px] font-rubik font-bold'>Taxation & accounting for crypto made simple and easy.</h2>

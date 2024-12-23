@@ -203,6 +203,9 @@ export const shadcnPlugin = plugin(
                     rubik: "var(--font-rubik)",
                     space_Grotesk: "var(--font-space_Grotesk)",
                 },
+                backgroundImage: {
+                    'pattern-bg-img': "url('/images/pattern-bg-img.png')",
+                },
                 keyframes: {
                     "accordion-down": {
                         from: { height: "0" },

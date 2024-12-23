@@ -7,6 +7,7 @@ import CustomNavLink from "../molecules/custom-nav-link";
 import ResourcesNavContent from "../organisms/resources-nav-content";
 import { CountrySelect } from "../organisms/country-selector";
 import Link from "next/link";
+import { APP_ROUTES } from "@/lib/routes";
 
 interface INavigation {
     title: string;
@@ -46,7 +47,7 @@ const Topbar = () => {
         <div className="bg-background fixed inset-0 w-full h-[var(--topbar-height)] flex items-center justify-between pt-[24px] pb-[16px] px-[24px] md:px-0 shadow z-[25]">
             <div className='relative md:container flex items-center justify-between'>
                 {/* Logo */}
-                <Link href="/" legacyBehavior>
+                <Link href={APP_ROUTES.index}>
                     <BrandLogo />
                 </Link>
 
