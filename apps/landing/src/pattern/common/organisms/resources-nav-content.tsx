@@ -5,6 +5,7 @@ import BlogIcon from '../atoms/nav-icons/blog-icon'
 import FinancialReportingGuide from '../atoms/nav-icons/financial-reporting-guide'
 import SupportIcon from '../atoms/nav-icons/support-icon'
 import GlossaryIcon from '../atoms/nav-icons/glossary-icon'
+import { RESOURCES_ROUTES } from '@/lib/routes'
 
 const ResourcesNavContent = () => {
     return (
@@ -12,23 +13,23 @@ const ResourcesNavContent = () => {
             <ul className='bg-inherit w-full h-full grid grid-cols-3 gap-12 mx-auto'>
                 <li className='w-full flex flex-col items-center gap-y-9'>
                     {/* Crypto Tax guide */}
-                    <NavListItem icon={<CryptoTaxGuideIcon />} href='/' title='Crypto tax guide' description='Learn how crypto taxes work in your country of residence.Computation, filing, optimization and consultation' />
+                    <NavListItem icon={<CryptoTaxGuideIcon />} href={RESOURCES_ROUTES.taxGuide} title='Crypto tax guide' description='Learn how crypto taxes work in your country of residence.Computation, filing, optimization and consultation' />
 
                     {/* Blog */}
-                    <NavListItem icon={<BlogIcon />} href='/' title='Blog' description='Articles on cryptocurrency taxation, accounting, industry regulations etc.' />
+                    <NavListItem icon={<BlogIcon />} href={RESOURCES_ROUTES.blog} title='Blog' description='Articles on cryptocurrency taxation, accounting, industry regulations etc.' />
                 </li>
 
                 <li className='w-full flex flex-col items-center gap-y-9'>
                     {/* Financial reporting guide */}
-                    <NavListItem icon={<FinancialReportingGuide />} href='/' title='Financial reporting guide' description='Everything you need to know about crypto financial reporting.' />
+                    <NavListItem icon={<FinancialReportingGuide />} href={RESOURCES_ROUTES.financialReportingGuide} title='Financial reporting guide' description='Everything you need to know about crypto financial reporting.' />
 
                     {/* Support */}
-                    <NavListItem icon={<SupportIcon />} href='/' title='Support' description='More information about Chainkeeping, get answers to your questions.' />
+                    <NavListItem icon={<SupportIcon />} href={RESOURCES_ROUTES.support} title='Support' description='More information about Chainkeeping, get answers to your questions.' />
                 </li>
 
                 <li className='w-full flex flex-col items-center gap-y-9'>
                     {/* Glossary */}
-                    <NavListItem icon={<GlossaryIcon />} href='/' title='Glossary' description='Get informed, A-Z of crypto, crytpo taxation and more.' />
+                    <NavListItem icon={<GlossaryIcon />} href={RESOURCES_ROUTES.glossary} title='Glossary' description='Get informed, A-Z of crypto, crytpo taxation and more.' />
                 </li>
             </ul>
         </div>

@@ -16,7 +16,7 @@ const CustomNavLink = ({
     return (
         <>
             <Link href={href as string} legacyBehavior passHref className='w-fit'>
-                <NavigationMenuLink className={navigationMenulinkStyle()} active={false}>
+                <NavigationMenuLink className={navigationMenulinkStyle()} active={isActive}>
                     {title}
                 </NavigationMenuLink>
             </Link>

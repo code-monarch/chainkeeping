@@ -2,6 +2,7 @@ import React from 'react'
 import NavListItem from '../molecules/nav-list-item'
 import CryptoPlatformsIcon from '../atoms/nav-icons/crypto-platforms-icon'
 import AccountingSoftwaresIcon from '../atoms/nav-icons/accounting-softwares-icon'
+import { INTEGRATIONS_ROUTES } from '@/lib/routes'
 
 const IntegrationsNavContent = () => {
     return (
@@ -9,11 +10,11 @@ const IntegrationsNavContent = () => {
             <ul className='bg-inherit w-full h-full grid grid-cols-3 gap-12 mx-auto'>
                 {/* Crypto platforms */}
                 <li className='w-full flex items-center justify-center'>
-                    <NavListItem icon={<CryptoPlatformsIcon />} href='/' title='Crypto platforms' description='Connect your Wallets, Exchanges, DeFi platforms.' />
+                    <NavListItem icon={<CryptoPlatformsIcon />} href={INTEGRATIONS_ROUTES.cryptoPlatforms} title='Crypto platforms' description='Connect your Wallets, Exchanges, DeFi platforms.' />
                 </li>
                 {/* Accounting softwares */}
                 <li className='w-full flex items-center justify-center'>
-                    <NavListItem icon={<AccountingSoftwaresIcon />} href='/' title='Accounting softwares' description='Connect (QuickBooks, Xero, FreshBooks, Sage, ZohoBooks).' />
+                    <NavListItem icon={<AccountingSoftwaresIcon />} href={INTEGRATIONS_ROUTES.accountingSoftwares} title='Accounting softwares' description='Connect (QuickBooks, Xero, FreshBooks, Sage, ZohoBooks).' />
                 </li>
             </ul>
         </div>

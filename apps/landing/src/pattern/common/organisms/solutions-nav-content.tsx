@@ -6,6 +6,7 @@ import CryptoPayrollIcon from '../atoms/nav-icons/crypto-payroll-icon'
 import CryptoPaymentsIcon from '../atoms/nav-icons/crypto-payments-icon'
 import CryptoInvoicingIcon from '../atoms/nav-icons/crypto-invoicing-icon'
 import CryptoFinancialReportingIcon from '../atoms/nav-icons/crypto-financial-reporting-icon'
+import { SOLUTIONS_ROUTES } from '@/lib/routes'
 
 const SolutionsNavContent = () => {
   return (
@@ -13,26 +14,26 @@ const SolutionsNavContent = () => {
       <ul className='bg-inherit w-full h-full grid grid-cols-3 gap-12 mx-auto'>
         <li className='w-full flex flex-col items-center gap-y-9'>
           {/* Crypto tax computation */}
-          <NavListItem icon={<CryptoTaxComputationIcon />} href='/' title='Crypto tax computation' description='Computation, filing, optimization and consultation' />
+          <NavListItem icon={<CryptoTaxComputationIcon />} href={SOLUTIONS_ROUTES.computation} title='Crypto tax computation' description='Computation, filing, optimization and consultation' />
 
           {/* For accounting practitioners */}
-          <NavListItem icon={<ForAccountingPractitionersIcon />} href='/' title='For accounting practitioners' description='Enable your clients stay compliant with crypto tax regulations.' />
+          <NavListItem icon={<ForAccountingPractitionersIcon />} href={SOLUTIONS_ROUTES.accountPractitioners} title='For accounting practitioners' description='Enable your clients stay compliant with crypto tax regulations.' />
         </li>
 
         <li className='w-full flex flex-col items-center gap-y-9'>
           {/* Crypto payroll */}
-          <NavListItem icon={<CryptoPayrollIcon />} href='/' title='Crypto payroll' description='Employee records, PAYE, Pension figure, NHIS, NHF, Life insurance.' />
+          <NavListItem icon={<CryptoPayrollIcon />} href={ SOLUTIONS_ROUTES.payroll} title='Crypto payroll' description='Employee records, PAYE, Pension figure, NHIS, NHF, Life insurance.' />
 
           {/* Crypto payments */}
-          <NavListItem icon={<CryptoPaymentsIcon />} href='/' title='Crypto payments' description='Pay vendors, Bills, Bulk and Single payments.' />
+          <NavListItem icon={<CryptoPaymentsIcon />} href={SOLUTIONS_ROUTES.payments} title='Crypto payments' description='Pay vendors, Bills, Bulk and Single payments.' />
         </li>
 
         <li className='w-full flex flex-col items-center gap-y-9'>
           {/* Crypto invoicing */}
-          <NavListItem icon={<CryptoInvoicingIcon />} href='/' title='Crypto invoicing' description='Bill customers with Sales invoice and record purchases' />
+          <NavListItem icon={<CryptoInvoicingIcon />} href={SOLUTIONS_ROUTES.invoicing} title='Crypto invoicing' description='Bill customers with Sales invoice and record purchases' />
 
           {/* Crypto financial reporting */}
-          <NavListItem icon={<CryptoFinancialReportingIcon />} href='/' title='Crypto financial reporting' description='Integration with accounting softwares for proper reporting, consulting.' />
+          <NavListItem icon={<CryptoFinancialReportingIcon />} href={SOLUTIONS_ROUTES.financialReporting} title='Crypto financial reporting' description='Integration with accounting softwares for proper reporting, consulting.' />
         </li>
       </ul>
     </div>

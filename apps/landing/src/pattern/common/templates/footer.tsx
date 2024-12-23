@@ -6,6 +6,7 @@ import FacebookIcon from '../atoms/social-icons.tsx/facebook-icon';
 import LinkedInIcon from '../atoms/social-icons.tsx/linkedIn-icon';
 import TwitterIcon from '../atoms/social-icons.tsx/twitter-icon';
 import YoutubeIcon from '../atoms/social-icons.tsx/youtube-icon';
+import { RESOURCES_ROUTES, SOLUTIONS_ROUTES } from '@/lib/routes';
 
 const navlinks = [
     // Solutions
@@ -14,23 +15,23 @@ const navlinks = [
         links: [
             {
                 title: "Crypto Taxes",
-                href: "",
+                href: SOLUTIONS_ROUTES.computation,
             },
             {
                 title: "Crypto Invoicing",
-                href: "",
+                href: SOLUTIONS_ROUTES.invoicing,
             },
             {
                 title: "Crypto Payments",
-                href: "",
+                href: SOLUTIONS_ROUTES.payments,
             },
             {
                 title: "Crypto Payroll",
-                href: "",
+                href: SOLUTIONS_ROUTES.payroll,
             },
             {
                 title: "Crypto Financial Reporting",
-                href: "",
+                href: SOLUTIONS_ROUTES.financialReporting,
             },
         ]
     },
@@ -62,27 +63,27 @@ const navlinks = [
         links: [
             {
                 title: "Blog",
-                href: "",
+                href: RESOURCES_ROUTES.blog,
             },
             {
                 title: "Crypto Tax guide",
-                href: "",
+                href: RESOURCES_ROUTES.taxGuide,
             },
             {
                 title: "Financial Reporting guide",
-                href: "",
+                href: RESOURCES_ROUTES.financialReportingGuide,
             },
             {
                 title: "Glossary",
-                href: "",
+                href: RESOURCES_ROUTES.glossary,
             },
             {
                 title: "Help Center",
-                href: "",
+                href: RESOURCES_ROUTES.support,
             },
             {
                 title: "FAQs",
-                href: "",
+                href: RESOURCES_ROUTES.FAQs,
             },
         ]
     },
