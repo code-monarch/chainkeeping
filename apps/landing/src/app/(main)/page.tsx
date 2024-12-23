@@ -1,5 +1,6 @@
 "use client";
 
+import FeaturesTemp from "@/pattern/home/templates/features-temp";
 import HeroSection from "@/pattern/home/templates/hero-section";
 import HowItWorksTemp from "@/pattern/home/templates/how-it-works-temp";
 import IntegrationsTemp from "@/pattern/home/templates/integrations-temp";
@@ -15,6 +16,7 @@ export default function Home() {
       <HowItWorksTemp />
       <IntegrationsTemp />
       <ReviewsTemp />
+      <FeaturesTemp />
       <JoinUsWidget />
     </div>
   );

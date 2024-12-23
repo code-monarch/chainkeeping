@@ -6,7 +6,7 @@ import HowItWorksImage from '../organisms/how-it-works-image'
 
 const HowItWorksTemp = () => {
   return (
-    <div className='w-full h-[572px] flex items-end justify-between gap-[87px] mb-[144px]'>
+    <div className='w-full md:container h-[572px] flex items-end justify-between gap-[87px]x'>
       {/* Left */}
       <div className='w-full max-w-[515px] min-h-full flex flex-col justify-between gap-8'>
         <div className='space-y-[18px]'>

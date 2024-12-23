@@ -40,7 +40,7 @@ const customers: IWhoWeServeWidgetProps[] = [
 
 const WhoWeServe = () => {
     return (
-        <div className='w-full min-h-[819px] flex flex-col gap-8'>
+        <div className='w-full md:container min-h-[819px] flex flex-col gap-8'>
             <div className='w-full flex flex-col gap-2 items-center'>
                 <HeaderLabel>Who we serve</HeaderLabel>
                 <Typography className='text-center text-[2.25rem] leading-[42.66px]'>Crypto tax software for everyone</Typography>

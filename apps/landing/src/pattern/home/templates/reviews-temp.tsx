@@ -22,7 +22,7 @@ const reviews = [
 
 const ReviewsTemp = () => {
     return (
-        <div className='w-full flex flex-col gap-y-12'>
+        <div className='w-full md:container flex flex-col gap-y-12'>
             <div className='w-full flex flex-col items-start gap-y-6'>
                 <div className='lg:w-[406px] text-center space-y-[4px]'>
                     <HeaderLabel className='text-left'>Reviews</HeaderLabel>

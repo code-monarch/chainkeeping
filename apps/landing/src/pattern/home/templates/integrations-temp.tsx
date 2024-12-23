@@ -15,7 +15,7 @@ const styles = {
 
 const IntegrationsTemp = () => {
   return (
-    <div className='w-full h-[647px] flex flex-col items-center gap-y-[46px]'>
+    <div className='w-full md:container h-[647px] flex flex-col items-center gap-y-[46px]'>
       <div className='max-w-[935px] flex flex-col items-center gap-y-6'>
         <div className='w-full text-center space-y-[4px]'>
           <HeaderLabel className='text-center'>Integrations</HeaderLabel>
