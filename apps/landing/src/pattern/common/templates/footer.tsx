@@ -41,19 +41,19 @@ const navlinks = [
         links: [
             {
                 title: "Individuals",
-                href: "",
+                href: SOLUTIONS_ROUTES.computation,
             },
             {
                 title: "Corporate Entities",
-                href: "",
+                href: SOLUTIONS_ROUTES.company,
             },
             {
                 title: "Accounting Practitioners",
-                href: "",
+                href: SOLUTIONS_ROUTES.accountPractitioners,
             },
             {
                 title: "Tax Authorities",
-                href: "",
+                href: SOLUTIONS_ROUTES.taxAuthority,
             }
         ]
     },
