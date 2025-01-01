@@ -41,15 +41,15 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-    "group inline-flex h-10 w-max items-center justify-center rounded-none bg-background px-[12px] pt-[8px] pb-[24px] text-sm font-medium transition-colors hover:bg-accent hover:text-secondary hover:border-b-[1.5px] hover-border-secondary focus:bg-accent focus:text-secondary focus:outline-none focus:border-b-[1.5px] focus-border-secondary disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 data-[active]:border-b-[1.5px] [active]:border-secondary data-[state=open]:border-b-[1.5px] data-[state=open]:border-secondary"
+    "group inline-flex h-10 w-max items-center justify-center rounded-none bg-background px-[12px] pt-[8px] pb-[24px] text-sm text-gray-500 data-[active]:text-secondary font-medium transition-colors hover:bg-accent hover:text-secondary hover:border-b-[1.5px] hover-border-secondary focus:bg-accent focus:text-secondary focus:outline-none focus:border-b-[1.5px] focus-border-secondary disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 data-[active]:border-b-[1.5px] [active]:border-secondary data-[state=open]:border-b-[1.5px] data-[state=open]:border-secondary"
 )
 
 const navigationMenulinkStyle = cva(
-    "inline-flex h-fit min-w-[74px] w-fit items-center justify-center rounded-none bg-background px-[12px] py-[8px] text-sm font-medium transition-colors whitespace-nowrap hover:bg-accent hover:text-secondary hover:border-b-[1.5px] hover:border-secondary focus:bg-accent focus:text-secondary focus:outline-none focus:border-b-[1.5px] focus:border-secondary disabled:pointer-events-none disabled:opacity-50"
+    "inline-flex h-fit min-w-[74px] w-fit items-center justify-center rounded-none bg-background px-[12px] py-[8px] text-sm text-gray-500 font-medium transition-colors whitespace-nowrap hover:bg-accent hover:text-secondary hover:border-b-[1.5px] hover:border-secondary focus:bg-accent focus:text-secondary data-[active]:text-secondary focus:outline-none focus:border-b-[1.5px] focus:border-secondary disabled:pointer-events-none disabled:opacity-50"
 )
 
 const navigationMenuListItemStyle = cva(
-    "flex min-h-[92px] h-fit w-[314px] items-start justify-center bg-background p-[12px] text-sm font-normal transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent data-[state=open]:bg-accent rounded-[8px]"
+    "flex min-h-[92px] h-fit w-[314px] items-start justify-center bg-background p-[12px] text-sm text-gray-500 font-normal transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent data-[state=open]:bg-accent rounded-[8px]"
 )
 
 const NavigationMenuTrigger = forwardRef<
@@ -63,7 +63,7 @@ const NavigationMenuTrigger = forwardRef<
     >
         {children}{" "}
         <ChevronDown
-            className="relative top-[1px] ml-1 h-3 w-3 text-[hsla(215,23%,40%,1)] transition duration-200 group-data-[state=open]:rotate-180 group-data-[state=open]:text-secondary"
+            className="relative top-[1px] ml-1 h-3 w-3 text-gray-500 transition duration-200 group-data-[state=open]:rotate-180 group-data-[state=open]:text-secondary"
             aria-hidden="true"
         />
     </NavigationMenuPrimitive.Trigger>

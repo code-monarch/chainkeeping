@@ -6,7 +6,7 @@ import FacebookIcon from '../atoms/social-icons.tsx/facebook-icon';
 import LinkedInIcon from '../atoms/social-icons.tsx/linkedIn-icon';
 import TwitterIcon from '../atoms/social-icons.tsx/twitter-icon';
 import YoutubeIcon from '../atoms/social-icons.tsx/youtube-icon';
-import { APP_ROUTES, RESOURCES_ROUTES, SOLUTIONS_ROUTES } from '@/lib/routes';
+import { APP_ROUTES, RESOURCES_ROUTES, SOLUTIONS_ROUTES, WHO_WE_SERVE_ROUTES } from '@/lib/routes';
 
 const navlinks = [
     // Solutions
@@ -41,19 +41,19 @@ const navlinks = [
         links: [
             {
                 title: "Individuals",
-                href: SOLUTIONS_ROUTES.computation,
+                href: WHO_WE_SERVE_ROUTES.individuals,
             },
             {
                 title: "Corporate Entities",
-                href: SOLUTIONS_ROUTES.company,
+                href: WHO_WE_SERVE_ROUTES.company,
             },
             {
                 title: "Accounting Practitioners",
-                href: SOLUTIONS_ROUTES.accountPractitioners,
+                href: WHO_WE_SERVE_ROUTES.accountingPractitioners,
             },
             {
                 title: "Tax Authorities",
-                href: SOLUTIONS_ROUTES.taxAuthority,
+                href: WHO_WE_SERVE_ROUTES.taxAuthority,
             }
         ]
     },

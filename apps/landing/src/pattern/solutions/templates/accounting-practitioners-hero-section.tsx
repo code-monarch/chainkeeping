@@ -8,7 +8,7 @@ const featuresAtGlance = [
     "Automated Operations"
 ]
 
-const AccountPractitionersHeroSection = () => {
+const AccountingPractitionersHeroSection = () => {
   return (
       <section className="bg-primary bg-pattern-bg-img bg-cover bg-center w-full h-[345px]">
           <div className='w-full h-full md:container flex flex-col items-start justify-center gap-y-3'>
@@ -35,4 +35,4 @@ const AccountPractitionersHeroSection = () => {
   )
 }
 
-export default AccountPractitionersHeroSection
+export default AccountingPractitionersHeroSection

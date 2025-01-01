@@ -71,22 +71,6 @@ You can spin up the landing application dev server by running:
 turbo run dev --filter landing
 ```
 
-### Run saas app
-
-You can spin up the saas application dev server by running:
-
-```bash
-turbo run dev --filter saas
-```
-
-### Run customer portal app
-
-Spin up the customer-portal app dev server by running:
-
-```bash
-turbo run dev --filter customer-portal
-```
-
 ### install all packages
 
 You can install all project packages by running:

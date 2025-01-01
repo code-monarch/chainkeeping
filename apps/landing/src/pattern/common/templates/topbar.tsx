@@ -30,15 +30,15 @@ const navigation: INavigation[] = [
     },
     {
         title: "Pricing",
-        href: '/',
+        href: '/pricing',
     },
     {
         title: "About",
-        href: '/',
+        href: '/about',
     },
     {
         title: "Contact us",
-        href: '/',
+        href: '/contact-us',
     }
 ]
 
@@ -59,7 +59,7 @@ const Topbar = () => {
                                 <div key={idx}>
                                     <Hidden isVisible={content ? true : false} >
                                         <NavigationMenuItem>
-                                            <NavigationMenuTrigger className="py-2 px-3">{title}</NavigationMenuTrigger>
+                                            <NavigationMenuTrigger className=" py-2 px-3">{title}</NavigationMenuTrigger>
                                             <NavigationMenuContent asChild>
                                                 {content}
                                             </NavigationMenuContent>

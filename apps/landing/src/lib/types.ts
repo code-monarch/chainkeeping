@@ -11,3 +11,8 @@ export interface IFormatNumberProps {
 export interface IFormatDollarAmountProps {
     amount: number;
 }
+
+export interface IFaqs {
+    question: string;
+    answer: string;
+}

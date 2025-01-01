@@ -17,7 +17,7 @@ const SolutionsNavContent = () => {
           <NavListItem icon={<CryptoTaxComputationIcon />} href={SOLUTIONS_ROUTES.computation} title='Crypto tax computation' description='Computation, filing, optimization and consultation' />
 
           {/* For accounting practitioners */}
-          <NavListItem icon={<ForAccountingPractitionersIcon />} href={SOLUTIONS_ROUTES.accountPractitioners} title='For accounting practitioners' description='Enable your clients stay compliant with crypto tax regulations.' />
+          <NavListItem icon={<ForAccountingPractitionersIcon />} href={SOLUTIONS_ROUTES.accountingPractitioners} title='For accounting practitioners' description='Enable your clients stay compliant with crypto tax regulations.' />
         </li>
 
         <li className='w-full flex flex-col items-center gap-y-9'>

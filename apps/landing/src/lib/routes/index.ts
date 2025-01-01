@@ -5,13 +5,17 @@ export const APP_ROUTES = {
 export const SOLUTIONS_ROUTES = {
     index: "/solutions",
     computation: "/solutions/tax-computation",
-    company: "/solutions/company",
+    accountingPractitioners: "/who-we-serve/accounting-practitioners",
     payroll: "/solutions/payroll",
     invoicing: "/solutions/invoicing",
-    accountPractitioners: "/solutions/account-practitioners",
     payments: "/solutions/payments",
     financialReporting: "/solutions/financial-reporting",
-    taxAuthority: "/solutions/tax-authority",
+};
+export const WHO_WE_SERVE_ROUTES = {
+    individuals: "/who-we-serve/individuals",
+    company: "/who-we-serve/company",
+    accountingPractitioners: "/who-we-serve/accounting-practitioners",
+    taxAuthority: "/who-we-serve/tax-authority",
 };
 
 export const INTEGRATIONS_ROUTES = {

@@ -7,8 +7,7 @@ import { INavListItemProps } from '@/pattern/types';
 const CustomNavLink = ({
     href,
     title,
-    exact,
-    className,
+    exact
 }: Omit<INavListItemProps, "description" | "icon">) => {
     const pathname = usePathname();
     const isActive = exact ? pathname === href : pathname.startsWith(href);
