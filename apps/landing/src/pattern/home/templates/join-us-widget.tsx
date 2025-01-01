@@ -7,7 +7,7 @@ export const list = ["Crypto Tax computation, filing, compliance", "Crypto & Fia
 
 const JoinUsWidget = () => {
     return (
-        <div className='w-full h-[472px] flex items-center justify-center'>
+        <div className='w-full h-[472px] flex items-center justify-center px-8'>
             <div className='bg-[hsla(0,67%,98%,1)] w-full md:container h-full flex items-center justify-center rounded-[32px]'>
                 <div className='w-full flex flex-col items-center gap-y-8'>
                     <div className='lg:w-[798px] text-center space-y-[4px]'>
