@@ -30,7 +30,7 @@ const NavigationMenuList = forwardRef<
     <NavigationMenuPrimitive.List
         ref={ref}
         className={cn(
-            "group flex flex-1 list-none items-center justify-center space-x-1",
+            "h-full group flex flex-1 list-none items-center justify-center space-x-1",
             className
         )}
         {...props}
@@ -41,11 +41,11 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-    "group inline-flex h-10 w-max items-center justify-center rounded-none bg-background px-[12px] pt-[8px] pb-[24px] text-sm text-gray-500 data-[active]:text-secondary font-medium transition-colors hover:bg-accent hover:text-secondary hover:border-b-[1.5px] hover-border-secondary focus:bg-accent focus:text-secondary focus:outline-none focus:border-b-[1.5px] focus-border-secondary disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 data-[active]:border-b-[1.5px] [active]:border-secondary data-[state=open]:border-b-[1.5px] data-[state=open]:border-secondary"
+    "group inline-flex h-full w-max items-center justify-center rounded-none bg-background px-[12px] pt-[8px] pb-[24px] text-sm text-gray-500 data-[active]:text-secondary font-medium transition-colors hover:text-secondary hover:border-b-[1.5px] hover-border-secondary focus:bg-accent focus:text-secondary focus:outline-none focus:border-b-[1.5px] focus-border-secondary disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 data-[active]:border-b-[1.5px] data-[active]:border-b-secondary data-[state=open]:border-b-[1.5px] data-[state=open]:border-b-secondary"
 )
 
 const navigationMenulinkStyle = cva(
-    "inline-flex h-fit min-w-[74px] w-fit items-center justify-center rounded-none bg-background px-[12px] py-[8px] text-sm text-gray-500 font-medium transition-colors whitespace-nowrap hover:bg-accent hover:text-secondary hover:border-b-[1.5px] hover:border-secondary focus:bg-accent focus:text-secondary data-[active]:text-secondary focus:outline-none focus:border-b-[1.5px] focus:border-secondary disabled:pointer-events-none disabled:opacity-50"
+    "inline-flex h-full min-w-[74px] w-fit items-center justify-center rounded-none bg-background px-[12px] py-[8px] text-sm text-gray-500 font-medium transition-colors whitespace-nowrap hover:text-secondary hover:border-b-[1.5px] hover:border-secondary focus:bg-accent focus:text-secondary data-[active]:text-secondary data-[active]:border-b-[1.5px] data-[active]:border-b-secondary focus:outline-none focus:border-b-[1.5px] focus:border-secondary disabled:pointer-events-none disabled:opacity-50"
 )
 
 const navigationMenuListItemStyle = cva(

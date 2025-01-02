@@ -26,6 +26,7 @@ export const shadcnPlugin = plugin(
                 "--primary-disabled": "0, 0%, 97%, 1",
                 "--secondary": "0, 69%, 51%, 1",
                 "--secondary-foreground": "0, 0%, 100%, 1",
+                "--secondary-accent": "0, 67%, 98%, 1",
                 "--accent": "204, 33%, 97%, 1",
                 "--accent-foreground": "216, 30%, 18%, 1",
                 "--label": "221, 9%, 37%, 1",
@@ -79,6 +80,7 @@ export const shadcnPlugin = plugin(
                 "--primary-disabled": "0, 0%, 97%, 1",
                 "--secondary": "0, 69%, 51%, 1",
                 "--secondary-foreground": "0, 0%, 100%, 1",
+                "--secondary-accent": "0, 67%, 98%, 1",
                 "--accent": "204, 33%, 97%, 1",
                 "--accent-foreground": "216, 30%, 18%, 1",
                 "--label": "221, 9%, 37%, 1",
@@ -153,6 +155,7 @@ export const shadcnPlugin = plugin(
                     secondary: {
                         DEFAULT: "hsl(var(--secondary))",
                         foreground: "hsl(var(--secondary-foreground))",
+                        accent: "hsl(var(--secondary-accent))"
                     },
                     destructive: {
                         DEFAULT: "hsl(var(--destructive))",

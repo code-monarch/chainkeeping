@@ -44,22 +44,22 @@ const navigation: INavigation[] = [
 
 const Topbar = () => {
     return (
-        <div className="bg-background fixed inset-0 w-full h-[var(--topbar-height)] flex items-center justify-between pt-[24px] pb-[16px] px-[24px] md:px-0 shadow z-[25]">
-            <div className='relative md:container flex items-center justify-between'>
+        <div className="bg-background fixed inset-0 w-full h-[var(--topbar-height)] flex items-center justify-between px-[24px] md:px-0 shadow z-[25]">
+            <div className='h-full relative md:container flex items-center justify-between'>
                 {/* Logo */}
                 <Link href={APP_ROUTES.index}>
                     <BrandLogo />
                 </Link>
 
-                <div className="flex items-center gap-[27px]">
+                <div className="h-full flex items-center gap-[27px]">
                     {/* Navigation */}
                     <NavigationMenu>
-                        <NavigationMenuList>
+                        <NavigationMenuList className="h-[var(--topbar-height)]" >
                             {navigation.map(({ title, content, href }, idx) => (
-                                <div key={idx}>
+                                <div key={idx} className="h-full">
                                     <Hidden isVisible={content ? true : false} >
-                                        <NavigationMenuItem>
-                                            <NavigationMenuTrigger className=" py-2 px-3">{title}</NavigationMenuTrigger>
+                                        <NavigationMenuItem className="h-full">
+                                            <NavigationMenuTrigger className="py-2 px-3">{title}</NavigationMenuTrigger>
                                             <NavigationMenuContent asChild>
                                                 {content}
                                             </NavigationMenuContent>
@@ -67,7 +67,7 @@ const Topbar = () => {
                                     </Hidden>
 
                                     <Hidden isVisible={!content} >
-                                        <NavigationMenuItem>
+                                        <NavigationMenuItem className="h-full">
                                             <CustomNavLink href={href as string} title={title} />
                                         </NavigationMenuItem>
                                     </Hidden>

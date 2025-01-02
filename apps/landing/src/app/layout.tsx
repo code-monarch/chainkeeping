@@ -1,8 +1,8 @@
 import "@chainkeeping/ui/dist/index.css";
-import "./styles/globals.css";
+import "./assets/styles/globals.css";
 
 import type { Metadata } from "next";
-import { dmsans, inter, rubik, sen, space_Grotesk } from "./fonts";
+import { dmsans, inter, rubik, sen, space_Grotesk } from "./assets/fonts";
 import { Providers } from "../redux/provider";
 
 
