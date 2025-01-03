@@ -1,6 +1,6 @@
+import React from 'react'
 import HeaderLabel from '@/pattern/common/atoms/header-label'
 import { Typography } from '@chainkeeping/ui'
-import React from 'react'
 import WhoWeServeWidget, { IWhoWeServeWidgetProps } from '../organisms/who-we-serve-widget'
 import IndividualCardIcon from '../atoms/individual-card-icon'
 import CompanyCardIcon from '../atoms/company-card-icon'

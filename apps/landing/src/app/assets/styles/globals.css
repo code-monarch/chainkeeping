@@ -35,3 +35,9 @@ a {
     border-right: 1px solid #000 !important;
   }
 }
+
+/* Shadow styles for Pricing Cards */
+.card-shadow {
+  box-shadow: 0px 4px 8px 0px hsla(194, 90%, 12%, 0.05);
+  box-shadow: 1px -4px 8px 0px hsla(194, 90%, 12%, 0.05);
+}

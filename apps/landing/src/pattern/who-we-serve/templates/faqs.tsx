@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import { FAQuestions } from '@/lib/data'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@chainkeeping/ui'
 import { IFaqs } from '@/lib/types'
 
