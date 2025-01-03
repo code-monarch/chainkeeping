@@ -93,23 +93,23 @@ const navlinks = [
         links: [
             {
                 title: "About",
-                href: "",
+                href: APP_ROUTES.about,
             },
             {
                 title: "Contact us",
-                href: "",
+                href: APP_ROUTES.contact,
             },
             {
                 title: "Careers",
-                href: "",
+                href: APP_ROUTES.careers,
             },
             {
                 title: "Partnership",
-                href: "",
+                href: APP_ROUTES.partnership,
             },
             {
                 title: "Pricing",
-                href: "",
+                href: APP_ROUTES.pricing,
             }
         ]
     },

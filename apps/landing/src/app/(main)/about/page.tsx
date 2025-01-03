@@ -17,7 +17,9 @@ const AboutPage = () => {
       <OurCulture />
       <CompanyStatementsSection />
       <CompanyOrganogram />
-      <OurPartnersSection />
+      <div className='w-full' id="partnership">
+        <OurPartnersSection />
+      </div>
       <div className='w-full my-[144px]'>
         <JoinUsWidget />
       </div>

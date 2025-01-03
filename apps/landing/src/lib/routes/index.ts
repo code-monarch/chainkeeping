@@ -1,5 +1,10 @@
 export const APP_ROUTES = {
     index: "/",
+    about: "/about",
+    contact: "/contact-us",
+    careers: "/careers",
+    partnership: "/about/#partnership",
+    pricing: "/pricing",
 };
 
 export const SOLUTIONS_ROUTES = {
