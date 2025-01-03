@@ -79,7 +79,7 @@ const CompanyOrganogram = () => {
                     <HeaderLabel className='text-center'>Our People</HeaderLabel>
                     <Typography className='w-fit text-center text-[2.25rem] leading-[42.66px]'>Meet our super amazing team!</Typography>
                 </div>
-                <div className='w-full flex items-center gap-x-6 gap-y-12 flex-wrap'>
+                <div className='w-full flex items-center justify-evenly gap-x-6 gap-y-12 flex-wrap'>
                     {stakeholders.map(({ image, name, position }, idx) => (
                         <StakeholderCard key={idx} image={image} name={name} position={position} />
                     ))}
