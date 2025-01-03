@@ -50,11 +50,6 @@ const stakeholders = [
         image: CharlesPhoto,
     },
     {
-        name: 'Charles Nnama Okaformbah',
-        position: 'CTO',
-        image: CharlesPhoto,
-    },
-    {
         name: 'Omoniyi Olayinka',
         position: 'Project Manager',
         image: OlayinkaPhoto,
