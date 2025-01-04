@@ -7,7 +7,8 @@ import CustomNavLink from "../molecules/custom-nav-link";
 import ResourcesNavContent from "../organisms/resources-nav-content";
 import { CountrySelect } from "../organisms/country-selector";
 import Link from "next/link";
-import { APP_ROUTES } from "@/lib/routes";
+import { APP_ROUTES, AUTH_ROUTES } from "@/lib/routes";
+import { useRouter } from "next/navigation";
 
 interface INavigation {
     title: string;
@@ -43,6 +44,8 @@ const navigation: INavigation[] = [
 ]
 
 const Topbar = () => {
+    const { push } = useRouter();
+
     return (
         <div className="bg-background fixed inset-0 w-full h-[var(--topbar-height)] flex items-center justify-between px-[24px] md:px-0 shadow z-[25]">
             <div className='h-full relative md:container flex items-center justify-between'>
@@ -77,8 +80,8 @@ const Topbar = () => {
                     </NavigationMenu>
 
                     <div className="flex items-center gap-2">
-                        <Button variant="ghost" size="sm" className="w-fit font-semibold" >Log In</Button>
-                        <Button variant="secondary" size="sm" >Sign up</Button>
+                        <Button variant="ghost" size="sm" onClick={() => push(AUTH_ROUTES.login)} className="w-fit font-semibold" >Log In</Button>
+                        <Button variant="secondary" size="sm" onClick={() => push(APP_ROUTES.signup)} >Sign up</Button>
                         <CountrySelect />
                     </div>
                 </div>

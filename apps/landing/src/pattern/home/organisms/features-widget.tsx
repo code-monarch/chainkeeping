@@ -58,16 +58,16 @@ const FeaturesWidget = () => {
     return (
         <div className='w-full h-fit flex items-center justify-between'>
             <ToggleGroup type="single" orientation='vertical' value={feature}
-                    onValueChange={(newValue) => {
-                        if (newValue) {
-                            dispatch(setFeatureValue(newValue));
-                        }
-                    }}
+                onValueChange={(newValue) => {
+                    if (newValue) {
+                        dispatch(setFeatureValue(newValue));
+                    }
+                }}
                 className='h-full max-h-[456px] flex flex-col items-start gap-y-9'>
-                    {features?.map(({ value, description, icon, title }, idx) => (
-                        <FeaturesStep key={idx} description={description} icon={icon} title={title} value={value} toggleGroupValue={feature} />
-                    ))}
-                </ToggleGroup>
+                {features?.map(({ value, description, icon, title }, idx) => (
+                    <FeaturesStep key={idx} description={description} icon={icon} title={title} value={value} toggleGroupValue={feature} />
+                ))}
+            </ToggleGroup>
 
             <FeaturesImage feature={feature} />
         </div>
