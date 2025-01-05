@@ -47,7 +47,7 @@ export const shadcnPlugin = plugin(
                 "--success-foreground": "0, 0%, 100%, 1",
                 "--warning": "43, 93%, 66%, 1",
                 "--warning-foreground": "0, 0%, 0%, 1",
-                "--ring": "215 20.2% 65.1%",
+                "--ring": "0, 69%, 51%, 0.25",
                 "--radius": "0.5rem",
                 "--sidebar-background": "0 0% 98%",
                 "--sidebar-foreground": "240 5.3% 26.1%",

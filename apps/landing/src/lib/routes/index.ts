@@ -6,6 +6,8 @@ export const APP_ROUTES = {
     partnership: "/about/#partnership",
     pricing: "/pricing",
     signup: "/sign-up",
+    terms: "/terms-of-service",
+    privacyPolicy: "/privacy-policy",
 };
 
 export const AUTH_ROUTES = {

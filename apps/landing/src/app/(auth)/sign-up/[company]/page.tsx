@@ -1,5 +1,6 @@
 'use client'
 
+import CreateAccountTemp from '@/pattern/auth/templates/create-account-temp'
 import { useParams } from 'next/navigation'
 
 const CompanySignUpPage = () => {
@@ -8,6 +9,7 @@ const CompanySignUpPage = () => {
 
     return (
         <>
+            <CreateAccountTemp />
         </>
     )
 }
