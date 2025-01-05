@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { APP_ROUTES, AUTH_ROUTES } from '@/lib/routes'
 import { BrandLogo, Card, CardContent, CardHeader, CardTitle, Checkbox, Form, FormField, FormItem, FormLabel, FormMessage, SubmitButton } from '@chainkeeping/ui'
 import { z } from "zod"
@@ -31,6 +32,9 @@ const Socials: Array<"Apple" | "Google"> = [
 ]
 
 const CreateAccountTemp = () => {
+    const { push } = useRouter()
+    const pathname = usePathname();
+
     const defaultValues = {
         email: "",
         password: "",
@@ -50,6 +54,7 @@ const CreateAccountTemp = () => {
 
     const onSubmit = (data: z.infer<typeof CreateAccountFormSchema>) => {
         console.log("Submitted: ", data)
+        push(`${pathname}?additional-info=true`);
     }
     return (
         <div className='w-fit flex flex-col items-center gap-y-8 pb-[144px]'>
@@ -125,7 +130,7 @@ const CreateAccountTemp = () => {
                                 size="lg"
                                 type="submit"
                                 disabled={!isDirty}
-                                className="w-full mt-[18px]"
+                                className="w-full mt-[8px]"
                             >
                                 Continue
                             </SubmitButton>

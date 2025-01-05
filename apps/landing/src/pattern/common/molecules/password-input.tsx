@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { ICustomInputProps } from "@/pattern/types";
-import { Input } from "@chainkeeping/ui";
+import { cn, Input } from "@chainkeeping/ui";
 import PasswordInputLockIcon from "../atoms/password-input-lock-icon";
 import PasswordToggleIcon from "../atoms/password-toggle-icon";
 import { Controller, useFormContext } from "react-hook-form";
@@ -10,6 +10,7 @@ const PasswordInput: FC<ICustomInputProps> = ({
     error,
     value,
     onChange,
+    className,
     placeholder,
     ...props
 }) => {
@@ -34,7 +35,7 @@ const PasswordInput: FC<ICustomInputProps> = ({
                             disabled={disabled}
                             variant={error ? "error" : "default"}
                             placeholder={placeholder ?? "Enter password"}
-                            className='pr-[40px]'
+                            className={cn(className, "pl-[34px] pr-[40px]")}
                             {...props}
                         />
                         {/* prefix Icon */}

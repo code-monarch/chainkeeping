@@ -7,7 +7,9 @@ export const ButtonStyle = {
         destructive:
             "bg-secondary text-secondary-foreground hover:bg-[hsla(0,69%,51%,1)] hover:border-secondary hover:ring-2 hover:ring-[hsla(0,69%,51%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(0,69%,51%,1)] focus-visible:border-[hsla(0,69%,51%,1)] focus-visible:ring-2 focus-visible:ring-[hsla(0,69%,51%,0.25)] shadow-[hsla(0,0%,0%,0.1) shadow-[hsla(0,69%,51%,0.1)]",
         outline:
-            "border border-secondary bg-shite text-secondary shadow-sm hover:border-secondary hover:ring-2 hover:ring-[hsla(0,69%,51%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(0,69%,51%,1)] focus-visible:border-[hsla(0,69%,51%,1)] focus-visible:ring-2 focus-visible:ring-[hsla(0,69%,51%,0.25)] shadow-[hsla(0,0%,0%,0.1) shadow-[hsla(0,69%,51%,0.1)]",
+            "border border-secondary bg-white text-secondary placeholder:text-muted shadow-sm hover:border-secondary hover:ring-2 hover:ring-[hsla(0,69%,51%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(0,69%,51%,1)] focus-visible:border-[hsla(0,69%,51%,1)] focus-visible:ring-2 focus-visible:ring-[hsla(0,69%,51%,0.25)] shadow-[hsla(0,0%,0%,0.1) shadow-[hsla(0,69%,51%,0.1)]",
+        primaryOutline:
+            "border bg-white text-foreground placeholder:text-muted shadow-sm hover:border-secondary hover:ring-2 hover:ring-[hsla(0,69%,51%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(0,69%,51%,1)] focus-visible:border-[hsla(0,69%,51%,1)] focus-visible:ring-2 focus-visible:ring-[hsla(0,69%,51%,0.25)] shadow-[hsla(0,0%,0%,0.1) shadow-[hsla(0,69%,51%,0.1)]",
 
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-secondary underline-offset-4 hover:underline",

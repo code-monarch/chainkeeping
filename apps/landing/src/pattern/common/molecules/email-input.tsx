@@ -1,6 +1,6 @@
 import React, { FC, useRef, useState } from "react";
 import { ICustomInputProps } from "@/pattern/types";
-import { Input } from "@chainkeeping/ui";
+import { cn, Input } from "@chainkeeping/ui";
 import EmailInputIcon from "../atoms/email-input-icon";
 import { Controller, useFormContext } from "react-hook-form";
 
@@ -10,6 +10,7 @@ const EmailInput: FC<ICustomInputProps> = ({
     value,
     onChange,
     placeholder,
+    className,
     ...props
 }) => {
     const [isFocus, setIsFocus] = useState<boolean>(false);
@@ -29,6 +30,7 @@ const EmailInput: FC<ICustomInputProps> = ({
                         disabled={disabled}
                         variant={error ? "error" : "default"}
                         placeholder={placeholder ?? "example@gmail.com"}
+                        className={cn(className, "pl-[34px]")}
                         {...props}
                     />
                     {/* Prefix */}

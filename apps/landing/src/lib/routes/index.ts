@@ -6,6 +6,7 @@ export const APP_ROUTES = {
     partnership: "/about/#partnership",
     pricing: "/pricing",
     signup: "/sign-up",
+    signupAdditionalInfo: "/sign-up?additional-info=true",
     terms: "/terms-of-service",
     privacyPolicy: "/privacy-policy",
 };
