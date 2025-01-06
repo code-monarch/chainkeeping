@@ -4,6 +4,7 @@ import { baseAPI } from "./api/base-api";
 import hardSet from "redux-persist/lib/stateReconciler/hardSet";
 import howItWorksReducer from './slices/how-it-works.slice';
 import featuresReducer from './slices/features.slice';
+import integrationsReducer from './slices/integrations.slice';
 
 import storage from "redux-persist/lib/storage";
 
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
     [baseAPI.reducerPath]: baseAPI.reducer,
     howItWorks: howItWorksReducer,
     features: featuresReducer,
+    integrations: integrationsReducer,
 });
 
 export default rootReducer;
