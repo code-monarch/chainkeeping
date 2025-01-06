@@ -17,9 +17,13 @@ interface INavigation {
 }
 
 const navigation: INavigation[] = [
+    // {
+    //     title: "Solutions",
+    //     content: <SolutionsNavContent />
+    // },
     {
         title: "Solutions",
-        content: <SolutionsNavContent />
+        href: APP_ROUTES.solutions
     },
     // {
     //     title: "Integrations",

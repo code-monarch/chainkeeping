@@ -1,5 +1,6 @@
 export const APP_ROUTES = {
     index: "/",
+    solutions: "/#features",
     about: "/about",
     contact: "/contact-us",
     careers: "/careers",
