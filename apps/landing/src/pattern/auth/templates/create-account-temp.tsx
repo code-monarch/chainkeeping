@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
-import { APP_ROUTES, AUTH_ROUTES } from '@/lib/routes'
-import { BrandLogo, Card, CardContent, CardHeader, CardTitle, Checkbox, Form, FormField, FormItem, FormLabel, FormMessage, SubmitButton } from '@chainkeeping/ui'
+import { useParams, usePathname, useRouter } from 'next/navigation'
+import { APP_ROUTES } from '@/lib/routes'
+import { BrandLogo, Button, Card, CardContent, CardHeader, CardTitle, Checkbox, Form, FormField, FormItem, FormLabel, FormMessage, SubmitButton } from '@chainkeeping/ui'
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from 'react-hook-form';
@@ -10,6 +10,7 @@ import EmailInput from '@/pattern/common/molecules/email-input'
 import PasswordInput from '@/pattern/common/molecules/password-input'
 import SocialsLoginWidget from '../molecules/socials-login-widget'
 import OrWidget from '../molecules/OR-widget'
+import { handleLoginRouting } from '@/lib/utils/handle-login-routing'
 
 const CreateAccountFormSchema = z.object({
     email: z
@@ -34,6 +35,8 @@ const Socials: Array<"Apple" | "Google"> = [
 const CreateAccountTemp = () => {
     const { push } = useRouter()
     const pathname = usePathname();
+    const params = useParams<{ slug: "" | "personal" | "company" | "practitioners" }>
+()
 
     const defaultValues = {
         email: "",
@@ -137,7 +140,7 @@ const CreateAccountTemp = () => {
                         </form>
                         <div className='w-full flex items-center justify-center gap-x-2 font-dmsans text-base'>
                             <p className='text-gray-700'>Already have an account?</p>
-                            <Link href={AUTH_ROUTES.login} className='h-fit font-normal text-secondary p-0'>Log in</Link>
+                            <Button variant="link" onClick={() => handleLoginRouting(params.slug)}>Log in</Button>
                         </div>
                     </Form>
                 </CardContent>

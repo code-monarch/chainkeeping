@@ -4,6 +4,7 @@ import AccountTypeToggleGroup from '../organisms/account-type-toggle-group'
 import Link from 'next/link'
 import { APP_ROUTES, COMPANY_DASHBOARD_URL, PERSONAL_DASHBOARD_URL, PRACTITIONERS_DASHBOARD_URL } from '@/lib/routes'
 import { useRouter } from 'next/navigation'
+import { handleLoginRouting } from '@/lib/utils/handle-login-routing'
 
 interface IProps {
     pathname: string
@@ -13,22 +14,6 @@ const AccountTypeSelectorTemp: FC<IProps> = ({ pathname }) => {
     const [accountType, setAccountType] = useState<"personal" | "company" | "practitioners" | "">("")
 
     const { push } = useRouter()
-
-    const handleLoginRouting = (accountType: string) => {
-        switch (accountType) {
-            case 'personal':
-                window.open(PERSONAL_DASHBOARD_URL, '_blank');
-                break
-            case 'company':
-                window.open(COMPANY_DASHBOARD_URL, '_blank');
-                break
-            case 'practitioners':
-                window.open(PRACTITIONERS_DASHBOARD_URL, '_blank');
-                break
-            default:
-                window.open(PERSONAL_DASHBOARD_URL, '_blank');
-        }
-    }
 
     const handleContinue = () => {
         if (pathname === APP_ROUTES.signup) {
