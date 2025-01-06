@@ -5,6 +5,8 @@ import CryptoPlatformsTab from '../organisms/crypto-platforms-tab'
 import ComingSoonBadge from '@/pattern/home/atoms/coming-soon-badge'
 import AccountingSoftwaresTab from '../organisms/accounting-softwares-tab'
 import EcommerceTab from '../organisms/e-commerce-tab'
+import { useRouter } from 'next/navigation'
+import { APP_ROUTES } from '@/lib/routes'
 
 const styles = {
   tabs: `w-full flex flex-col items-center justify-start space-y-[32px]`,
@@ -14,6 +16,8 @@ const styles = {
 }
 
 const IntegrationsTemp = () => {
+  const { push } = useRouter()
+
   return (
     <div className='w-full md:container h-[647px] flex flex-col items-center gap-y-[46px]'>
       <div className='max-w-[935px] flex flex-col items-center gap-y-6'>
@@ -23,7 +27,7 @@ const IntegrationsTemp = () => {
         </div>
         <p className='text-foreground text-base text-center leading-[22.4px] font-dmsans'>Your transactions can be imported from all crypto platforms - Wallets, Exchanges, DeFi Platforms, NFT Marketplaces, etc. via APIs, wallet addresses, CSV Uploads and/or manual transaction entries. Real-time sync to accounts on major exchanges like Coinbase, Binance. Integrate your favorite accounting softwares as well.</p>
 
-        <Button variant="link" className='font-dmsans p-0'>
+        <Button variant="link" onClick={() => push(APP_ROUTES.integrations)} className='font-dmsans p-0'>
           See all integrations <span className='inline-flex ml-3'><LearnMoreIcon /></span>
         </Button>
       </div>

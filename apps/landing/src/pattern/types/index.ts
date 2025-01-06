@@ -1,4 +1,6 @@
-import { ReactNode } from "react";
+import { IIconProps } from "@chainkeeping/ui";
+import { ReactElement, ReactNode } from "react";
+import { FieldError } from "react-hook-form";
 export interface INavListItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     href: string
     icon: React.ReactElement
@@ -7,12 +9,14 @@ export interface INavListItemProps extends React.AnchorHTMLAttributes<HTMLAnchor
     exact?: boolean // Determines whether the link is exactly on the same app route e.g: "buyer" and not "buyer/checkout"
     className?: string
 }
-
-
-export interface IIconProps extends React.SVGAttributes<SVGElement> {
-    children?: never;
-    color?: string;
-    height?: string;
-    width?: string;
-    className?: string;
+export interface ICustomInputProps
+    extends React.InputHTMLAttributes<HTMLInputElement> {
+    name: string;
+    error?: FieldError;
+    prefixIcon?: ReactElement;
+    suffixIcon?: ReactElement;
+}
+export interface IInputIconProps extends IIconProps {
+    focus?: boolean; // input focus state
+    toggle?: boolean; // toggle password input visible state
 }

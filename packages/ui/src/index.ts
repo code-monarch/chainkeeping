@@ -100,3 +100,5 @@ export * from './lib/utils';
 // Icons
 export * from "./components/icons/brand-logo"
 export * from "./components/icons/brand-logo-white"
+// Icon types
+export * from "./components/icons/types"

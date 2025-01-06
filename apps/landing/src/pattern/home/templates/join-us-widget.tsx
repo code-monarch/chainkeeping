@@ -2,10 +2,13 @@ import React from 'react'
 import { Button, Typography } from '@chainkeeping/ui'
 import HeaderLabel from '@/pattern/common/atoms/header-label'
 import CheckIcon from '../atoms/check-icon'
+import { APP_ROUTES } from '@/lib/routes'
+import { useRouter } from 'next/navigation'
 
 export const list = ["Crypto Tax computation, filing, compliance", "Crypto & Fiat Invoicing, Payroll and Payments", "Crypto Portfolio management"]
 
 const JoinUsWidget = () => {
+    const { push } = useRouter()
     return (
         <div className='w-full h-[472px] flex items-center justify-center px-8'>
             <div className='bg-[hsla(0,67%,98%,1)] w-full md:container h-full flex items-center justify-center rounded-[32px]'>
@@ -23,7 +26,7 @@ const JoinUsWidget = () => {
                         ))}
                     </div>
 
-                    <Button variant="secondary" size="lg" >Get started for free</Button>
+                    <Button variant="secondary" size="lg" onClick={() => push(APP_ROUTES.signup)} >Get started for free</Button>
                 </div>
             </div>
         </div>

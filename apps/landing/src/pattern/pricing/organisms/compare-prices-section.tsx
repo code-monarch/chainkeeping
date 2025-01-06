@@ -4,12 +4,15 @@ import PremiumPlanPerks from '../molecules/premium-plan-perks'
 import CustomizedPlanPerks from '../molecules/customized-plan-pecks'
 import AllInclusivePerks from '../molecules/all-inclusive-perks'
 import { Button } from '@chainkeeping/ui'
+import { APP_ROUTES } from '@/lib/routes'
+import { useRouter } from 'next/navigation'
 
 const ComparePricesSection = () => {
+    const { push } = useRouter()
     return (
         <div className='w-full min-h-[464px] h-fit space-y-[16px]'>
             <div className='w-full h-[52px] pb-[24px] flex items-start justify-start border-b'>
-                <h3 className='text-foreground text-2xl font-rubik'>Compare plans</h3>
+                <h3 className='text-foreground text-2xl font-rubik font-bold'>Compare plans</h3>
             </div>
             <div className='w-full h-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8'>
                 <BasicPlanPerks />
@@ -30,7 +33,7 @@ const ComparePricesSection = () => {
                         If you&apos;re having trouble selecting the right plan for your account, our team of experts can assist you.
                     </p>
                 </div>
-                <Button variant="default">
+                <Button variant="default" onClick={() => push(APP_ROUTES.contact)}>
                     Contact us
                 </Button>
             </div>
