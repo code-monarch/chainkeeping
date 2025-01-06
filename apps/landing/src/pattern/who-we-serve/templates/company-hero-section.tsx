@@ -1,6 +1,8 @@
 import React from 'react'
 import { Button } from '@chainkeeping/ui'
 import ListItemIcon from '../atoms/list-item-icon'
+import { APP_ROUTES } from '@/lib/routes'
+import { useRouter } from 'next/navigation'
 
 const featuresAtGlance = [
     "All crypto platforms supported",
@@ -9,6 +11,7 @@ const featuresAtGlance = [
 ]
 
 const CompanyHeroSection = () => {
+    const { push } = useRouter()
     return (
         <section className="bg-primary bg-pattern-bg-img bg-cover bg-center w-full h-[345px]">
             <div className='w-full h-full md:container flex flex-col items-start justify-center gap-y-3'>
@@ -29,7 +32,7 @@ const CompanyHeroSection = () => {
                         </ul>
                     </div>
                 </div>
-                <Button size='lg' variant="secondary" >Get started</Button>
+                <Button size='lg' variant="secondary" onClick={() => push(APP_ROUTES.signup)} >Get started</Button>
             </div>
         </section>
     )

@@ -74,6 +74,7 @@ a {
   border-radius: 4px !important;
 }
 
+/* PhoneNumber Input */
 .selected-flag {
   background-color: hsla(204, 33%, 97%, 1) !important;
   border-top-left-radius: 6px !important;
@@ -82,3 +83,13 @@ a {
 .selected-flag:hover {
   background-color: hsla(204, 33%, 97%, 1) !important;
 }
+
+  select option {
+    color: hsla(216, 30%, 18%, 1);
+    background-color: transparent;
+    padding: 8px;
+  }
+
+  select option:hover {
+    background-color: hsla(204, 33%, 97%, 1);
+  }

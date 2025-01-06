@@ -7,7 +7,7 @@ import { useParams } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
 
 const CompanySignUpPage = () => {
-    const params = useParams<{ company: string }>()
+    const params = useParams()
     console.log(params)
 
     const searchParams = useSearchParams()

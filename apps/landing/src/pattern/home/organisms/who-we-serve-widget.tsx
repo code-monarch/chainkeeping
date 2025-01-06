@@ -1,6 +1,7 @@
 import React, { FC, ReactElement } from 'react'
 import { Button, Card, CardContent, CardFooter, CardHeader, CardTitle } from '@chainkeeping/ui'
 import LearnMoreIcon from '../atoms/learn-more-icon';
+import { useRouter } from 'next/navigation';
 
 export interface IWhoWeServeWidgetProps {
     title: string;
@@ -11,6 +12,7 @@ export interface IWhoWeServeWidgetProps {
 }
 
 const WhoWeServeWidget: FC<IWhoWeServeWidgetProps> = ({ description, href, icon, label, title }) => {
+    const { push } = useRouter()
     return (
         <>
             <Card
@@ -33,7 +35,7 @@ const WhoWeServeWidget: FC<IWhoWeServeWidgetProps> = ({ description, href, icon,
                     {description}
                 </CardContent>
                 <CardFooter className="flex justify-between text-base text-label font-semibold font-dmsans !mt-0">
-                    <Button variant="link" className='font-dmsans p-0'>Learn more <span className='inline-flex ml-3'><LearnMoreIcon /></span></Button>
+                    <Button variant="link" onClick={() => push(href)} className='font-dmsans'>Learn more <span className='inline-flex ml-3'><LearnMoreIcon /></span></Button>
                 </CardFooter>
             </Card>
         </>

@@ -1,5 +1,7 @@
 import { FC, ReactNode } from 'react'
 import { Button, Card, CardContent, CardHeader, Hidden } from '@chainkeeping/ui';
+import { APP_ROUTES } from '@/lib/routes';
+import { useRouter } from 'next/navigation';
 
 interface IPlanCardProps {
     title: string;
@@ -10,6 +12,8 @@ interface IPlanCardProps {
 }
 
 const PlanCard: FC<IPlanCardProps> = ({ amount, pack, pecks, title, customized = false }) => {
+    const { push } = useRouter()
+    
     return (
         <Card className='w-full max-w-[368px] md:min-w-[368px] md:max-w-full h-[395px] flex flex-col items-center gap-y-2 p-6 rounded-[8px] card-shadow'>
             <CardHeader className="w-full flex flex-col gap-y-[20px] text-center">
@@ -32,7 +36,7 @@ const PlanCard: FC<IPlanCardProps> = ({ amount, pack, pecks, title, customized =
                     </div>
                     <p className="text-sm text-[hsla(215,20%,65%,1)] font-dmsans">Per Assessment Year</p>
                 </div>
-                <Button variant={customized ? "default" : "secondary"} size="lg" className='w-full text-base font-medium'>
+                <Button variant={customized ? "default" : "secondary"} size="lg" onClick={() => push(APP_ROUTES.signup)} className='w-full text-base font-medium'>
                     Get started
                 </Button>
                 {pecks}

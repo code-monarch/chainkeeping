@@ -29,7 +29,7 @@ const PhoneNumberInput: FC<ICustomInputProps> = ({ name, disabled }) => {
                     inputClass="min-w-full w-full min-h-[48px] h-full bg-transparent appearance-none font-[500] !font-dmsans !text-base !text-foreground py-[16px] ml-[8px] placeholder:text-sm !border-none !outline-none"
                     buttonClass="!bg-accent !w-[45px] !appearance-none !font-dmsans !text-[1.125rem] px-[8px] !border-none hover:!bg-accent focus:!bg-accent !outline-y-none !outline-l-none !rounded-l-[6px] hover:!rounded-l-[6px] !shadow-none"
                     searchClass="placeholder:!font-dmsans"
-                    dropdownClass="custom_scollbar !bg-white !max-w-[250px] !font-dmsans !text-sm !rounded-[6px] !shadow-md card-shadow"
+                    dropdownClass="custom_scollbar appearance-none !bg-white !max-w-[250px] !font-dmsans !text-sm !rounded-[6px] !shadow-md card-shadow"
                 />
             )}
         />

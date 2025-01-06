@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import LocationSelector from '@/pattern/common/organisms/location-selector';
 import PhoneNumberInput from '@/pattern/common/molecules/phone-number-input';
+import { useRouter } from 'next/navigation';
 
 const SignupInfoFormSchema = z.object({
     firstName: z
@@ -33,6 +34,8 @@ const SignUpInformationTemp = () => {
     const [countryName, setCountryName] = useState<string>('')
     const [stateName, setStateName] = useState<string>('')
 
+    const { push } = useRouter()
+
     const defaultValues = {
         firstName: "",
         lastName: "",
@@ -53,10 +56,11 @@ const SignUpInformationTemp = () => {
         formState: { errors, isDirty },
     } = form
 
-    console.log("FORM ERROR: ", errors)
+    console.log("ERRORS: ", errors)
 
     const onSubmit = (data: z.infer<typeof SignupInfoFormSchema>) => {
         console.log("Submitted: ", data)
+        push(APP_ROUTES.verifySignupEmail)
     }
     return (
         <div className='w-fit flex flex-col items-center gap-y-8 pb-[144px]'>
@@ -162,7 +166,7 @@ const SignUpInformationTemp = () => {
                                 size="lg"
                                 type="submit"
                                 disabled={!isDirty}
-                                className="w-full mt-[18px]"
+                                className="w-full text-base font-medium mt-[18px]"
                             >
                               Complete Sign up
                             </SubmitButton>

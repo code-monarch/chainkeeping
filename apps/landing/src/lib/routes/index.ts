@@ -7,8 +7,11 @@ export const APP_ROUTES = {
     pricing: "/pricing",
     signup: "/sign-up",
     signupAdditionalInfo: "/sign-up?additional-info=true",
+    verifySignupEmail: "/sign-up/verify-email",
+    signupEmailVerified: "/sign-up/email-verified",
     terms: "/terms-of-service",
     privacyPolicy: "/privacy-policy",
+    integrations: "/integrations",
 };
 
 export const AUTH_ROUTES = {

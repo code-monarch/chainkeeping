@@ -3,8 +3,12 @@ import HeaderLabel from '@/pattern/common/atoms/header-label'
 import { Button, Typography } from '@chainkeeping/ui'
 import HowItWorksWidget from '../organisms/how-it-works-widget'
 import HowItWorksImage from '../organisms/how-it-works-image'
+import { useRouter } from 'next/navigation'
+import { APP_ROUTES } from '@/lib/routes'
 
 const HowItWorksTemp = () => {
+  const { push } = useRouter()
+
   return (
     <div className='w-full md:container h-[572px] flex items-end justify-between gap-[87px]'>
       {/* Left */}
@@ -18,7 +22,7 @@ const HowItWorksTemp = () => {
         </div>
         <HowItWorksWidget />
 
-        <Button size="md">Get started access</Button>
+        <Button size="md" onClick={() => push(APP_ROUTES.signup)}>Get started</Button>
       </div>
 
       {/* Right */}

@@ -6,7 +6,7 @@ import IndividualCardIcon from '../atoms/individual-card-icon'
 import CompanyCardIcon from '../atoms/company-card-icon'
 import AccountingPractitionersCardIcon from '../atoms/accounting-practitioners-card-icon'
 import TaxAuthorityCardIcon from '../atoms/tax-authority-card-icon'
-import { SOLUTIONS_ROUTES, WHO_WE_SERVE_ROUTES } from '@/lib/routes'
+import { WHO_WE_SERVE_ROUTES } from '@/lib/routes'
 
 const customers: IWhoWeServeWidgetProps[] = [
     {
@@ -14,7 +14,7 @@ const customers: IWhoWeServeWidgetProps[] = [
         label: 'Individuals',
         title: "Connecting all cryptocurrency accounts via a single system of record for tax reporting.",
         description: 'Monitor the overall value of your cryptocurrency holdings in real time with our user-friendly dashboard and get our Cryptocurrencies properly accounted for, taxed appropriately and filed, all in a single solution',
-        href: SOLUTIONS_ROUTES.computation,
+        href: WHO_WE_SERVE_ROUTES.individuals,
     },
     {
         icon: <CompanyCardIcon />,

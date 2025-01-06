@@ -21,25 +21,29 @@ const navigation: INavigation[] = [
         title: "Solutions",
         content: <SolutionsNavContent />
     },
-    {
-        title: "Integrations",
-        content: <IntegrationsNavContent />
-    },
+    // {
+    //     title: "Integrations",
+    //     content: <IntegrationsNavContent />
+    // },
     {
         title: "Resources",
         content: <ResourcesNavContent />
     },
     {
+        title: "Integrations",
+        href: APP_ROUTES.integrations,
+    },
+    {
         title: "Pricing",
-        href: '/pricing',
+        href: APP_ROUTES.pricing,
     },
     {
         title: "About",
-        href: '/about',
+        href: APP_ROUTES.about,
     },
     {
         title: "Contact us",
-        href: '/contact-us',
+        href: APP_ROUTES.contact,
     }
 ]
 

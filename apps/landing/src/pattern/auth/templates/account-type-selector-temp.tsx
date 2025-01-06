@@ -46,7 +46,7 @@ const AccountTypeSelectorTemp: FC<IProps> = ({ pathname }) => {
 
             <Card className="bg-white w-[438px] h-[542px] flex flex-col gap-y-6 p-6 rounded-[8px] card-shadow border-none shadow-none">
                 <CardHeader className="h-[86px] border-b space-y-1 pb-4">
-                    <CardTitle className="text-lg font-medium font-sen">Account Type</CardTitle>
+                    <CardTitle className="text-base font-bold font-sen">Account Type</CardTitle>
                     <CardDescription className="text-sm text-[hsla(215,16%,47%,1)]">Select an account type that best describes you and how you intend to use Chainkeeping.</CardDescription>
                 </CardHeader>
                 <CardContent className="w-full h-full flex flex-col gap-y-6 !mt-0">
@@ -56,7 +56,7 @@ const AccountTypeSelectorTemp: FC<IProps> = ({ pathname }) => {
                         size="lg"
                         disabled={!accountType}
                         onClick={handleContinue}
-                        className="w-full"
+                        className="w-full text-base font-medium"
                     >
                         Continue
                     </Button>

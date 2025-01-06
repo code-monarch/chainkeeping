@@ -130,7 +130,7 @@ const CreateAccountTemp = () => {
                                 size="lg"
                                 type="submit"
                                 disabled={!isDirty}
-                                className="w-full mt-[8px]"
+                                className="w-full text-base font-medium mt-[8px]"
                             >
                                 Continue
                             </SubmitButton>

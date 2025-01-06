@@ -27,7 +27,7 @@ export default function ContactForm() {
                                     How did you hear about us?
                                 </label>
                                 <Select>
-                                    <SelectTrigger>
+                                    <SelectTrigger className="h-[48px]">
                                         <SelectValue placeholder="Select" />
                                     </SelectTrigger>
                                     <SelectContent>
