@@ -7,7 +7,7 @@ import JoinUsWidget from '@/pattern/home/templates/join-us-widget';
 
 const IntegrationsPage = () => {
   return (
-    <div className='w-full space-y-[64px] mb-[144px]'>
+    <div className='w-full space-y-[64px] mb-[144px] transition-all duration-200 ease-in-out'>
       <IntegrationsHeroSection />
       <CryptoPlatformsTemp />
       <JoinUsWidget />
