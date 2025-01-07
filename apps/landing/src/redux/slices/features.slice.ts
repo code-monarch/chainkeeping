@@ -1,11 +1,10 @@
-// store/howItWorksSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface HowItWorksState {
+interface FeaturesState {
     feature: string;
 }
 
-const initialState: HowItWorksState = {
+const initialState: FeaturesState = {
     feature: "tax-computation", // default value
 };
 

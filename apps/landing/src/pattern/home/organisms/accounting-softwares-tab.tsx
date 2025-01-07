@@ -1,5 +1,5 @@
 import React from 'react'
-import { cryptoPlatforms } from '@/lib/data/crypto-platforms'
+import { cryptoPlatforms } from '@/lib/data/platforms'
 
 const AccountingSoftwaresTab = () => {
   return (

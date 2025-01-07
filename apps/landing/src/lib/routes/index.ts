@@ -1,11 +1,23 @@
 export const APP_ROUTES = {
     index: "/",
+    solutions: "/#features",
     about: "/about",
     contact: "/contact-us",
     careers: "/careers",
     partnership: "/about/#partnership",
     pricing: "/pricing",
+    signup: "/sign-up",
+    signupAdditionalInfo: "/sign-up?additional-info=true",
+    verifySignupEmail: "/sign-up/verify-email",
+    signupEmailVerified: "/sign-up/email-verified",
+    terms: "/terms-of-service",
+    privacyPolicy: "/privacy-policy",
+    integrations: "/integrations",
 };
+
+export const AUTH_ROUTES = {
+    login: "/auth/login",
+}
 
 export const SOLUTIONS_ROUTES = {
     index: "/solutions",
@@ -46,3 +58,7 @@ export const SOCIALS = {
     phone: "+2348063946733",
     email: "info@withconvexity.com ",
 };
+
+export const PERSONAL_DASHBOARD_URL = "https://www.personal.chainkeeping.com"
+export const COMPANY_DASHBOARD_URL = "https://www.company.chainkeeping.com"
+export const PRACTITIONERS_DASHBOARD_URL = "https://www.practitioners.chainkeeping.com"

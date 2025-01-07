@@ -44,7 +44,7 @@ const IndividualPricingTab = () => {
                 } />
 
                 {/* Customised */}
-                <PlanCard amount='***' pack='Advanced, recommended' title='Customized' customized={true} pecks={
+                <PlanCard amount='***' pack='Unlimited plan' title='Customized' customized={true} pecks={
                     <ul className="space-y-4">
                         <li className="flex items-start gap-2 text-sm text-[hsla(215,16%,47%,1)]">
                             <Check className="h-5 w-5 text-secondary mt-0.5" />
