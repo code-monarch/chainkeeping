@@ -32,8 +32,8 @@ Our project follows a structured branching and version control strategy to strea
 
 ### Branching Strategy
 
-- **Development Branch:** `restructure`
-  - Main development branch for ongoing restructuring and core development tasks.
+- **Development Branch:** `dev`
+  - Main development branch.
 - **Staging Branch:** `staging`
   - Used for merging completed tasks and features from feature branches. The branch where code is thoroughly reviewed before moving to production.
 - **Feature Branches:**

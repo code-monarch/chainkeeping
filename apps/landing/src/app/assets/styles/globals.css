@@ -37,10 +37,10 @@ a {
 }
 
 /* Shadow styles for Pricing Cards */
-.card-shadow {
+/* .card-shadow {
   box-shadow: 0px 4px 8px 0px hsla(194, 90%, 12%, 0.05);
   box-shadow: 1px -4px 8px 0px hsla(194, 90%, 12%, 0.05);
-}
+} */
 /* Custom Scrollbar style */
 .custom_scollbar::-webkit-scrollbar {
   width: 8px !important;
