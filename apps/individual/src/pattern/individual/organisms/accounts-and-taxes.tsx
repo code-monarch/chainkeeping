@@ -96,7 +96,7 @@ const AccountsAndTaxes = () => {
 								Taxes Due{" "}
 								<span className='font-bold '>({asset.taxes_due})</span>
 							</p>
-							<Button variant='outline' size='sm'>
+							<Button variant='primaryOutline' size='sm'>
 								Process
 							</Button>
 						</div>

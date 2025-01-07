@@ -1,5 +1,6 @@
 import React from "react";
 import TaxReportSettingIcon from "../atoms/report-setting-icon";
+import { Button } from "@chainkeeping/ui";
 
 const ReportSettings: React.FC = () => {
 	const taxData = [
@@ -12,34 +13,29 @@ const ReportSettings: React.FC = () => {
 			<div>
 				<div className='flex items-center gap-2 border-b pb-2'>
 					<TaxReportSettingIcon />
-					<h2 className='font-medium'>Report Setting</h2>
+					<h2 className='font-semibold'>Report Setting</h2>
 				</div>
 				<ul className='space-y-3'>
 					{taxData.map((item, index) => {
-						// Split the value into integer and decimal parts
-						const [integerPart, decimalPart] = item.value.split(".");
 						return (
-							<li
-								key={index}
-								className='flex justify-between border-b pb-3 pt-1 mt-6'
-							>
-								<span className='text-sm text-[#4F627D]'>{item.label}</span>
-								<span className='font-bold text-sm'>
-									<span className='text-[#94A3B8] pr-1 font-normal'>NGN</span>
-									<span>{integerPart}.</span>
-									<span className='text-[#94A3B8] text-[10px] font-normal'>
-										{decimalPart}
+							<li key={index} className='flex justify-between pb-3 pt-1 mt-6'>
+								<p className='text-sm font-bold gap-1 flex'>
+									<span className='text-[#64748B] font-normal'>
+										Calculation Method
 									</span>
-								</span>
+									({item.label})
+								</p>
+								<Button
+									variant='primaryOutline'
+									size='sm'
+									className='font-normal'
+								>
+									{item.value}
+								</Button>
 							</li>
 						);
 					})}
 				</ul>
-				<p className='text-xs mt-6'>
-					<span className='text-[#D82E2E]'>**</span> This is a high-level
-					summary of your tax report. Download your tax report to see more
-					detailed information.
-				</p>
 			</div>
 		</div>
 	);

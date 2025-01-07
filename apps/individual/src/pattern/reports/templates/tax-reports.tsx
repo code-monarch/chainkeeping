@@ -2,59 +2,75 @@ import React, { useState } from "react";
 import TaxReportPage from "../organisms/tax-report-page";
 import TaxReportForm from "../organisms/tax-report-form";
 import ReportTaxCard from "../organisms/report-tax-card";
+import FinanceReportSummary from "../organisms/finance-report-summary";
+import FinanceReportForm from "../organisms/finance-report-form";
+import { DateSelect } from "../organisms/date-selector";
 
 const TaxReports = () => {
 	const [activeTab, setActiveTab] = useState("Tax Reports");
+	const [selectedDate, setSelectedDate] = useState("2022");
 
 	const renderContent = () => {
 		switch (activeTab) {
 			case "Tax Reports":
 				return (
-					<div className='grid grid-cols-3 gap-4 w-full items-start'>
+					<div className='grid lg:grid-cols-3 max-sm:grid-cols-1 gap-4 w-full items-start'>
 						<TaxReportPage />
 						<TaxReportForm />
 						<ReportTaxCard />
 					</div>
 				);
 			case "Financial Reports":
-				return <div>Content for Financial Reports</div>;
+				return (
+					<div className='grid lg:grid-cols-3 max-sm:grid-cols-1 gap-4 w-full items-start'>
+						<FinanceReportSummary />
+						<FinanceReportForm />
+						<ReportTaxCard />
+					</div>
+				);
 			default:
 				return null;
 		}
 	};
 
 	return (
-		<div className='h-full flex flex-col'>
+		<div className='h-full w-full flex flex-col'>
 			{/* Fixed Tabs */}
-			<div className='fixed  left-0 w-full bg-white shadow-md z-10 pt-3'>
-				<div className='flex md:container mx-auto max-w-screen-lg px-4 '>
-					<button
-						className={`px-4 py-4 font-medium ${
-							activeTab === "Tax Reports"
-								? "border-b-2 border-[#D82E2E] text-[#202B3C] font-medium"
-								: "text-[#94A3B8]"
-						}`}
-						onClick={() => setActiveTab("Tax Reports")}
-					>
-						Tax Reports
-					</button>
-					<button
-						className={`px-4 py-2 font-medium ${
-							activeTab === "Financial Reports"
-								? "border-b-2 border-[#D82E2E] text-[#202B3C] font-medium"
-								: "text-[#94A3B8]"
-						}`}
-						onClick={() => setActiveTab("Financial Reports")}
-					>
-						Financial Reports
-					</button>
+			<div className='fixed left-0 w-full bg-white shadow-md z-10 pt-3'>
+				<div className='flex justify-between md:px-16 mx-auto px-4'>
+					<div className='flex'>
+						<button
+							className={`px-4 py-4 font-medium ${
+								activeTab === "Tax Reports"
+									? "border-b-2 border-[#D82E2E] text-[#202B3C] font-medium"
+									: "text-[#94A3B8]"
+							}`}
+							onClick={() => setActiveTab("Tax Reports")}
+						>
+							Tax Reports
+						</button>
+						<button
+							className={`px-4 py-2 font-medium ${
+								activeTab === "Financial Reports"
+									? "border-b-2 border-[#D82E2E] text-[#202B3C] font-medium"
+									: "text-[#94A3B8]"
+							}`}
+							onClick={() => setActiveTab("Financial Reports")}
+						>
+							Financial Reports
+						</button>
+					</div>
+					<div className='flex gap-2 items-center'>
+						<h1 className='font-bold text-2xl'>
+							{selectedDate} Assessment Year
+						</h1>
+						<DateSelect value={selectedDate} setValue={setSelectedDate} />
+					</div>
 				</div>
 			</div>
 
 			{/* Tab Content */}
-			<div className='pt-24 md:container w-full mx-auto max-w-screen-lg '>
-				{renderContent()}
-			</div>
+			<div className='pt-24 md:px-16 w-full'>{renderContent()}</div>
 		</div>
 	);
 };

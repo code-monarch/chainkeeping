@@ -15,7 +15,7 @@ const TaxReportPage: React.FC = () => {
 			<div>
 				<div className='flex items-center gap-2 border-b pb-2'>
 					<TaxReportIcon />
-					<h2 className='font-medium'>Tax report summary</h2>
+					<h2 className='font-semibold'>Tax report summary</h2>
 				</div>
 				<ul className='space-y-3'>
 					{taxData.map((item, index) => {

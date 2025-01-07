@@ -29,7 +29,7 @@ function PortfolioCard() {
 					<p>
 						Assets <span className='text-[#202B3C] pr-2'>(18)</span>
 					</p>
-					<Button variant='outline' size='sm'>
+					<Button variant='primaryOutline' size='sm'>
 						View All
 					</Button>
 				</div>

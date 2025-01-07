@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/pattern/common/templates/footer";
 import { Topbar } from "@/pattern/common/templates/topbar";
 import { cn } from "@chainkeeping/ui";
 

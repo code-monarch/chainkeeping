@@ -31,7 +31,7 @@ const TransactionsTable: React.FC<TransactionsTableProps> = ({
 		<div className='bg-white rounded-lg w-full flex flex-col p-4 text-[#202B3C]'>
 			<div className='flex justify-between items-center mb-4 border-b pb-2'>
 				<h3 className='font-medium text-base'>Recent transactions</h3>
-				<Button variant='outline' size='sm'>
+				<Button variant='primaryOutline' size='sm'>
 					View All
 				</Button>
 			</div>

@@ -4,18 +4,16 @@ import PdfIcon from "../atoms/pdf-icon";
 import { Button } from "@chainkeeping/ui";
 import InfoButtonIcon from "../atoms/info-button-icon";
 
-const TaxReportForm: React.FC = () => {
-	// State to manage the disabled state of the Download button
+const FinanceReportForm: React.FC = () => {
 	const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-	const [isFadingOut, setIsFadingOut] = useState(false); // State to track fade-out animation
+	const [isFadingOut, setIsFadingOut] = useState(false);
 
-	// Function to handle enabling the button
 	const handleSignReportClick = () => {
-		setIsFadingOut(true); // Trigger fade-out animation
+		setIsFadingOut(true);
 		setTimeout(() => {
-			setIsButtonDisabled(false); // Disable the div after animation
-			setIsFadingOut(false); // Reset fade-out state
-		}, 300); // Match this timeout to the CSS transition duration
+			setIsButtonDisabled(false);
+			setIsFadingOut(false);
+		}, 300);
 	};
 
 	return (
@@ -23,12 +21,12 @@ const TaxReportForm: React.FC = () => {
 			<div>
 				<div className='flex items-center gap-2 border-b pb-2'>
 					<TaxReportFormIcon />
-					<h2 className='font-semibold'>Tax report Form</h2>
+					<h2 className='font-semibold'>Fiancial report Form</h2>
 				</div>
 				<ul className='space-y-3'>
 					<li className='flex justify-between border-b pb-3 pt-1 mt-6'>
 						<span className='text-sm flex font-bold gap-1 items-center'>
-							<PdfIcon /> 2022 Tax report
+							<PdfIcon /> 2022 Financial report
 						</span>
 						<Button
 							variant='secondary'
@@ -68,4 +66,4 @@ const TaxReportForm: React.FC = () => {
 	);
 };
 
-export default TaxReportForm;
+export default FinanceReportForm;
