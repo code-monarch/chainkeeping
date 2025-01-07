@@ -3,7 +3,7 @@ import React from 'react'
 const ElectrumIcon = () => {
   return (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_6557_7845)">
+          <g clipPath="url(#clip0_6557_7845)">
               <mask id="mask0_6557_7845" maskUnits="userSpaceOnUse" x="3" y="3" width="26" height="26">
                   <path d="M28.7992 3.20001H3.19922V28.8H28.7992V3.20001Z" fill="white" />
               </mask>
