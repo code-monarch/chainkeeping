@@ -29,7 +29,7 @@ const FinanceReportSummary: React.FC = () => {
 					<ul className='space-y-3'>
 						{taxData.map((item, index) => {
 							// Split the value into integer and decimal parts
-							const [integerPart, decimalPart] = item.value.split(".");
+
 							return (
 								<li
 									key={index}
@@ -38,10 +38,7 @@ const FinanceReportSummary: React.FC = () => {
 									<span className='text-sm text-[#4F627D]'>{item.label}</span>
 									<span className='font-bold text-sm'>
 										<span className='text-[#94A3B8] pr-1 font-normal'>NGN</span>
-										<span>{integerPart}.</span>
-										<span className='text-[#94A3B8] text-[10px] font-normal'>
-											{decimalPart}
-										</span>
+										<span>{item.value}.</span>
 									</span>
 								</li>
 							);
