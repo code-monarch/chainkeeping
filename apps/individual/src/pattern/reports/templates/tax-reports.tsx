@@ -40,7 +40,7 @@ const TaxReports = () => {
 				<div className='flex justify-between md:px-16 mx-auto px-4'>
 					<div className='flex'>
 						<button
-							className={`px-4 py-4 font-medium ${
+							className={`px-4 py-5 font-medium ${
 								activeTab === "Tax Reports"
 									? "border-b-2 border-[#D82E2E] text-[#202B3C] font-medium"
 									: "text-[#94A3B8]"
@@ -50,7 +50,7 @@ const TaxReports = () => {
 							Tax Reports
 						</button>
 						<button
-							className={`px-4 py-2 font-medium ${
+							className={`px-4 py-5 font-medium ${
 								activeTab === "Financial Reports"
 									? "border-b-2 border-[#D82E2E] text-[#202B3C] font-medium"
 									: "text-[#94A3B8]"
@@ -60,10 +60,15 @@ const TaxReports = () => {
 							Financial Reports
 						</button>
 					</div>
-					<div className='flex gap-2 items-center'>
-						<h1 className='font-bold text-2xl'>
-							{selectedDate} Assessment Year
-						</h1>
+					<div className='flex gap-2 '>
+						<div>
+							<h1 className='font-bold text-2xl'>
+								{selectedDate} Assessment Year
+							</h1>
+							<p className='text-[#94A3B8] text-sm'>
+								Jan 1, {selectedDate} - Dec 31, {selectedDate}
+							</p>
+						</div>
 						<DateSelect value={selectedDate} setValue={setSelectedDate} />
 					</div>
 				</div>

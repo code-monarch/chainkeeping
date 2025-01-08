@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-import AssetsSection from "@/pattern/individual/templates/assets-section";
 import TaxReports from "@/pattern/reports/templates/tax-reports";
 
 const Reports = () => {

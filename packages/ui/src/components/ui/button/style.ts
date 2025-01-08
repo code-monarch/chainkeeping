@@ -11,6 +11,8 @@ export const ButtonStyle = {
 			"border border-secondary bg-white text-secondary placeholder:text-muted shadow-sm hover:border-secondary hover:ring-2 hover:ring-[hsla(0,69%,51%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(0,69%,51%,1)] focus-visible:border-[hsla(0,69%,51%,1)] focus-visible:ring-2 focus-visible:ring-[hsla(0,69%,51%,0.25)] shadow-[hsla(0,0%,0%,0.1) shadow-[hsla(0,69%,51%,0.1)]",
 		primaryOutline:
 			"border bg-white text-foreground placeholder:text-muted shadow-sm hover:border-secondary hover:ring-2 hover:ring-[hsla(0,69%,51%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(0,69%,51%,1)] focus-visible:border-[hsla(0,69%,51%,1)] focus-visible:ring-2 focus-visible:ring-[hsla(0,69%,51%,0.25)] shadow-[hsla(0,0%,0%,0.1) shadow-[hsla(0,69%,51%,0.1)]",
+		secondaryOutline:
+			"border border-secondary bg-white text-secondary placeholder:text-muted shadow-sm hover:border-secondary hover:ring-2 hover:ring-[hsla(0,69%,51%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(0,69%,51%,1)] focus-visible:border-[hsla(0,69%,51%,1)] focus-visible:ring-2 focus-visible:ring-[hsla(0,69%,51%,0.25)] shadow-[hsla(0,0%,0%,0.1) shadow-[hsla(0,69%,51%,0.1)]",
 
 		ghost: "hover:bg-accent hover:text-accent-foreground",
 		link: "bg-transparent !w-fit !h-fit text-secondary underline-offset-4 !p-0 hover:underline",
