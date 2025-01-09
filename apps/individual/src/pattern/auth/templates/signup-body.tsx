@@ -3,8 +3,18 @@ import { BrandLogo, Button, Checkbox, Input } from "@chainkeeping/ui";
 import Link from "next/link";
 import GoogleIcon from "../atoms/google-icon";
 import Appleicon from "../atoms/apple-icon";
+import { useRouter } from "next/navigation";
 
 const SignUpBody = () => {
+	const router = useRouter(); // Initialize useRouter
+
+	// Function to handle login click
+	const handleSignUp = () => {
+		// You can add your login logic here (e.g., validation, API call, etc.)
+
+		// Redirect to the dashboard page after successful login
+		router.push("/additional-info");
+	};
 	return (
 		<div className='sm:mt-10 w-full flex flex-col sm:items-center'>
 			<Link href={APP_ROUTES.index} className='max-sm:hidden'>
@@ -60,8 +70,13 @@ const SignUpBody = () => {
 						</p>
 					</div>
 				</div>
-				<Button variant='default' size='md' className='w-full mt-4'>
-					Log in{" "}
+				<Button
+					variant='default'
+					size='md'
+					className='w-full mt-4'
+					onClick={handleSignUp}
+				>
+					Continue{" "}
 				</Button>
 
 				<div className='flex items-center text-[#202B3C] w-full justify-center gap-3 mt-6'>

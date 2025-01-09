@@ -3,6 +3,7 @@ import { APP_ROUTES } from "@/lib/routes";
 import { BrandLogo, Button, Input } from "@chainkeeping/ui";
 import Link from "next/link";
 import InfoIcon from "../atoms/info-icon";
+import { useRouter } from "next/navigation";
 
 const VerifyEmailBody = () => {
 	const [seconds, setSeconds] = useState(119); // Starting countdown from 119 seconds
@@ -20,6 +21,16 @@ const VerifyEmailBody = () => {
 
 		return () => clearInterval(intervalId); // Cleanup the interval on unmount
 	}, [seconds]);
+
+	const router = useRouter(); // Initialize useRouter
+
+	// Function to handle login click
+	const handleSignUp = () => {
+		// You can add your login logic here (e.g., validation, API call, etc.)
+
+		// Redirect to the dashboard page after successful login
+		router.push("/verification-success");
+	};
 
 	return (
 		<div className='sm:mt-10 w-full flex flex-col sm:items-center'>
@@ -49,7 +60,12 @@ const VerifyEmailBody = () => {
 						placeholder='Enter verification code'
 					/>
 				</div>
-				<Button variant='default' size='md' className='w-full mt-5'>
+				<Button
+					variant='default'
+					size='md'
+					className='w-full mt-5'
+					onClick={handleSignUp}
+				>
 					Verify{" "}
 				</Button>
 			</div>

@@ -49,7 +49,7 @@ const ForgotPassword = () => {
 
 				<div className='flex items-center w-full justify-center gap-3 mt-6'>
 					<p>Don’t have an account?</p>{" "}
-					<Link className='text-[#D82E2E]' href='/account-type'>
+					<Link className='text-[#D82E2E]' href='/sign-up'>
 						Sign Up
 					</Link>
 				</div>

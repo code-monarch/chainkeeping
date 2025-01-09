@@ -11,6 +11,7 @@ import {
 	SelectValue,
 } from "@chainkeeping/ui";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const AdditionalInfoBody = () => {
 	const [country, setCountry] = useState<string>(""); // Stores the selected country
@@ -39,6 +40,16 @@ const AdditionalInfoBody = () => {
 
 	const handleCountryChange = (value: string) => {
 		setCountry(value); // Set the selected country
+	};
+
+	const router = useRouter(); // Initialize useRouter
+
+	// Function to handle login click
+	const handleSignUp = () => {
+		// You can add your login logic here (e.g., validation, API call, etc.)
+
+		// Redirect to the dashboard page after successful login
+		router.push("/verify-email");
 	};
 
 	return (
@@ -143,7 +154,12 @@ const AdditionalInfoBody = () => {
 					</Select>
 				</div>
 
-				<Button variant='default' size='md' className='w-full mt-5'>
+				<Button
+					variant='default'
+					size='md'
+					className='w-full mt-5'
+					onClick={handleSignUp}
+				>
 					Complete sign up
 				</Button>
 			</div>
