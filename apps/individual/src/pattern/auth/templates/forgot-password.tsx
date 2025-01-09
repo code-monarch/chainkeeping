@@ -35,11 +35,7 @@ const ForgotPassword = () => {
 					<label htmlFor='email' className='text-sm'>
 						Email Address
 					</label>
-					<Input
-						icon={<FiUser />}
-						type='text'
-						placeholder='Enter your username'
-					/>
+					<Input type='text' placeholder='Enter your username' />
 				</div>
 
 				<Button
