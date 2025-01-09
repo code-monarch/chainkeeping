@@ -283,7 +283,7 @@ const UnifiedTaxes = () => {
 					))}
 				</tbody>
 			</table>
-			<Modal isOpen={isModalOpen} onClose={closeModal}>
+			<Modal isOpen={isModalOpen} onClose={closeModal} title='Tax Filed'>
 				<div className='p-4 flex flex-col gap-7 items-center'>
 					<SuccesIcon />
 
@@ -295,7 +295,7 @@ const UnifiedTaxes = () => {
 						<p className='text-sm text-[#4F627D]'>0123-5678-9012</p>
 						<CopyIcon />
 					</div> */}
-					<Button onClick={closeModal} className='w-full'>
+					<Button onClick={closeModal} className='w-full text-base'>
 						Ok, got it
 					</Button>
 				</div>

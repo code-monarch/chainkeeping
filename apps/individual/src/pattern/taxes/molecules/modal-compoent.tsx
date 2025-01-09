@@ -5,9 +5,10 @@ interface ModalProps {
 	isOpen: boolean;
 	onClose: () => void;
 	children: React.ReactNode;
+	title?: string; // Add a title prop
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }) => {
 	const [show, setShow] = useState(false);
 
 	// Trigger the show animation when the modal is open
@@ -39,7 +40,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
 				onClick={(e) => e.stopPropagation()}
 			>
 				<div className='flex justify-between w-full items-center bg-[#F5F8FA] p-4 overflow-hidden rounded-t-lg'>
-					<p className='font-bold'>Tax processed</p>
+					<p className='font-bold'>{title || "Default Title"}</p>{" "}
+					{/* Dynamic title */}
 					<button
 						className=' text-xl text-gray-500 hover:text-gray-700'
 						onClick={onClose}

@@ -35,7 +35,6 @@ const TaxReports = () => {
 
 	return (
 		<div className='h-full w-full flex flex-col'>
-			{/* Fixed Tabs */}
 			<div className='fixed left-0 w-full bg-white shadow-md z-10 pt-3'>
 				<div className='flex justify-between md:px-16 mx-auto px-4'>
 					<div className='flex'>
