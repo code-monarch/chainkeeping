@@ -1,8 +1,19 @@
 import { APP_ROUTES } from "@/lib/routes";
 import { BrandLogo, Button, Checkbox, Input } from "@chainkeeping/ui";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FiUser } from "react-icons/fi";
 
 const ForgotPassword = () => {
+	const router = useRouter(); // Initialize useRouter
+
+	// Function to handle login click
+	const handleReset = () => {
+		// You can add your login logic here (e.g., validation, API call, etc.)
+
+		// Redirect to the dashboard page after successful login
+		router.push("/reset-password");
+	};
 	return (
 		<div className='sm:mt-10 w-full flex flex-col sm:items-center'>
 			<Link href={APP_ROUTES.index} className='max-sm:hidden'>
@@ -24,11 +35,20 @@ const ForgotPassword = () => {
 					<label htmlFor='email' className='text-sm'>
 						Email Address
 					</label>
-					<Input id='email' type='email' placeholder='yourmail@gmail.com' />
+					<Input
+						icon={<FiUser />}
+						type='text'
+						placeholder='Enter your username'
+					/>
 				</div>
 
-				<Button variant='default' size='md' className='w-full mt-4'>
-					Log in{" "}
+				<Button
+					variant='default'
+					size='md'
+					className='w-full mt-4'
+					onClick={handleReset}
+				>
+					Reset password{" "}
 				</Button>
 
 				<div className='flex items-center w-full justify-center gap-3 mt-6'>

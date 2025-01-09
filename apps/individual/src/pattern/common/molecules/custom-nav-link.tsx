@@ -5,7 +5,7 @@ import {
 	NavigationMenuLink,
 	navigationMenulinkStyleTwo,
 } from "@chainkeeping/ui";
-import { INavListItemProps } from "@/pattern/types";
+import { INavListItemProps } from "../../types";
 
 const CustomNavLink = ({
 	href,

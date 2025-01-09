@@ -1,3 +1,4 @@
+import { useRouter } from "next/navigation"; // Import useRouter
 import { APP_ROUTES } from "@/lib/routes";
 import { BrandLogo, Button, Checkbox, Input } from "@chainkeeping/ui";
 import Link from "next/link";
@@ -5,6 +6,16 @@ import GoogleIcon from "../atoms/google-icon";
 import Appleicon from "../atoms/apple-icon";
 
 const LoginBody = () => {
+	const router = useRouter(); // Initialize useRouter
+
+	// Function to handle login click
+	const handleLogin = () => {
+		// You can add your login logic here (e.g., validation, API call, etc.)
+
+		// Redirect to the dashboard page after successful login
+		router.push("/dashboard");
+	};
+
 	return (
 		<div className='sm:mt-10 w-full flex flex-col sm:items-center'>
 			<Link href={APP_ROUTES.index} className='max-sm:hidden'>
@@ -51,7 +62,12 @@ const LoginBody = () => {
 						Forgot Password?
 					</Link>
 				</div>
-				<Button variant='default' size='md' className='w-full mt-4'>
+				<Button
+					variant='default'
+					size='md'
+					className='w-full mt-4'
+					onClick={handleLogin}
+				>
 					Log in{" "}
 				</Button>
 
@@ -59,7 +75,7 @@ const LoginBody = () => {
 					<p>Don’t have an account?</p>{" "}
 					<Link
 						className='text-[#D82E2E] hover:border-b border-[#D82E2E]'
-						href='/account-type'
+						href='/sign-up'
 					>
 						Sign Up
 					</Link>

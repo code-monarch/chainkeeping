@@ -1,6 +1,5 @@
 import React from "react";
 import PortfolioIcon from "../atoms/portfolio-icon";
-import { ClassValue } from "clsx";
 import { Button } from "@chainkeeping/ui";
 import PortfolioTable from "../molecules/porfolio-table";
 

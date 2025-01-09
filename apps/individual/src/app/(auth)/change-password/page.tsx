@@ -2,7 +2,7 @@
 
 import ChangePassword from "@/pattern/auth/templates/change-password";
 
-export default function Login() {
+export default function PasswordChange() {
 	return (
 		<div>
 			<ChangePassword />

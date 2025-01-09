@@ -1,7 +1,5 @@
 import React from "react";
 import TransactionsTable from "../molecules/recent-transactions";
-import TradeIcon from "../atoms/transactionsIcons/trade-icon";
-import BinanceExchangeIcon from "../atoms/transactionsIcons/binance-exchange-icon";
 import BinanceIcon from "@/pattern/common/atoms/crypto-platforms/binance-icon";
 import UsdtIcon from "../atoms/transactionsIcons/usdt-icon";
 import FanthomIcon from "../atoms/transactionsIcons/fantom-icon";

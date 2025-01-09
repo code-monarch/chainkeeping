@@ -15,7 +15,7 @@ export default function MainLayout({
 				"relative bg-[#F8F9FA] w-screen min-h-svh h-fit flex flex-col  gap-[12px] font-dmsans transition-all duration-200 ease-in-out"
 			)}
 		>
-			<main className='bg-background w-full h-fit flex flex-col items-center sm:mt-[var(--topbar-height)]'>
+			<main className=' w-full h-fit flex flex-col items-center sm:mt-[var(--topbar-height)]'>
 				{children}
 			</main>
 		</div>

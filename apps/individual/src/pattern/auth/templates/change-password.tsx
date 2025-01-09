@@ -1,8 +1,18 @@
 import { APP_ROUTES } from "@/lib/routes";
 import { BrandLogo, Button, Checkbox, Input } from "@chainkeeping/ui";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const ChangePassword = () => {
+	const router = useRouter(); // Initialize useRouter
+
+	// Function to handle login click
+	const handleChangePassword = () => {
+		// You can add your login logic here (e.g., validation, API call, etc.)
+
+		// Redirect to the dashboard page after successful login
+		router.push("/dashboard");
+	};
 	return (
 		<div className='sm:mt-10 w-full flex flex-col sm:items-center'>
 			<Link href={APP_ROUTES.index} className='max-sm:hidden'>
@@ -24,16 +34,29 @@ const ChangePassword = () => {
 					<label htmlFor='email' className='text-sm'>
 						New Password
 					</label>
-					<Input id='email' type='email' placeholder='yourmail@gmail.com' />
+					<Input
+						id='password'
+						type='password'
+						placeholder='Enter your new password'
+					/>
 				</div>
 				<div className='space-y-2 my-2'>
 					<label htmlFor='email' className='text-sm'>
 						Confirm Password
 					</label>
-					<Input id='email' type='password' placeholder='enter yor password' />
+					<Input
+						id='password'
+						type='password'
+						placeholder='Enter your new password'
+					/>
 				</div>
 
-				<Button variant='default' size='md' className='w-full mt-4'>
+				<Button
+					variant='default'
+					size='md'
+					className='w-full mt-4'
+					onClick={handleChangePassword}
+				>
 					Change password{" "}
 				</Button>
 			</div>
