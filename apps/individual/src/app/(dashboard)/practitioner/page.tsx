@@ -4,7 +4,7 @@ import TaxReports from "@/pattern/reports/templates/tax-reports";
 
 const Practitioner = () => {
 	return (
-		<div className='w-full min-h-screen h-fit flex flex-col gap-y-[144px] mb-[144px]'>
+		<div className='w-full min-h-screen max-sm:mt-14 h-fit flex flex-col gap-y-[144px] mb-[144px]'>
 			<ConnectPractioner />
 		</div>
 	);
