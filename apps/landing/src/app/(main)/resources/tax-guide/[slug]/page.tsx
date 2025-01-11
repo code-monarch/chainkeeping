@@ -1,18 +1,16 @@
 "use client";
 
 import React from 'react'
-import JoinUsWidget from '@/pattern/home/templates/join-us-widget';
-import TaxGuideHeroSection from '@/pattern/resources/templates/tax-guide-hero-section';
-import TaxGuideTemp from '@/pattern/resources/templates/tax-guide-temp';
 import { useParams } from 'next/navigation';
+import GhanaTaxGuideTemp from '@/pattern/resources/templates/ghana-tax-guide-temp';
+import NigeriaTaxGuideTemp from '@/pattern/resources/templates/nigeria-tax-guide-temp';
 
 const TaxGuideCountryPage = () => {
     const params = useParams<{ slug: "Nigeria" | "Ghana" }>()
 
     return (
-        <div className='w-full flex flex-col items-center gap-y-[88px] mb-[144px]'>
-            {params.slug}
-            <JoinUsWidget />
+        <div className='w-full flex flex-col items-center gap-y-[88px] pt-14'>
+            {params.slug.toLocaleLowerCase() === "nigeria" ? <NigeriaTaxGuideTemp country={params.slug} /> : <GhanaTaxGuideTemp country={params.slug} />}
         </div>
     )
 }
