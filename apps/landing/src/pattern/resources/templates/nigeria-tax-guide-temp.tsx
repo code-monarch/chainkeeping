@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import TaxGuideNavigation from './tax-guide-navigation'
+import TaxGuideNavigation from '../organisms/tax-guide-navigation'
 import TaxGuideCountryHeaderSection from '../organisms/tax-guide-country-header-section'
 import TaxGuideIntroSection from '../organisms/tax-guide-intro-section'
 import TaxationOfCryptoInNigeria from '../organisms/taxation-of-crypto-in-nigeria'
