@@ -119,15 +119,15 @@ const navlinks = [
         links: [
             {
                 title: "Privacy Policy",
-                href: "",
+                href: RESOURCES_ROUTES.PrivacyPolicy,
             },
             {
                 title: "Terms of use",
-                href: "",
+                href: RESOURCES_ROUTES.Terms,
             },
             {
                 title: "Security",
-                href: "",
+                href: RESOURCES_ROUTES.PrivacyPolicy,
             }
         ]
     },

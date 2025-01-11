@@ -10,7 +10,7 @@ import Link from "next/link";
 import { APP_ROUTES, AUTH_ROUTES } from "@/lib/routes";
 import { useRouter } from "next/navigation";
 
-interface INavigation {
+export interface INavigation {
     title: string;
     href?: string;
     content?: ReactElement;

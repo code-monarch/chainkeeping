@@ -49,6 +49,8 @@ export const RESOURCES_ROUTES = {
     blog: "/resources/blog",
     support: "/resources/support",
     FAQs: "/resources/faqs",
+    Terms: "/resources/terms-of-use",
+    PrivacyPolicy: "/resources/privacy-policy",
 };
 
 export const SOCIALS = {
