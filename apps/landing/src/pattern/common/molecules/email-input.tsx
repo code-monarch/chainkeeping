@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from "react";
+import React, { FC, useState } from "react";
 import { ICustomInputProps } from "@/pattern/types";
 import { cn, Input } from "@chainkeeping/ui";
 import EmailInputIcon from "../atoms/email-input-icon";
@@ -27,7 +27,7 @@ const EmailInput: FC<ICustomInputProps> = ({
                         onChange={onChange}
                         onFocus={() => setIsFocus(true)}
                         onBlur={() => setIsFocus(false)}
-                        disabled={disabled}
+                        disabled={disabled}                 
                         variant={error ? "error" : "default"}
                         placeholder={placeholder ?? "example@gmail.com"}
                         className={cn(className, "pl-[34px]")}
