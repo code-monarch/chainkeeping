@@ -1,0 +1,110 @@
+import { ReactElement } from "react";
+import {
+	BrandLogo,
+	Button,
+	Hidden,
+	NavigationMenu,
+	NavigationMenuContent,
+	NavigationMenuItem,
+	NavigationMenuList,
+	NavigationMenuTrigger,
+} from "@chainkeeping/ui";
+import SolutionsNavContent from "../organisms/solutions-nav-content";
+import IntegrationsNavContent from "../organisms/integrations-nav-content";
+import CustomNavLink from "../molecules/custom-nav-link";
+import ResourcesNavContent from "../organisms/resources-nav-content";
+import { CountrySelect } from "../organisms/country-selector";
+import Link from "next/link";
+import { APP_ROUTES } from "@/lib/routes";
+import QuickActionIcon from "../atoms/quick-action-icon";
+import UserProfileIcon from "../atoms/user-profile-icon";
+
+interface INavigation {
+	title: string;
+	href?: string;
+	content?: ReactElement;
+}
+
+const navigation: INavigation[] = [
+	{
+		title: "Dashboard",
+		href: "/dashboard",
+	},
+	{
+		title: "Accounts",
+		href: "/accounts",
+	},
+	{
+		title: "Transactions",
+		href: "/transactions",
+	},
+	{
+		title: "Taxes",
+		href: "/taxes",
+	},
+	{
+		title: "Reports",
+		href: "/reports",
+	},
+	{
+		title: "Bulk Payment",
+		href: "/bulk-payments",
+	},
+	{
+		title: "Practitioner",
+		href: "/practitioner",
+	},
+];
+
+const Topbar = () => {
+	return (
+		<div className='bg-background fixed inset-0 w-full h-[var(--topbar-height)] border-b flex items-center justify-center px-[24px] md:px-0  z-[25]'>
+			<div className='h-full relative md:px-16 w-full flex items-center justify-between'>
+				<div className='flex items-center  gap-7'>
+					<Link href={APP_ROUTES.index}>
+						<BrandLogo />
+					</Link>
+
+					<div className='h-[22px] pl-7  border-l-2  flex items-center gap-[27px]'>
+						{/* Navigation */}
+						<NavigationMenu>
+							<NavigationMenuList className='h-[var(--topbar-height)]'>
+								{navigation.map(({ title, content, href }, idx) => (
+									<div key={idx} className='h-full'>
+										<Hidden isVisible={content ? true : false}>
+											<NavigationMenuItem className='h-full'>
+												<NavigationMenuTrigger className='py-2 px-3'>
+													{title}
+												</NavigationMenuTrigger>
+												<NavigationMenuContent asChild>
+													{content}
+												</NavigationMenuContent>
+											</NavigationMenuItem>
+										</Hidden>
+
+										<Hidden isVisible={!content}>
+											<NavigationMenuItem className='h-full'>
+												<CustomNavLink href={href as string} title={title} />
+											</NavigationMenuItem>
+										</Hidden>
+									</div>
+								))}
+							</NavigationMenuList>
+						</NavigationMenu>
+					</div>
+				</div>
+
+				<div className='h-full flex items-center gap-[27px]'>
+					<div className='flex items-center gap-4'>
+						<QuickActionIcon />
+						<UserProfileIcon />
+
+						{/* <CountrySelect /> */}
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export { Topbar };
