@@ -9,7 +9,7 @@ export interface IInfoCardProps {
 
 const InfoCard: FC<IInfoCardProps> = ({ img, title, description }) => {
     return (
-        <div className='w-full min-h-[480px] h-fit flex flex-col gap-y-6'>
+        <div className='w-full h-fit lg:min-h-[480px] flex flex-col gap-y-6'>
             <Image src={img} alt={title} className='w-full' />
             <div className='w-full flex flex-col justify-start gap-y-3'>
                 <h5 className='font-rubik font-medium text-2xl text-foreground'>{title}</h5>

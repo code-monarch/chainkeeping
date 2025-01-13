@@ -13,11 +13,11 @@ const featuresAtGlance = [
 const CompanyHeroSection = () => {
     const { push } = useRouter()
     return (
-        <section className="bg-primary bg-pattern-bg-img bg-cover bg-center w-full h-[345px]">
-            <div className='w-full h-full lg:container flex flex-col items-start justify-center gap-y-3'>
-                <div className='flex items-center gap-[112px]'>
-                    <div className='w-full max-w-[564px] h-[152px] flex flex-col gap-y-1'>
-                        <h3 className='text-white text-[2.75rem] leading-[52.14px] font-rubik font-bold'>For Companies</h3>
+        <section className="bg-primary bg-pattern-bg-img bg-cover bg-center w-full h-fit lg:h-[345px]">
+            <div className='w-full h-full flex flex-col items-start justify-center gap-y-3 py-[66px] px-[18px] lg:container'>
+                <div className='flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-[112px]'>
+                    <div className='w-full max-w-[564px] h-fit lg:h-[152px] flex flex-col gap-y-1'>
+                        <h3 className='text-white text-4xl lg:text-[2.75rem] leading-[52.14px] font-rubik font-bold'>For Companies</h3>
                         <p className='text-white text-base font-dmsans'>Automate your recordkeeping, tax computations, and tax filing procedures using Chainkeeping.</p>
                     </div>
 

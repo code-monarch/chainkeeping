@@ -30,7 +30,7 @@ const info: IInfoCardProps[] = [
 
 const AccountingPractitionersInfoSection = () => {
   return (
-      <div className='w-full lg:container grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-[72px]'>
+      <div className='w-full grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8 lg:gap-y-[72px] px-[18px] lg:container'>
           {info.map(({ description, img, title }, idx) => (
               <InfoCard key={idx} description={description} img={img} title={title} />
           ))}
