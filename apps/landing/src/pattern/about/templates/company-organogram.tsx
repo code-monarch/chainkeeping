@@ -68,7 +68,7 @@ const stakeholders = [
 
 const CompanyOrganogram = () => {
     return (
-        <div className='w-full md:container min-h-[500px] h-fit flex flex-col items-center gap-y-12 pt-[144px]'>
+        <div className='w-full lg:container min-h-[500px] h-fit flex flex-col items-center gap-y-12 pt-[144px]'>
             <div className='w-full space-y-[56px]'>
                 <div className='w-full text-center space-y-[4px]'>
                     <HeaderLabel className='text-center'>Our People</HeaderLabel>

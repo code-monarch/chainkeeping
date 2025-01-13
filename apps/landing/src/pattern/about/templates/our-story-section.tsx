@@ -6,7 +6,7 @@ import OurStoryImg from "@/public/images/our-story-img.png"
 
 const OurStorySection = () => {
     return (
-        <div className='w-full md:container min-h-[572px] h-fit flex items-start justify-between gap-[87px] mt-[88px]'>
+        <div className='w-full lg:container min-h-[572px] h-fit flex items-start justify-between gap-[87px] mt-[88px]'>
             <div className='min-w-[576px] w-full flex items-center justify-between gap-8'>
                 {/* left */}
                 <div className='w-full max-w-[576px] space-y-[18px]'>

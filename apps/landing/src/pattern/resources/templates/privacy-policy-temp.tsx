@@ -77,7 +77,7 @@ const infoWeCollect = [
 const PrivacyPolicyTemp = () => {
     return (
         <div className='relative w-full min-h-[500px] h-fit '>
-            <div className='w-full md:container flex items-start justify-between gap-16'>
+            <div className='w-full lg:container flex items-start justify-between gap-16'>
                 {/* Left */}
                 <div className='sticky top-[88px] right-0 w-[221px] min-h-[203px] h-full'>
                     <h6 className='w-full font-rubik font-medium text-base text-foreground pb-3'>Contents</h6>

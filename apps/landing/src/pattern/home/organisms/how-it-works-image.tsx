@@ -65,8 +65,8 @@ const HowItWorksImage = () => {
     };
 
     return (
-        <div className='bg-muted w-full md:max-w-[589px] h-full min-h-[283.44px] md:max-h-[500px] flex items-center justify-center rounded-xl transition-all duration-300 ease-in-out'>
-            <div className="relative w-full max-w-[283.08px] h-[204.44px] md:h-[360px] md:max-w-[500px]">
+        <div className='bg-muted w-full lg:max-w-[589px] h-full min-h-[283.44px] lg:max-h-[500px] flex items-center justify-center rounded-xl transition-all duration-300 ease-in-out'>
+            <div className="relative w-full max-w-[283.08px] h-[204.44px] lg:h-[360px] lg:max-w-[500px]">
                 {renderImage()}
             </div>
         </div>

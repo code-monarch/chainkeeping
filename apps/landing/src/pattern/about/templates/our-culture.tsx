@@ -9,7 +9,7 @@ import HelpCultureIcon from '../atoms/help-culture-icon'
 
 const OurCulture = () => {
     return (
-        <div className='w-full md:container flex flex-col items-start gap-y-12'>
+        <div className='w-full lg:container flex flex-col items-start gap-y-12'>
             <div className='w-full max-w-[580px] space-y-[18px]'>
                 <div className='w-full text-center space-y-[4px]'>
                     <HeaderLabel className='text-left'>Our Culture</HeaderLabel>
@@ -18,7 +18,7 @@ const OurCulture = () => {
                 <p className='w-[580px] text-foreground text-base leading-[22px] font-dmsans'>We know how overwhelming and tasking crypto taxes and financial reporting can be, so we built Chainkeeping to simplify and solve this process for you. This is why we are the most preferred crypto tax and accounting solution..</p>
             </div>
 
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 mx-auto">
                 <CultureCard icon={<ClientNeedsCultureIcon />} header='Client needs and understanding' description='We ensure your satisfaction by properly identifying your needs and understanding them. We then provide solutions to your needs.' className='bg-[hsla(211,66%,93%,1)]' />
 
                 <CultureCard icon={<CommunicationCultureIcon />} header='Communication and Transparency' description='We ensure transparency in our systems and keep good communications going to Increase collaboration, enhance trust, and increase innovation.' className='bg-[hsla(211,66%,93%,1)]' />

@@ -11,10 +11,10 @@ import { APP_ROUTES } from "@/lib/routes";
 const HeroSection = () => {
 	const { push } = useRouter();
 	return (
-		<div className='min-h-[941px] h-fit md:min-h-[563px] md:h-[563px] flex flex-col justify-between gap-y-6 md:gap-y-0 md:flex-row md:items-start md:justify-between pt-8 md:pt-[88px] px-[18px] md:container'>
+		<div className='min-h-[941px] h-fit lg:min-h-[563px] lg:h-[563px] flex flex-col justify-between gap-y-6 lg:gap-y-0 lg:flex-row lg:items-start lg:justify-between pt-8 lg:pt-[88px] px-[18px] lg:container'>
 			<div className='max-w-[546px] h-full max-h-[506px] flex flex-col gap-y-6'>
 				<div className='w-full flex flex-col gap-y-3'>
-					<h2 className='w-full text-4xl md:text-[2.75rem] leading-[42.66px] md:leading-[52.14px] font-rubik font-bold'>
+					<h2 className='w-full text-4xl lg:text-[2.75rem] leading-[42.66px] lg:leading-[52.14px] font-rubik font-bold'>
 						Taxation & accounting for crypto made simple and easy.
 					</h2>
 					<p className='text-foreground text-base font-dmsans'>
@@ -41,7 +41,7 @@ const HeroSection = () => {
 				</div>
 
 				{/* CTA */}
-				<div className='w-fit flex flex-col md:flex-row md:items-center md:gap-x-6 gap-y-6'>
+				<div className='w-fit flex flex-col lg:flex-row lg:items-center lg:gap-x-6 gap-y-6'>
 					<Button
 						variant='secondary'
 						size='lg'
@@ -58,7 +58,7 @@ const HeroSection = () => {
 					</Button>
 				</div>
 			</div>
-			<div className="relative w-full h-[283.17px] md:h-[463.65px] md:w-[600px]">
+			<div className="relative w-full h-[283.17px] lg:h-[463.65px] lg:w-[600px]">
 				<Image
 					src={HeroImage} alt='hero image'
 					fill

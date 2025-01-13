@@ -14,7 +14,7 @@ const ComparePricesSection = () => {
             <div className='w-full h-[52px] pb-[24px] flex items-start justify-start border-b'>
                 <h3 className='text-foreground text-2xl font-rubik font-bold'>Compare plans</h3>
             </div>
-            <div className='w-full h-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8'>
+            <div className='w-full h-full grid grid-cols-1 lg:grid-cols-3 lg:grid-cols-4 gap-8'>
                 <BasicPlanPerks />
                 <PremiumPlanPerks />
                 <CustomizedPlanPerks />

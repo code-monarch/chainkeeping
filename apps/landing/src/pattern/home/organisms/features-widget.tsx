@@ -56,14 +56,14 @@ const FeaturesWidget = () => {
     const dispatch: AppDispatch = useDispatch();
     const feature = useSelector((state: RootState) => state.features.feature);
     return (
-        <div className='w-full h-fit flex flex-col md:flex-row items-start md:items-center md:justify-between gap-y-6'>
+        <div className='w-full h-fit flex flex-col lg:flex-row items-start lg:items-center lg:justify-between gap-y-6'>
             <ToggleGroup type="single" orientation='vertical' value={feature}
                 onValueChange={(newValue) => {
                     if (newValue) {
                         dispatch(setFeatureValue(newValue));
                     }
                 }}
-                className='h-full w-full md:max-h-[456px] flex flex-col items-start gap-y-9'>
+                className='h-full w-full lg:max-h-[456px] flex flex-col items-start gap-y-9'>
                 {features?.map(({ value, description, icon, title }, idx) => (
                     <FeaturesStep key={idx} description={description} icon={icon} title={title} value={value} toggleGroupValue={feature} />
                 ))}

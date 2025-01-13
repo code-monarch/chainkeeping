@@ -34,7 +34,7 @@ const IntegrationsHeroSection = () => {
 
     return (
         <section className="bg-primary bg-pattern-bg-img bg-cover bg-center w-full h-[484px]">
-            <div className="w-full h-full md:container flex flex-col items-center justify-start gap-y-8 pt-[69px] pb-[47px]">
+            <div className="w-full h-full lg:container flex flex-col items-center justify-start gap-y-8 pt-[69px] pb-[47px]">
                 <div className="w-full max-w-[760px] flex flex-col gap-y-8">
                     <div className="w-full flex flex-col gap-y-1">
                         <h3 className="font-rubik font-bold text-[2.75rem] text-white">Seamlessly import from anywhere</h3>

@@ -11,7 +11,7 @@ interface IProps {
 const GhanaTaxGuideTemp: FC<IProps> = ({ country }) => {
     return (
         <div className='relative w-full min-h-[500px] h-fit mb-[153px]'>
-            <div className='w-full md:container flex items-start justify-between gap-16'>
+            <div className='w-full lg:container flex items-start justify-between gap-16'>
                 {/* left */}
                 <div className='w-full flex flex-col gap-y-16'>
                     <div id="general" className='w-full flex flex-col gap-y-4'>

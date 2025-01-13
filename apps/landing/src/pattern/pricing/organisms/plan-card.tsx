@@ -15,7 +15,7 @@ const PlanCard: FC<IPlanCardProps> = ({ amount, pack, pecks, title, customized =
     const { push } = useRouter()
     
     return (
-        <Card className='w-full max-w-[368px] md:min-w-[368px] md:max-w-full h-[395px] flex flex-col items-center gap-y-2 p-6 rounded-[8px] card-shadow'>
+        <Card className='w-full max-w-[368px] lg:min-w-[368px] lg:max-w-full h-[395px] flex flex-col items-center gap-y-2 p-6 rounded-[8px] card-shadow'>
             <CardHeader className="w-full flex flex-col gap-y-[20px] text-center">
                 <h3 className="w-full h-fit text-gray-700 text-center text-xl font-rubik font-bold">{title}</h3>
                 <div className='relative w-full h-[48px] flex items-center !mt-0'>

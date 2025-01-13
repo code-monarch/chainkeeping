@@ -28,7 +28,7 @@ const info: IInfoCardProps[] = [
 
 const TaxAuthorityInfoSection = () => {
     return (
-        <div className='w-full h-fit md:container grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-[72px]'>
+        <div className='w-full h-fit lg:container grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-[72px]'>
             {info.map(({ description, img, title }, idx) => (
                 <InfoCard key={idx} description={description} img={img} title={title} />
             ))}

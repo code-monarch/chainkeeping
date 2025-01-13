@@ -6,7 +6,7 @@ import ComparePricesSection from './compare-prices-section'
 const IndividualPricingTab = () => {
     return (
         <div className='w-full min-h-[400px] h-fit space-y-[104px]'>
-            <div className='w-full h-full grid grid-cols-1 md:grid-cols-3 gap-12'>
+            <div className='w-full h-full grid grid-cols-1 lg:grid-cols-3 gap-12'>
                 {/* Basic */}
                 <PlanCard amount='50' pack='Starter pack' title='Basic' pecks={
                     <ul className="space-y-4">

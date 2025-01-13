@@ -116,8 +116,8 @@ const FeaturesImage: FC<IProps> = ({ feature }) => {
     };
 
     return (
-        <div className='bg-[hsla(240,4%,5%,1)] w-full h-full md:max-w-[549.71px] md:h-[444px] flex items-center justify-center rounded-xl transition-all duration-300 ease-in-out overflow-hidden'>
-            <div className="relative w-[215.84px] h-[250.18px] md:w-[408.15px] md:h-[318.87px]">{renderImage()}</div>
+        <div className='bg-[hsla(240,4%,5%,1)] w-full h-full lg:max-w-[549.71px] lg:h-[444px] flex items-center justify-center rounded-xl transition-all duration-300 ease-in-out overflow-hidden'>
+            <div className="relative w-[215.84px] h-[250.18px] lg:w-[408.15px] lg:h-[318.87px]">{renderImage()}</div>
         </div>
     )
 };

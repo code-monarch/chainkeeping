@@ -9,7 +9,7 @@ interface IProps {
 const Faqs: FC<IProps> = ({ faqs }) => {
   return (
     <div className='w-full h-[625px] flex items-center justify-center'>
-          <div className='w-full h-full md:container flex flex-col items-center gap-y-12'>
+          <div className='w-full h-full lg:container flex flex-col items-center gap-y-12'>
               <h3 className='font-rubik font-semibold text-foreground text-[2rem]'>Frequently Asked Questions</h3>
               <div className='w-full'>
                   <Accordion type='single' collapsible className='w-full'>

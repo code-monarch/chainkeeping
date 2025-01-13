@@ -58,14 +58,14 @@ const Topbar = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className="bg-background fixed inset-0 w-full h-[var(--topbar-height)] flex items-center justify-between px-[24px] md:px-0 shadow z-[25]">
-            <div className='w-full h-full relative md:container flex items-center justify-between'>
+        <div className="bg-background fixed inset-0 w-full h-[var(--topbar-height)] flex items-center justify-between px-[24px] lg:px-0 shadow z-[25]">
+            <div className='w-full h-full relative lg:container flex items-center justify-between'>
                 {/* Logo */}
                 <Link href={APP_ROUTES.index}>
                     <BrandLogo />
                 </Link>
 
-                <div className="hidden h-full md:flex md:items-center md:gap-[27px]">
+                <div className="hidden h-full lg:flex lg:items-center lg:gap-[27px]">
                     {/* Navigation */}
                     <NavigationMenu>
                         <NavigationMenuList className="h-[var(--topbar-height)]" >
@@ -96,7 +96,7 @@ const Topbar = () => {
                         <CountrySelect />
                     </div>
                 </div>
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
                             <Button variant="icon" size="icon">

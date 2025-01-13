@@ -9,7 +9,7 @@ import FIRSLogo from "@/public/logo/FIRS-logo.png"
 
 const OurPartnersSection = () => {
     return (
-        <div className='w-full md:container flex flex-col items-center gap-y-12 pt-[144px]'>
+        <div className='w-full lg:container flex flex-col items-center gap-y-12 pt-[144px]'>
             <div className='w-full space-y-[56px]'>
                 <div className='w-full text-center space-y-[4px]'>
                     <HeaderLabel className='text-center'>Our Partners</HeaderLabel>

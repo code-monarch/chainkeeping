@@ -10,7 +10,7 @@ import WhoWeServe from "@/pattern/home/templates/who-we-serve";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-full h-fit flex flex-col gap-12 md:gap-y-[144px] mb-[57px] md:mb-[144px]">
+    <div className="w-full min-h-full h-fit flex flex-col gap-12 lg:gap-y-[144px] mb-[57px] lg:mb-[144px]">
       <HeroSection />
       <WhoWeServe />
       <HowItWorksTemp />
