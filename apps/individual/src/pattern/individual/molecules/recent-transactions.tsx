@@ -1,6 +1,6 @@
 import React from "react";
-import TradeIcon from "../atoms/transactionsIcons/trade-icon";
-import ArrowIcon from "../atoms/transactionsIcons/arrow-icon";
+import TradeIcon from "../atoms/transactions-icons/trade-icon";
+import ArrowIcon from "../atoms/transactions-icons/arrow-icon";
 import { Button } from "@chainkeeping/ui";
 
 interface Transaction {

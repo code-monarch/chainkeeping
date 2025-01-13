@@ -29,7 +29,7 @@ const HowItWorksWidget = () => {
     const dispatch: AppDispatch = useDispatch();
     const toggleGroupValue = useSelector((state: RootState) => state.howItWorks.toggleGroupValue);
     return (
-        <div className='max-w-[439px] max-h-[306px] h-fit flex flex-col items-start'>
+        <div className='w-full h-fit md:max-w-[439px] md:max-h-[306px] flex flex-col items-start'>
             <ToggleGroup type="single" orientation='vertical' value={toggleGroupValue}
                 onValueChange={(newValue) => {
                     if (newValue) {

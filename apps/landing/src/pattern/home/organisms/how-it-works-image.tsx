@@ -12,17 +12,65 @@ const HowItWorksImage = () => {
     const renderImage = () => {
         switch (toggleGroupValue) {
             case 'import':
-                return <Image src={ImportImage} alt="Import Transactions" width={500} height={360} className="w-[500px] h-[360px]" />;
+                return <>
+                    <Image
+                        src={ImportImage}
+                        alt="Import Transactions"
+                        fill
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        priority
+                    />
+                </>
             case 'review':
-                return <Image src={ReviewImage} alt="Review Transactions" width={500} height={360} className="w-[500px] h-[360px]" />;
+                return <>
+                    <Image
+                        src={ReviewImage} alt="Review Transactions"
+                        fill
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        priority
+                    />
+                </>
             case 'download':
-                return <Image src={DownloadImage} alt="Download Report" width={500} height={360} className="w-[500px] h-[360px]" />;
+                return <>
+                    <Image
+                        src={DownloadImage} alt="Download Report"
+                        fill
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        priority
+                    />
+                </>
             default:
-                return <Image src={ImportImage} alt="Import Transactions" width={500} height={360} className="w-[500px] h-[360px]" />;
+                return <>
+                    <Image
+                        src={ImportImage}
+                        alt="Import Transactions"
+                        fill
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        priority
+                    />
+                </>
         }
     };
 
-    return <div className="bg-muted w-[598px] h-[500px] flex items-center justify-center rounded-xl transition-all duration-300 ease-in-out">{renderImage()}</div>;
+    return (
+        <div className='bg-muted w-full md:max-w-[589px] h-full min-h-[283.44px] md:max-h-[500px] flex items-center justify-center rounded-xl transition-all duration-300 ease-in-out'>
+            <div className="relative w-full max-w-[283.08px] h-[204.44px] md:h-[360px] md:max-w-[500px]">
+                {renderImage()}
+            </div>
+        </div>
+    )
 };
 
 export default HowItWorksImage;

@@ -9,6 +9,7 @@ export const ButtonStyle = {
 			"bg-secondary text-secondary-foreground hover:bg-[hsla(0,69%,51%,1)] hover:border-secondary hover:ring-2 hover:ring-[hsla(0,69%,51%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(0,69%,51%,1)] focus-visible:border-[hsla(0,69%,51%,1)] focus-visible:ring-2 focus-visible:ring-[hsla(0,69%,51%,0.25)] shadow-[hsla(0,0%,0%,0.1) shadow-[hsla(0,69%,51%,0.1)]",
 		outline:
 			"border border-secondary bg-white text-secondary placeholder:text-muted shadow-sm hover:border-secondary hover:ring-2 hover:ring-[hsla(0,69%,51%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(0,69%,51%,1)] focus-visible:border-[hsla(0,69%,51%,1)] focus-visible:ring-2 focus-visible:ring-[hsla(0,69%,51%,0.25)] shadow-[hsla(0,0%,0%,0.1) shadow-[hsla(0,69%,51%,0.1)]",
+		icon: "bg-transparent w-fit h-fit border-none outline-none hover:border-none hover:ring-0 hover:outline-none  focus:border-none focus-visible:ring-none rounded-full shadow-none",
 		primaryOutline:
 			"border bg-white text-foreground placeholder:text-muted shadow-sm hover:border-secondary hover:ring-2 hover:ring-[hsla(0,69%,51%,0.25)] focus-visible:outline-none focus-visible:bg-[hsla(0,69%,51%,1)] focus-visible:border-[hsla(0,69%,51%,1)] focus-visible:ring-2 focus-visible:ring-[hsla(0,69%,51%,0.25)] shadow-[hsla(0,0%,0%,0.1) shadow-[hsla(0,69%,51%,0.1)]",
 		secondaryOutline:

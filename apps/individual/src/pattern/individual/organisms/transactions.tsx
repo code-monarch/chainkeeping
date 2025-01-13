@@ -1,16 +1,16 @@
 import React from "react";
 import TransactionsTable from "../molecules/recent-transactions";
 import BinanceIcon from "@/pattern/common/atoms/crypto-platforms/binance-icon";
-import UsdtIcon from "../atoms/transactionsIcons/usdt-icon";
-import FanthomIcon from "../atoms/transactionsIcons/fantom-icon";
-import AvaxIcon from "../atoms/transactionsIcons/avax-icon";
-import TustIcon from "../atoms/transactionsIcons/tust-icon";
-import TrustWalletIcon from "../atoms/transactionsIcons/trust-wallet-icon";
-import CakeIcon from "../atoms/transactionsIcons/cake-icon";
-import TrustIcon from "../atoms/transactionsIcons/trust-token-icon";
-import BusdIcon from "../atoms/transactionsIcons/busd-icon";
-import VetIcon from "../atoms/transactionsIcons/vet-icon";
-import StxIcon from "../atoms/transactionsIcons/stx-icon";
+import UsdtIcon from "../atoms/transactions-icons/usdt-icon";
+import FanthomIcon from "../atoms/transactions-icons/fantom-icon";
+import AvaxIcon from "../atoms/transactions-icons/avax-icon";
+import TustIcon from "../atoms/transactions-icons/tust-icon";
+import TrustWalletIcon from "../atoms/transactions-icons/trust-wallet-icon";
+import CakeIcon from "../atoms/transactions-icons/cake-icon";
+import TrustIcon from "../atoms/transactions-icons/trust-token-icon";
+import BusdIcon from "../atoms/transactions-icons/busd-icon";
+import VetIcon from "../atoms/transactions-icons/vet-icon";
+import StxIcon from "../atoms/transactions-icons/stx-icon";
 
 const transactions = [
 	{
