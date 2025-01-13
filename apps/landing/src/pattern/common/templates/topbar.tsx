@@ -131,7 +131,7 @@ const Topbar = () => {
                                 <span className="sr-only">Toggle menu</span>
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="bottom" closeIcon={<MenuCloseIcon />} closeIconClassName="absolute top-[48px] right-[36px] rounded-full" className="bg-primary h-full w-full text-white pt-12 pl-8 pr-9">
+                        <SheetContent side="bottom" closeIcon={<MenuCloseIcon />} closeIconClassName="absolute top-[48px] right-[36px] rounded-full" className="bg-primary h-full w-screen text-white pt-12 pl-8 pr-9">
                             <SheetHeader>
                                 <SheetTitle aria-hidden='true' className="hidden">Mobile navigation</SheetTitle>
                                 <SheetDescription aria-hidden='true' className="hidden">
