@@ -145,14 +145,14 @@ const Footer = () => {
 
 
     return (
-        <div className='bg-primary w-full h-[420px]'>
-            <div className='w-full h-full md:container flex flex-col justify-between pt-[56px]'>
-                <div className='w-full h-[180px] flex items-start gap-x-[50px]'>
+        <div className='bg-primary w-full h-fit lg:h-[420px]'>
+            <div className='w-full h-full flex flex-col justify-between gap-y-[96px] py-[56px] px-[18px] lg:container'>
+                <div className='w-full h-fit lg:h-[180px] flex flex-col lg:flex-row lg:items-start lg:justify gap-[50px]'>
                     <Link href={APP_ROUTES.index}>
                         <BrandLogoWhite />
                     </Link>
                     {/* Solutions */}
-                    <div className='xl:min-w-[972px] 2xl:w-full flex items-start gap-6 justify-between'>
+                    <div className='h-fit xl:min-w-[972px] 2xl:w-full flex flex-col lg:flex-row items-start gap-6 justify-between'>
                         {/* Solutions */}
                         {navlinks?.map(({ header, links }, idx) => (
                             <ul className={cn(style.ul)} key={idx}>
@@ -176,7 +176,7 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom */}
-                <div className='h-[72px] w-full flex items-center justify-between py-6 border-t'>
+                <div className='h-[72px] w-full flex flex-col lg:flex-row lg:items-center lg:justify-between gap-y-6 py-6 border-t'>
                     <CopyrightText />
                     <div className='flex items-center gap-6'>
                         <FacebookIcon />

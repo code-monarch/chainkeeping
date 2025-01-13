@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Button, Checkbox } from "@chainkeeping/ui";
-import { RxCaretSort } from "react-icons/rx";
-import { BiSolidSortAlt } from "react-icons/bi";
+import { Button, Checkbox} from "@chainkeeping/ui";
 import SortIcon from "../atoms/sort-icon";
 import CopyIcon from "../atoms/copy-icon";
 import Modal from "../molecules/modal-compoent";

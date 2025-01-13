@@ -10,13 +10,13 @@ const HowItWorksTemp = () => {
   const { push } = useRouter()
 
   return (
-    <div className='w-full md:container h-[572px] flex items-end justify-between gap-[87px]'>
+    <div className='w-full h-fit lg:h-[572px] flex flex-col-reverse lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-[87px] px-[18px] lg:container'>
       {/* Left */}
       <div className='w-full max-w-[515px] min-h-full flex flex-col justify-between gap-8'>
-        <div className='space-y-[18px]'>
-          <div className='w-full text-center space-y-[4px]'>
+        <div className='space-y-[48px] lg:space-y-[18px]'>
+          <div className='w-full text-left lg:text-center space-y-[4px]'>
             <HeaderLabel className='text-left'>How it works</HeaderLabel>
-            <Typography className='w-fit text-left text-[2.25rem] leading-[42.66px]'>Get started in 3 simple steps</Typography>
+            <Typography className='w-[315px] lg:w-full text-left text-2xl lg:text-[2.25rem] leading-[28.44px] lg:leading-[42.66px] after:w-[71px] after:left-0 lg:after:w-[515px]'>Get started in 3 simple steps</Typography>
           </div>
           <p className='text-foreground text-base leading-[22.4px] font-dmsans'>Calculate and generate report for your crypto taxes in a few simple steps within a matter of minutes.</p>
         </div>

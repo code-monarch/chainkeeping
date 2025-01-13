@@ -14,7 +14,7 @@ const styles = {
 
 const PricingTabs = () => {
     return (
-        <div className='relative w-full md:container min-h-[350px] pt-[88px]'>
+        <div className='relative w-full lg:container min-h-[350px] pt-[88px]'>
             <Tabs defaultValue="individual" className={styles.tabs}>
                 <TabsList className={styles.tablist}>
                     {/* Individual */}

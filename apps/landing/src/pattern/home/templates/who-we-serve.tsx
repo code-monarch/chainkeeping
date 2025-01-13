@@ -41,13 +41,13 @@ const customers: IWhoWeServeWidgetProps[] = [
 
 const WhoWeServe = () => {
     return (
-        <div className='w-full md:container min-h-[819px] flex flex-col gap-8'>
-            <div className='w-full flex flex-col gap-2 items-center'>
-                <HeaderLabel>Who we serve</HeaderLabel>
-                <Typography className='text-center text-[2.25rem] leading-[42.66px]'>Crypto tax software for everyone</Typography>
+        <div className='w-full min-h-[819px] flex flex-col gap-8 px-[18px] lg:container'>
+            <div className='w-full flex flex-col gap-2 items-start lg:items-center'>
+                <HeaderLabel className='text-left lg:text-center'>Who we serve</HeaderLabel>
+                <Typography className='text-left lg:text-center text-2xl lg:text-[2.25rem] leading-[28.44px] lg:leading-[42.66px] after:w-[111px] after:left-0 lg:after:w-[596px]'>Crypto tax software for everyone</Typography>
             </div>
-            <div className='flex flex-col gap-y-6'>
-                <div className='w-full h-fit grid grid-cols-2 gap-x-16 gap-y-6 mx-auto'>
+            <div className='w-full flex flex-col gap-y-6'>
+                <div className='w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6 lg:mx-auto'>
                     {customers.map(({ description, href, icon, label, title }, idx) => (
                         <WhoWeServeWidget key={idx} description={description} href={href} icon={icon} label={label} title={title} />
                     ))}

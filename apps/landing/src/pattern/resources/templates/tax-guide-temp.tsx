@@ -16,7 +16,7 @@ const taxGuides = [
 
 const TaxGuideTemp = () => {
     return (
-        <div className='w-full md:container'>
+        <div className='w-full lg:container'>
             <div className='w-fit flex items-center justify-start gap-x-6'>
                 {taxGuides?.map(({ country, description, title }, idx) => (
                     <TaxGuideCard key={idx} country={country as "Nigeria" | "Ghana"} description={description} title={title} />

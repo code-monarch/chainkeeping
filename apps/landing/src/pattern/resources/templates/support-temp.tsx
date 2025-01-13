@@ -35,7 +35,7 @@ const SupportTemp = () => {
   const { push } = useRouter();
 
   return (
-    <div className='w-full md:container flex flex-col items-center gap-y-[88px]'>
+    <div className='w-full lgd:container flex flex-col items-center gap-y-[88px]'>
       <div className='w-full max-w-[1200px] h-[304px] flex items-center justify-center gap-6 flex-wrap'>
         {SupportTypes?.map(({ Icon, buttonText, description, href, title }, idx) => (
           <SupportCard key={idx} Icon={Icon} buttonText={buttonText} description={description} href={href} title={title} />

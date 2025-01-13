@@ -10,7 +10,6 @@ const IntegrationsPage = () => {
     <div className='w-full space-y-[64px] mb-[144px] transition-all duration-200 ease-in-out'>
       <IntegrationsHeroSection />
       <CryptoPlatformsTemp />
-      <JoinUsWidget />
     </div>
   )
 }

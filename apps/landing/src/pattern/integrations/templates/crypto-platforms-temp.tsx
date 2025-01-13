@@ -58,8 +58,8 @@ const CryptoPlatformsTemp = () => {
     }, [search, integrations]);
 
     return (
-        <div className='w-full min-h-[920px] h-full md:container flex flex-col items-center justify-start'>
-            <div className='w-fit h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
+        <div className='w-full min-h-[920px] h-full lg:container flex flex-col items-center justify-start'>
+            <div className='w-fit h-full grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
                 {filteredIntegrations.length > 0 ? filteredIntegrations.map(({ Icon, name }, idx) => (
                     <div key={idx} className='w-[227px] h-[88px] flex items-center justify-center gap-[10px] whitespace-nowrap p-3 border rounded-xl transition-all duration-200 ease-in-out hover:shadow-lg'>
                         <span>{Icon}</span>

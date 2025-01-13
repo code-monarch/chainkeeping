@@ -14,9 +14,6 @@ const ContactUsPage = () => {
           <ContactForm />
         </div>
       </div>
-      <div className='w-full mt-[700px] mb-[144px]'>
-        <JoinUsWidget />
-      </div>
     </>
   )
 }
