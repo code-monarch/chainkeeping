@@ -14,10 +14,10 @@ const currency = [
 
 const CostCurrencyWidget = () => {
     return (
-        <div className='min-w-[363px] w-fit h-[44px] flex items-center gap-4'>
-            <label htmlFor="currency" className='text-foreground text-base font-dmsans whitespace-nowrap'>Show cost in:</label>
+        <div className='w-full lg:min-w-[363px] h-fit lg:h-[44px] flex flex-col lg:flex-row items-start lg:items-center gap-4'>
+            <label htmlFor="currency" className='text-foreground text-base text-left font-dmsans whitespace-nowrap'>Show cost in:</label>
             <Select name='currency' defaultValue={currency[0].value}>
-                <SelectTrigger className="w-[250px]">
+                <SelectTrigger className="w-full lg:w-[250px]">
                     <SelectValue placeholder="Select a currency" />
                 </SelectTrigger>
                 <SelectContent>

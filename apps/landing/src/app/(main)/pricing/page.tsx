@@ -11,7 +11,7 @@ const PricingPage = () => {
     <>
       <PricingHeroSection />
       <PricingTabs />
-      <div className='w-full my-[144px]'>
+      <div className='w-full lg:my-[144px]'>
         <Faqs faqs={pricingFAQs} />
       </div>
     </>
