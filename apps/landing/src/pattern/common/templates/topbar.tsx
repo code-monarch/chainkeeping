@@ -1,6 +1,6 @@
 import { ReactElement, useState } from "react"
 
-import { BrandLogo, Button, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger, Hidden, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@chainkeeping/ui";
+import { BrandLogo, Button, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, Hidden, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@chainkeeping/ui";
 // import SolutionsNavContent from "../organisms/solutions-nav-content";
 // import IntegrationsNavContent from "../organisms/integrations-nav-content";
 import CustomNavLink from "../molecules/custom-nav-link";
@@ -82,11 +82,11 @@ const Topbar = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className="bg-background fixed inset-0 w-full h-[var(--topbar-height)] flex items-center justify-between px-[24px] lg:px-0 shadow z-[25]">
+        <div className="bg-background fixed inset-0 w-screen h-[var(--topbar-height)] flex items-center justify-between px-[24px] lg:px-0 shadow z-[25]">
             <div className='w-full h-full relative lg:container flex items-center justify-between'>
                 {/* Logo */}
                 <Link href={APP_ROUTES.index}>
-                    <BrandLogo />
+                    <BrandLogo className="w-[143px] h-[24px] lg:w-[179px] lg:h-[30px]" />
                 </Link>
 
                 {/* laptops navigation */}
@@ -149,7 +149,7 @@ const Topbar = () => {
                                         </Hidden>
                                         <Hidden isVisible={subLinks ? true : false} >
                                             <DropdownMenu key={idx} modal={true}>
-                                                <DropdownMenuTrigger className="flex items-center gap-1"><span>{title}</span> <ChevronDown /> </DropdownMenuTrigger>
+                                                <DropdownMenuTrigger className="flex items-center gap-1"><span>{title}</span> <ChevronDown className="h-5 w-5" /> </DropdownMenuTrigger>
                                                 <DropdownMenuContent className="bg-white w-full h-fit flex flex-col gap-y-3 ml-8 mr-9">
                                                     {subLinks?.map(({ link, title }, idx) => (
                                                         <DropdownMenuItem key={idx}>
