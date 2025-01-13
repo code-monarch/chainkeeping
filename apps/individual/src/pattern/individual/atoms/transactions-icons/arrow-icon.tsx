@@ -10,18 +10,18 @@ const ArrowIcon = () => {
 			<path
 				d='M14.43 5.93018L20.5 12.0002L14.43 18.0702'
 				stroke='#CBD5E1'
-				stroke-width='1.5'
-				stroke-miterlimit='10'
-				stroke-linecap='round'
-				stroke-linejoin='round'
+				strokeWidth='1.5'
+				strokeMiterlimit='10'
+				strokeLinecap='round'
+				strokeLinejoin='round'
 			/>
 			<path
 				d='M3.5 12H20.33'
 				stroke='#CBD5E1'
-				stroke-width='1.5'
-				stroke-miterlimit='10'
-				stroke-linecap='round'
-				stroke-linejoin='round'
+				strokeWidth='1.5'
+				strokeMiterlimit='10'
+				strokeLinecap='round'
+				strokeLinejoin='round'
 			/>
 		</svg>
 	);

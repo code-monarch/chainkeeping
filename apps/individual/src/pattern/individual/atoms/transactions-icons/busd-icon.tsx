@@ -8,7 +8,7 @@ const BusdIcon = () => {
 			xmlns='http://www.w3.org/2000/svg'
 		>
 			<rect y='0.5' width='24' height='24' rx='12' fill='white' />
-			<g clip-path='url(#clip0_1260_18078)'>
+			<g clipPath='url(#clip0_1260_18078)'>
 				<circle cx='12' cy='12.5' r='12' fill='#EDF0F4' />
 				<path
 					d='M11.9673 1.5L14.6845 4.28274L7.84226 11.125L5.125 8.40774L11.9673 1.5Z'

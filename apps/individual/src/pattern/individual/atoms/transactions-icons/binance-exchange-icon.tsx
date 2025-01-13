@@ -10,7 +10,6 @@ const BinanceExchangeIcon = () => {
 			<g clip-path='url(#clip0_1260_17892)'>
 				<mask
 					id='mask0_1260_17892'
-					style='mask-type:luminance'
 					maskUnits='userSpaceOnUse'
 					x='2'
 					y='2'
