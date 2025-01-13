@@ -15,7 +15,7 @@ const JoinUsWidget = () => {
                 <div className='w-full flex flex-col items-center gap-y-8'>
                     <div className='lg:w-[798px] text-center space-y-[4px]'>
                         <HeaderLabel>Join us</HeaderLabel>
-                        <Typography className='text-center text-2xl lg:text-[2.25rem] leading-[28.44px] lg:leading-[42.66px] after:bottom-[8px]'>Seamless Crypto accounting and tax computations to make your compliance easy</Typography>
+                        <Typography className='w-[269px] lg:w-fit text-center text-2xl lg:text-[2.25rem] leading-[28.44px] lg:leading-[42.66px]'>Seamless Crypto accounting and tax computations to make your compliance easy</Typography>
                     </div>
                     <p className='font-dmsans text-foreground'>Chainkeeping makes it easy for your to calculate your taxes in few steps</p>
 

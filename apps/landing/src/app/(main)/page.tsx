@@ -17,7 +17,6 @@ export default function Home() {
       <IntegrationsTemp />
       <ReviewsTemp />
       <FeaturesTemp />
-      <JoinUsWidget />
     </div>
   );
 }

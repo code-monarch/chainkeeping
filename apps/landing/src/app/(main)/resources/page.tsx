@@ -10,7 +10,6 @@ const ResourcesPage = () => {
     <div className='w-full flex flex-col items-center gap-y-[88px] mb-[144px]'>
       <SupportHeroSection />
       <SupportTemp />
-      <JoinUsWidget />
     </div>
   )
 }
