@@ -104,20 +104,19 @@ const Topbar = () => {
                                 <span className="sr-only">Toggle menu</span>
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="bottom" closeIcon={<MenuCloseIcon />} closeIconClassName="absolute top-[48px] right-[36px] rounded-full" className="bg-primary h-full w-full text-white pt-12 pl-[18px] pr-9">
+                        <SheetContent side="bottom" closeIcon={<MenuCloseIcon />} closeIconClassName="absolute top-[48px] right-[36px] rounded-full" className="bg-primary h-full w-full text-white pt-12 pl-8 pr-9">
                             <nav className="flex flex-col gap-4">
-                                <Link href="/" onClick={() => setIsOpen(false)}>
-                                    Home
-                                </Link>
-                                <Link href="/docs" onClick={() => setIsOpen(false)}>
-                                    Documentation
-                                </Link>
-                                <Link href="/components" onClick={() => setIsOpen(false)}>
-                                    Components
-                                </Link>
-                                <Link href="/about" onClick={() => setIsOpen(false)}>
-                                    About
-                                </Link>
+                                {navigation.map(({ title, content, href }, idx) => (
+                                    <div key={idx} className="h-[54px]">
+                                        <Hidden isVisible={!content} >
+                                            <Link key={idx} href={href!} className="h-full " onClick={() => setIsOpen(false)}>
+                                                {title}
+                                            </Link>
+                                        </Hidden>
+                                    </div>
+                                ))}
+                                <Button size="lg" onClick={() => push(AUTH_ROUTES.login)} className="w-full font-medium text-base" >Log In</Button>
+                                <Button variant="secondary" size="lg" className="w-full font-medium text-base" onClick={() => push(APP_ROUTES.signup)} >Sign up</Button>
                             </nav>
                         </SheetContent>
                     </Sheet>
