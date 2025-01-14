@@ -1,6 +1,6 @@
 import { ReactElement, useState } from "react"
 
-import { BrandLogo, Button, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, Hidden, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@chainkeeping/ui";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, BrandLogo, Button, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, Hidden, NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger, Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@chainkeeping/ui";
 // import SolutionsNavContent from "../organisms/solutions-nav-content";
 // import IntegrationsNavContent from "../organisms/integrations-nav-content";
 import CustomNavLink from "../molecules/custom-nav-link";
@@ -89,7 +89,7 @@ const Topbar = () => {
                     <BrandLogo className="w-[143px] h-[24px] lg:w-[179px] lg:h-[30px]" />
                 </Link>
 
-                {/* laptops navigation */}
+                {/* laptop/Desktop navigation */}
                 <div className="hidden h-full lg:flex lg:items-center lg:gap-[27px]">
                     {/* Navigation */}
                     <NavigationMenu>
@@ -139,27 +139,29 @@ const Topbar = () => {
                                 </SheetDescription>
                             </SheetHeader>
 
-                            <nav className="flex flex-col gap-4">
+                            <nav className="h-full flex flex-col gap-4">
                                 {navigation.map(({ title, subLinks, href }, idx) => (
-                                    <div key={idx} className="h-[54px]">
+                                    <div key={idx} className="h-[40px]">
                                         <Hidden isVisible={!subLinks} >
                                             <Link key={idx} href={href!} className="h-full " onClick={() => setIsOpen(false)}>
                                                 {title}
                                             </Link>
                                         </Hidden>
                                         <Hidden isVisible={subLinks ? true : false} >
-                                            <DropdownMenu key={idx} modal={true}>
-                                                <DropdownMenuTrigger className="flex items-center gap-1"><span>{title}</span> <ChevronDown className="h-5 w-5" /> </DropdownMenuTrigger>
-                                                <DropdownMenuContent className="bg-white w-full h-fit flex flex-col gap-y-3 ml-8 mr-9">
-                                                    {subLinks?.map(({ link, title }, idx) => (
-                                                        <DropdownMenuItem key={idx}>
-                                                            <Link href={link} className="h-full" onClick={() => setIsOpen(false)}>
-                                                                {title}
-                                                            </Link>
-                                                        </DropdownMenuItem>
-                                                    ))}
-                                                </DropdownMenuContent>
-                                            </DropdownMenu>
+                                            <Accordion type='single' collapsible className='bg-primary w-full min-h-[40px] h-fit border-none'>
+                                                <AccordionItem value={`${title}`} className='w-full h-fit space-y-[12px]  border-none outline-none shadow-sm'>
+                                                    <AccordionTrigger className='text-white text-base text-left font-dmsans font-medium border-b-0 hover:no-underline py-0'>{title}</AccordionTrigger>
+                                                    <AccordionContent className='bg-primary h-fit flex flex-col text-base text-white text-left'>
+                                                        <div className="bg-primary w-fit h-fit flex flex-col gap-y-4 pl-4 pr-3 pb-3 rounded-md z-50">
+                                                            {subLinks?.map(({ link, title }, idx) => (
+                                                                <Link key={idx} href={link} className="h-full" onClick={() => setIsOpen(false)}>
+                                                                    {title}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
+                                                    </AccordionContent>
+                                                </AccordionItem>
+                                            </Accordion>
                                         </Hidden>
                                     </div>
                                 ))}
