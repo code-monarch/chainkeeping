@@ -35,15 +35,15 @@ const SupportTemp = () => {
   const { push } = useRouter();
 
   return (
-    <div className='w-full lgd:container flex flex-col items-center gap-y-[88px]'>
-      <div className='w-full max-w-[1200px] h-[304px] flex items-center justify-center gap-6 flex-wrap'>
+    <div className='w-full flex flex-col items-center gap-y-[88px] px-[18px] lg:container'>
+      <div className='w-full max-w-[1200px] h-fit lg:h-[304px] flex items-center justify-center gap-6 flex-wrap'>
         {SupportTypes?.map(({ Icon, buttonText, description, href, title }, idx) => (
           <SupportCard key={idx} Icon={Icon} buttonText={buttonText} description={description} href={href} title={title} />
         ))}
       </div>
-      <div className='w-full max-w-[800px] h-[175px] flex items-center'>
+      <div className='w-full max-w-[800px] h-fit lg:h-[175px] flex flex-col lg:flex-row items-center'>
         {/* Glossary */}
-        <div className='w-[336px] h-[150px] flex flex-col items-center gap-y-4 p-4 rounded-[8px]'>
+        <div className='w-full lg:w-[336px] h-fit lg:h-[150px] flex flex-col items-center gap-y-4 p-4 rounded-[8px]'>
           <h4 className='font-rubik font-medium text-2xl text-foreground'>Glossary</h4>
           <p className='w-full max-w-[304px] font-dmsans font-normal text-center text-sm text-[hsla(215,23%,40%,1)]'>Get informed, A-Z of crypto, crytpo taxation and more.</p>
           <Button variant="link" className='text-base font-normal font-dmsans' onClick={() => push(APP_ROUTES.contact)} >Learn</Button>

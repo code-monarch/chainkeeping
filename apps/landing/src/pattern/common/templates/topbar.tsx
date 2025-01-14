@@ -11,7 +11,6 @@ import { APP_ROUTES, AUTH_ROUTES, RESOURCES_ROUTES } from "@/lib/routes";
 import { useRouter } from "next/navigation";
 import MenuIcon from "../atoms/menu-icon";
 import { MenuCloseIcon } from "../atoms/menu-close-icon";
-import { ChevronDown } from "lucide-react";
 
 export interface INavigation {
     title: string;
