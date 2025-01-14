@@ -6,7 +6,7 @@ import FAQsTemp from '@/pattern/resources/templates/FAQs-temp';
 
 const FaqsPage = () => {
   return (
-    <div className='w-full flex flex-col items-center gap-y-[88px] mb-[144px]'>
+    <div className='w-full flex flex-col items-center gap-y-12 lg:gap-y-[88px] lg:mb-[144px]'>
       <FAQsHeroSection />
       <FAQsTemp />
     </div>

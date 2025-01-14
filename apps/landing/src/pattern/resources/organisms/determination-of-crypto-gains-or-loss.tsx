@@ -30,7 +30,7 @@ const importanceOfTaxOptimization = [
 const DeterminationOfCryptoGainsOrLoss = () => {
     return (
         <div className='w-full flex flex-col gap-y-4'>
-            <h3 className='text-[2rem] font-rubik font-semibold mt-4'>Determination of cryptocurrency gains or loss</h3>
+            <h3 className='text-2xl lg:text-[2rem] font-rubik font-semibold mt-4'>Determination of cryptocurrency gains or loss</h3>
             <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'>It is important to note that cryptocurrency inflows establish the cost basis for Cryptocurrencies, to enable the easy determination of gain or loss on same. Simply, in order to determine whether or not a gain or loss was realized on a cryptocurrency, there's a need to determine a cost basis first.</p>
             <InfoWidget info="Cost basis is the acquisition cost of your cryptocurrency; this includes your purchase price, the value of other crypto given up in exchange for this crypto, or amount reported as income if the crypto was earned. To then ascertain the gain or loss, the following methods are used;" />
 
@@ -68,7 +68,7 @@ const DeterminationOfCryptoGainsOrLoss = () => {
                 <div className='space-y-[16px]'>
                     <h3 className='text-[2rem] font-rubik font-semibold mt-4'>How is cryptocurrency taxed?</h3>
                     <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'>Mr. Olayinka opened an account with Binance exchange on the 4th of November, 2021 and purchased bitcoin as seen below;</p>
-                    <div className='bg-[hsla(204,33%,97%,1)] w-full min-h-[186px] h-fit flex flex-col gap-y-3 text-base font-space_Grotesk font-medium p-4 rounded-[8px]'>
+                    <div className='bg-[hsla(204,33%,97%,1)] w-full lg:min-h-[186px] h-fit flex flex-col gap-y-3 text-base font-space_Grotesk font-medium p-4 rounded-[8px]'>
                         <span>4th Nov 2021,	1 Bitcoin @ $45,000.00</span>
                         <span>29th Nov 2022, 1 Bitcoin @ $38,000.00</span>
                         <span>20th Dec 2022, 1 Bitcoin @ $50,000.00</span>
@@ -95,7 +95,7 @@ const DeterminationOfCryptoGainsOrLoss = () => {
 
                     {/* Tax forms issued by cryptocurrency exchanges */}
                     <div className='space-y-[32px] mt-4'>
-                        <h3 className='text-[2rem] font-rubik font-semibold'>Tax forms issued by cryptocurrency exchanges</h3>
+                        <h3 className='text-2xl lg:text-[2rem] font-rubik font-semibold'>Tax forms issued by cryptocurrency exchanges</h3>
                         <div className='space-y-[32px]'>
                             <div className='w-full flex items-start gap-x-4'>
                                 <div>
@@ -119,25 +119,25 @@ const DeterminationOfCryptoGainsOrLoss = () => {
                     </div>
                     {/* Tax forms issued by cryptocurrency exchanges */}
                     <div className='space-y-[32px] pt-4'>
-                        <h3 className='text-[2rem] font-rubik font-semibold'>Tax forms issued by cryptocurrency exchanges</h3>
+                        <h3 className='text-2xl lg:text-[2rem] font-rubik font-semibold'>Tax forms issued by cryptocurrency exchanges</h3>
                         <div className='space-y-[16px]'>
                             <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'>Every taxpayer is expected to get relevant tax forms from the tax authority applicable to them and file their returns for the period.</p>
                             <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'><strong>Individuals</strong> are required to request for Personal Income Tax Returns Form, fill it, file and pay their taxes within six (6) months from the end of the government fiscal year and also apply for Tax Clearance Certificate. Their Cryptocurrency income is meant to be included in the other income from other sources column with an attachment of the tax report generated from the Taxwhales platform.</p>
                             <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'><strong>Corporate</strong> bodies are required to declare all their incomes in their financial statement, file same on the Company Income Tax Returns Form, remit their taxes and make an application for Tax Clearance Certificate to FIRS within six months from the end of their accounting period (Document attached). The realized income/loss should be recognized in the Statement of Profit or Loss while the Unrealized income/loss should be recognized in the Other comprehensive income section.</p>
                             <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'><strong>Withholding Tax</strong> - for both Corporate bodies and Individuals who trade cryptocurrency for others and pay returns (Like investment), Withholding Tax should be withheld and remitted to the FIRS on behalf of the Client. If Company - FIRS, If Individual - State Internal Revenue Service.</p>
                         </div>
-                        <InfoWidget info="The processing of taxes for Companies/Corporate bodies has been made seamless and is done on the Taxpro (https://taxpromax.firs.gov.ng/) Platform of the government. Only taxes relating to individuals are filed manually." Icon={<BlueInfoIcon />} className='bg-[hsla(214,84%,56%,0.1)] h-[84px] font-medium font-dmsans border-l-[hsla(214,84%,56%,1)]' />
+                        <InfoWidget info="The processing of taxes for Companies/Corporate bodies has been made seamless and is done on the Taxpro (https://taxpromax.firs.gov.ng/) Platform of the government. Only taxes relating to individuals are filed manually." Icon={<BlueInfoIcon />} className='bg-[hsla(214,84%,56%,0.1)] h-fit lg:h-[84px] font-medium font-dmsans border-l-[hsla(214,84%,56%,1)]' />
                     </div>
                     {/* Reports issued by Chainkeeping for tax filing */}
                     <div className='space-y-[32px] pt-4'>
-                        <h3 className='text-[2rem] font-rubik font-semibold'>Reports issued by Chainkeeping for tax filing</h3>
+                        <h3 className='lg:text-[2rem] font-rubik font-semibold'>Reports issued by Chainkeeping for tax filing</h3>
                         <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'>Our Platform, Chainkeeping provides both Individual and Corporates users with a comprehensive report - Tax Report - which details the wallet transactions within a particular period, the capital gains and other Incomes. The gains/losses in the report are certified by a Tax Professional who affirms to this report by signing on it. This report is to be attached with other document when filing taxes by the Taxpayer.</p>
                     </div>
                     {/* Tax Optimization */}
                     <div className='space-y-[32px] pt-4'>
-                        <h3 className='text-[2rem] font-rubik font-semibold'>Tax Optimization</h3>
-                        <div className='bg-accent w-full h-[300px] flex items-end justify-center rounded-[8px]'>
-                            <div className='relative min-w-[386px] min-h-[283px]'>
+                        <h3 className='text-2xl lg:text-[2rem] font-rubik font-semibold'>Tax Optimization</h3>
+                        <div className='bg-accent w-full max-w-[976px] h-fit lg:h-[300px] flex items-end justify-center rounded-[8px]'>
+                            <div className='relative w-[200px] lg:w-[386px] h-[183px] lg:h-[283px]'>
                                 <Image src={ReportChecklistImg} alt="Report Checklist" fill
                                     className="object-cover"
                                 />
@@ -184,7 +184,7 @@ const DeterminationOfCryptoGainsOrLoss = () => {
 
                     {/* How do tax authority know about your cryptocurrency */}
                     <div className='space-y-[32px] pt-4'>
-                        <h3 className='text-[2rem] font-rubik font-semibold'>How do tax authorities know about your cryptocurrency?</h3>
+                        <h3 className='text-2xl lg:text-[2rem] font-rubik font-semibold'>How do tax authorities know about your cryptocurrency?</h3>
                         <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'>Tax authorities such as the IRS, ATO, CRA, HMRC, and others use a variety of techniques to track cryptocurrency transactions and enforce tax compliance. For starters, the IRS has subpoenaed domestic and international cryptocurrency exchanges such as Coinbase and Bitstamp for user transaction information. This has lead to at least tens of thousands of cryptocurrency users' transaction information being shared directly with the tax authorities.<br /><br />
                             In addition, tax authorities, like the IRS, use data analytics tools such as Chainanalysis and Palantir to pinpoint cryptocurrency users and tie their identity from a regulated cryptocurrency exchange to their off-exchange wallets and transactions (including multiple layers removed from the exchange).<br /><br />
                             The IRS and other tax authorities also partner and share data with other governmental bodies, academic institutions, and international governments to share information about cryptocurrency usage.</p>
@@ -192,7 +192,7 @@ const DeterminationOfCryptoGainsOrLoss = () => {
 
                     {/* Penalty for non-payment and non-filing of crypto taxes */}
                     <div className='space-y-[32px] pt-4'>
-                        <h3 className='text-[2rem] font-rubik font-semibold'>Penalty for non-payment and non-filing of crypto taxes</h3>
+                        <h3 className='text-2xl lg:text-[2rem] font-rubik font-semibold'>Penalty for non-payment and non-filing of crypto taxes</h3>
                         <ul className='list-disc text-gray-600 leading-[26px] font-dmsans font-normal pl-6'>
                             {
                                 penalties?.map((item, idx) => (

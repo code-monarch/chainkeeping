@@ -41,7 +41,7 @@ const TaxCalculationCard: FC<IProps> = ({ salesProceed, taxLiability, taxableIco
     return (
         <Card className="w-full max-w-[460px]">
             <CardContent className="space-y-[16px] p-0">
-                <h2 className="text-base font-semibold font-rubik whitespace-nowrap pb-3 mb-4 border-b">{title}</h2>
+                <h2 className="text-base font-semibold font-rubik lg:whitespace-nowrap pb-3 mb-4 border-b">{title}</h2>
                 <div className="bg-[hsla(204,33%,97%,1)] space-y-[16px] py-3 px-2 rounded-[8px]">
                     <div className="flex justify-between items-center">
                         <span className="text-sm font-dmsans">Sales Proceed</span>

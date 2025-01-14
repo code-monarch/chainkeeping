@@ -6,7 +6,7 @@ import CompanyPricingTab from '../organisms/company-pricing-tab'
 import CostCurrencyWidget from '../molecules/cost-currency-widget'
 
 const styles = {
-    tabs: `w-full flex flex-col items-start justify-start space-y-[64px]`,
+    tabs: `w-full flex flex-col items-start justify-start space-y-[16px] lg:space-y-[64px]`,
     tablist: `bg-accent w-full max-w-[452px] h-[44px] flex items-center justify-between p-[4px]`,
     tabTrigger: `w-[148px] h-[36px] flex xitems-center justify-center font-dmsans font-medium text-base text-gray-600 font-[500] data-[state=active]:bg-white data-[state=active]:font-[500] data-[state=active]:rounded-[7px] data-[state=active]:shadow`,
     tabContent: `w-full flex items-center justify-center`
@@ -14,7 +14,7 @@ const styles = {
 
 const PricingTabs = () => {
     return (
-        <div className='relative w-full lg:container min-h-[350px] pt-[88px]'>
+        <div className='relative w-full lg:min-h-[350px] h-fit lg:pt-[88px] px-[18px] lg:container'>
             <Tabs defaultValue="individual" className={styles.tabs}>
                 <TabsList className={styles.tablist}>
                     {/* Individual */}
@@ -47,7 +47,7 @@ const PricingTabs = () => {
             </Tabs>
 
             {/* Absolute currency selector */}
-            <div className='absolute top-[88px] right-[32px]'>
+            <div className='hidden lg:block absolute top-[88px] right-[32px]'>
                 <CostCurrencyWidget />
             </div>
         </div>

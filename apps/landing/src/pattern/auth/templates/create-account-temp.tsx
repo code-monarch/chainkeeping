@@ -60,13 +60,13 @@ const CreateAccountTemp = () => {
         push(`${pathname}?additional-info=true`);
     }
     return (
-        <div className='w-fit flex flex-col items-center gap-y-8 pb-[144px]'>
+        <div className='w-fit flex flex-col items-center gap-y-8 px-[18px] pb-[144px]'>
             <Link href={APP_ROUTES.index}>
                 <BrandLogo />
             </Link>
 
-            <Card className="bg-white w-[438px] h-[622px] flex flex-col gap-y-6 p-6 rounded-[8px] sahdow-md border-none">
-                <CardHeader className="h-[30px] flex items-start justify-start pb-2 border-b">
+            <Card className="bg-white w-fit max-w-[438px] lg:w-[438px] h-fit lg:h-[622px] flex flex-col gap-y-6 p-6 rounded-[8px] sahdow-md border-none">
+                <CardHeader className="h-fit lg:h-[30px] flex items-start justify-start pb-2 border-b">
                     <CardTitle className="text-base font-bold font-sen">Create Account</CardTitle>
                 </CardHeader>
                 <CardContent className="w-full h-full flex flex-col gap-y-6 !mt-0">
