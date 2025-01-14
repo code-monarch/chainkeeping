@@ -21,7 +21,7 @@ const taxableIncome = [
 const TaxableCryptoIncome = () => {
   return (
     <div className='w-full flex flex-col gap-y-4'>
-      <h3 className='text-[2rem] font-rubik font-semibold mt-4'>Taxable cryptocurrency income / transaction</h3>
+      <h3 className='text-2xl lg:text-[2rem] font-rubik font-semibold mt-4'>Taxable cryptocurrency income / transaction</h3>
       <ul className='list-disc text-gray-600 leading-[26px] font-dmsans font-normal pl-6'>
         {
           taxableIncome?.map((item, idx) => (

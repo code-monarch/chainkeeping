@@ -10,11 +10,11 @@ const taxableIncome = [
 const NonTaxableCryptoIncome = () => {
     return (
         <div className='w-full flex flex-col gap-y-4'>
-            <h3 className='text-[2rem] font-rubik font-semibold mt-4'>Non-taxable cryptocurrency transactions</h3>
-            <ul className='list-disc text-gray-600 leading-[26px] font-dmsans font-normal pl-6'>
+            <h3 className='text-2xl lg:text-[2rem] font-rubik font-semibold mt-4'>Non-taxable cryptocurrency transactions</h3>
+            <ul className='w-full max-w-[339px] list-disc text-gray-600 leading-[26px] font-dmsans font-normal pl-6'>
                 {
                     taxableIncome?.map((item, idx) => (
-                        <li key={idx} className='font-normal' >{formatTextWithLinks(item)}</li>
+                        <li key={idx} className='w-full font-normal overflow-x-hidden' >{formatTextWithLinks(item)}</li>
                     ))
                 }
             </ul>

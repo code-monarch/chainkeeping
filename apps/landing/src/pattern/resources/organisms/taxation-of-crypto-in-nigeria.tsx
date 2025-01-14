@@ -39,12 +39,12 @@ const withholdingTax = [
 const TaxationOfCryptoInNigeria = () => {
     return (
         <div className="w-full space-y-[16px] mt-4">
-            <h3 className='text-3xl font-rubik font-semibold mb-4'>TAXATION OF CRYPTOCURRENCY  IN NIGERIA</h3>
-            <h3 className='text-3xl font-rubik font-semibold'>Classification of cryptocurrency</h3>
+            <h3 className='text-2xl lg:text-3xl font-rubik font-semibold mb-4'>TAXATION OF CRYPTOCURRENCY  IN NIGERIA</h3>
+            <h3 className='text-2xl lg:text-3xl font-rubik font-semibold'>Classification of cryptocurrency</h3>
             <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'>
                 Cryptocurrency is classified as securities according to the SEC regulation released I April, 2022 and defines it as Digital Assets - a digital token that represents assets such as a debt or equity claim on the issuer;
             </p>
-            <h3 className='text-3xl font-rubik font-semibold'>Applicable taxes to cryptocurrency</h3>
+            <h3 className='text-2xl lg:text-3xl font-rubik font-semibold'>Applicable taxes to cryptocurrency</h3>
             <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'>
                 Based on Nigeria's ACTs, Securities are subject to 3 main taxes: </p>
             <ol className="roman-list list-none space-y-2 text-gray-600 leading-[26px] font-dmsans font-normal pl-6">

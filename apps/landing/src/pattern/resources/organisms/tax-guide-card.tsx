@@ -33,7 +33,7 @@ const TaxGuideCard: FC<IProps> = ({ country, description, title }) => {
 
     return (
         <Link href={`${RESOURCES_ROUTES.taxGuide}/${country}`} className='w-full h-fit' >
-            <Card className="w-[409px] h-[426px] space-y-0 border-2 border-accent p-0 border-none card-shadow shadow-md">
+            <Card className="w-full max-w-[409px] lg:w-[409px] min-h-[426px] h-fit lg:h-[426px] space-y-0 border-2 border-accent p-0 border-none card-shadow shadow-md">
                 <div className='relative bg-primary w-full h-[230px] flex flex-col justify-center items-start py-[42px] px-[32px] rounded-t-[8px]'>
                     <div className='w-full space-y-[10px]'>
                         <TaxGuideCountryFlag country={country} />
