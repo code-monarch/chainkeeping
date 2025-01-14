@@ -11,9 +11,9 @@ const linkToOtherWebsites = [
 
 const TermsOfUseTemp = () => {
     return (
-        <div className='w-full max-w-[984px] space-y-[32px]'>
+        <div className='w-full lg:max-w-[984px] space-y-[32px] px-[18px]'>
             <div className='w-full flex flex-col gap-y-4'>
-                <h3 className='text-[2.8rem] font-rubik font-semibold'>Terms of Service</h3>
+                <h3 className='text-[2rem] lg:text-[2.8rem] font-rubik font-semibold'>Terms of Service</h3>
                 <LastUpdatedWidget lastUpdate={LAST_UPDATE} />
                 <p className='text-base text-gray-600 leading-[26px] font-dmsans font-normal'>These terms and conditions outline the rules and regulations concerning access to and use of Chainkeeping website or mobile application related, linked or otherwise connected thereto.<br /><br />
                     You agree that by accessing this website, you have read, understood and agreed to be bound by all these terms and conditions. <strong>IF YOU DO NOT AGREE TO TAKE ALL OF THE TERMS AND CONDITIONS STATED ON THIS PAGE, YOU MUST DISCONTINUE USE IMMEDIATELY.</strong><br /><br />
