@@ -36,8 +36,8 @@ const IntegrationsHeroSection = () => {
         <section className="bg-primary bg-pattern-bg-img bg-cover bg-center w-full h-fit lg:h-[484px]">
             <div className="w-full h-full flex flex-col items-center justify-start gap-y-8 pt-[69px] pb-[47px] px-[18px] lg:container">
                 <div className="w-full max-w-[760px] flex flex-col gap-y-8">
-                    <div className="w-full max-w-[734px] flex flex-col gap-y-3 lg:gap-y-1">
-                        <h3 className="font-rubik font-bold text-4xl leading-[37.97px] lg:text-[2.75rem] text-white">Seamlessly import from anywhere</h3>
+                    <div className="w-full flex flex-col gap-y-3">
+                        <h3 className="font-rubik font-bold text-4xl leading-[37.97px] lg:text-[2.75rem] text-white text-left lg:text-center">Seamlessly import from anywhere</h3>
                         <p className="max-w-[339px] lg:max-w-[734px] text-white text-base text-left lg:text-center font-dmsans leading-[22px]">
                             Direct integration with 500+ exchanges, wallets, blockchains, and accounting softwares.
                             Integrate via read-only access for trade tracking, calculating crypto taxes, and syncing your
@@ -51,7 +51,7 @@ const IntegrationsHeroSection = () => {
                         onChange={(e) => setSearch(e?.target?.value)}
                     />
                 </div>
-                <div className="w-full lg:max-w-[855px] flex flex-col gap-y-8">
+                <div className="w-full lg:max-w-[855px] flex flex-col items-center gap-y-8">
                     <IntegrationsToggleGroup />
                     <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-center gap-8">
                         <div className="w-fit flex items-center justify-center gap-4 pr-8 lg:border-r lg:border-white">

@@ -11,7 +11,6 @@ import { APP_ROUTES, AUTH_ROUTES, RESOURCES_ROUTES } from "@/lib/routes";
 import { useRouter } from "next/navigation";
 import MenuIcon from "../atoms/menu-icon";
 import { MenuCloseIcon } from "../atoms/menu-close-icon";
-import { ChevronDown } from "lucide-react";
 
 export interface INavigation {
     title: string;
@@ -151,7 +150,7 @@ const Topbar = () => {
                                             <Accordion type='single' collapsible className='bg-primary w-full min-h-[40px] h-fit border-none'>
                                                 <AccordionItem value={`${title}`} className='w-full h-fit space-y-[12px]  border-none outline-none shadow-sm'>
                                                     <AccordionTrigger className='text-white text-base text-left font-dmsans font-medium border-b-0 hover:no-underline py-0'>{title}</AccordionTrigger>
-                                                    <AccordionContent className='bg-primary h-fit flex flex-col text-base text-white text-left'>
+                                                    <AccordionContent className='bg-primary h-fit flex flex-col text-base text-white text-left shadow-sm'>
                                                         <div className="bg-primary w-fit h-fit flex flex-col gap-y-4 pl-4 pr-3 pb-3 rounded-md z-50">
                                                             {subLinks?.map(({ link, title }, idx) => (
                                                                 <Link key={idx} href={link} className="h-full" onClick={() => setIsOpen(false)}>

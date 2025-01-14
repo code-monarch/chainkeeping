@@ -61,6 +61,6 @@ export const SOCIALS = {
     email: "info@withconvexity.com ",
 };
 
-export const PERSONAL_DASHBOARD_URL = "https://www.personal.chainkeeping.com"
-export const COMPANY_DASHBOARD_URL = "https://www.company.chainkeeping.com"
-export const PRACTITIONERS_DASHBOARD_URL = "https://www.practitioners.chainkeeping.com"
+export const PERSONAL_DASHBOARD_URL = "https://chainkeeping-271m.vercel.app/"
+export const COMPANY_DASHBOARD_URL = "https://chainkeeping-271m.vercel.app/"
+export const PRACTITIONERS_DASHBOARD_URL = "https://chainkeeping-271m.vercel.app/"
