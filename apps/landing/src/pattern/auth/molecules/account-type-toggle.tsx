@@ -11,7 +11,7 @@ export interface IAccountTypeToggleProps {
 
 const AccountTypeToggle: FC<IAccountTypeToggleProps> = ({ description, Icon, title, value, toggleGroupValue }) => {
     return (
-        <ToggleGroupItem value={value} aria-label={title} size="custom" variant="outline" className={cn('min-w-full max-w-[306px] bg-transparent w-full h-[96px] flex items-start justify-normal gap-3 p-4 rounded-[12px] border hover:bg-transparent hover:border-border focus-visible:bg-transparent data-[state=on]:bg-secondary-accent data-[state=on]:text-secondary data-[state=on]:border-secondary transition-all duration-200 ease-in-out')}>
+        <ToggleGroupItem value={value} aria-label={title} size="custom" variant="outline" className={cn('min-w-full max-w-[306px] bg-transparent w-full h-fit lg:h-[96px] flex items-start justify-normal gap-3 p-4 rounded-[12px] border hover:bg-transparent hover:border-border focus-visible:bg-transparent data-[state=on]:bg-secondary-accent data-[state=on]:text-secondary data-[state=on]:border-secondary transition-all duration-200 ease-in-out')}>
             <div className='w-fit h-fit'>
                 {Icon}
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderLabel from '@/pattern/common/atoms/header-label'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, ScrollArea, ScrollBar, Typography } from '@chainkeeping/ui'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, Typography } from '@chainkeeping/ui'
 
 const reviews = [
     {
@@ -31,24 +31,21 @@ const ReviewsTemp = () => {
                 <p className='w-full font-dmsans text-base'>Don&apos;t just take our words for it, see what our customers say about Chainkeeping services.</p>
             </div>
 
-            <ScrollArea className="w-[300px] lg:w-full h-fit pb-3">
-                <div className='w-full flex items-center gap-6 mx-auto'>
-                    {reviews.map(({ Title, description, name }, idx) => (
-                        <Card key={idx} className="w-[284px] lg:w-[384px] min-h-[256px] h-fit flex flex-col gap-3 p-8 shadow-none">
-                            <CardHeader>
-                                <CardTitle className='text-lg lg:text-xl font-bold font-dmsans'>{Title}</CardTitle>
-                            </CardHeader>
-                            <CardContent className='text-sm lg:text-base text-label font-dmsans !mt-0'>
-                                {description}
-                            </CardContent>
-                            <CardFooter className="flex justify-between text-base text-label font-semibold font-dmsans !mt-0">
-                                {name}
-                            </CardFooter>
-                        </Card>
-                    ))}
-                </div>
-                <ScrollBar orientation="horizontal" className='lg:!hidden' />
-            </ScrollArea>
+            <div className='w-full flex items-center gap-6 pb-3 mx-auto overflow-x-auto'>
+                {reviews.map(({ Title, description, name }, idx) => (
+                    <Card key={idx} className="min-w-[284px] lg:w-[384px] min-h-[256px] h-fit flex flex-col gap-3 p-8 shadow-none">
+                        <CardHeader>
+                            <CardTitle className='text-lg lg:text-xl font-bold font-dmsans'>{Title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className='text-sm lg:text-base text-label font-dmsans !mt-0'>
+                            {description}
+                        </CardContent>
+                        <CardFooter className="flex justify-between text-base text-label font-semibold font-dmsans !mt-0">
+                            {name}
+                        </CardFooter>
+                    </Card>
+                ))}
+            </div>
         </div>
     )
 }
