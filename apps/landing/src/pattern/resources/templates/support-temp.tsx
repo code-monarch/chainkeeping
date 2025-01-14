@@ -45,7 +45,7 @@ const SupportTemp = () => {
         {/* Glossary */}
         <div className='w-full lg:w-[336px] h-fit lg:h-[150px] flex flex-col items-center gap-y-4 p-4 rounded-[8px]'>
           <h4 className='font-rubik font-medium text-2xl text-foreground'>Glossary</h4>
-          <p className='w-full max-w-[304px] font-dmsans font-normal text-center text-sm text-[hsla(215,23%,40%,1)]'>Get informed, A-Z of crypto, crytpo taxation and more.</p>
+          <p className='w-full max-w-[304px] font-dmsans font-normal text-center text-sm text-[hsla(215,23%,40%,1)]'>Get informed, A-Z of crypto, crypto taxation and more.</p>
           <Button variant="link" className='text-base font-normal font-dmsans' onClick={() => push(APP_ROUTES.contact)} >Learn</Button>
         </div>
 

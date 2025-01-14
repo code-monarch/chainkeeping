@@ -29,7 +29,7 @@ const ResourcesNavContent = () => {
 
                 <li className='w-full flex flex-col items-center gap-y-9'>
                     {/* Glossary */}
-                    <NavListItem icon={<GlossaryIcon />} href={RESOURCES_ROUTES.glossary} title='Glossary' description='Get informed, A-Z of crypto, crytpo taxation and more.' />
+                    <NavListItem icon={<GlossaryIcon />} href={RESOURCES_ROUTES.glossary} title='Glossary' description='Get informed, A-Z of crypto, crypto taxation and more.' />
                 </li>
             </ul>
         </div>
