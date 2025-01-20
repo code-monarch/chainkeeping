@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Checkbox } from "@chainkeeping/ui";
 import SortIcon from "../atoms/sort-icon";
 import Modal from "@/pattern/taxes/molecules/modal-compoent";
+import { useRouter } from "next/navigation";
 
 type SortOrder = "asc" | "desc" | null;
 type Tax = {
@@ -21,7 +22,11 @@ const PractitionerTables = () => {
 	const [currentPage, setCurrentPage] = useState(1);
 	const [searchText, setSearchText] = useState("");
 
-	const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
+	const router = useRouter();
+
+	const handleView = () => {
+		router.push("/practitioner/activity-log");
+	};
 
 	const [orders, setOrders] = useState<Tax[]>([
 		{
@@ -86,19 +91,6 @@ const PractitionerTables = () => {
 	const indexOfLastRow = currentPage * rowsPerPage;
 	const indexOfFirstRow = indexOfLastRow - rowsPerPage;
 	const currentRows = filteredOrders.slice(indexOfFirstRow, indexOfLastRow);
-
-	const totalPages = Math.ceil(filteredOrders.length / rowsPerPage);
-
-	const changePage = (page: number) => {
-		if (page > 0 && page <= totalPages) setCurrentPage(page);
-	};
-
-	const handleCopy = (text: string) => {
-		navigator.clipboard.writeText(text).then(
-			() => alert("RRR copied to clipboard!"),
-			(err) => console.error("Failed to copy RRR: ", err)
-		);
-	};
 
 	// Handle row selection
 	const handleRowsChange = (event: { target: { value: any } }) => {
@@ -177,19 +169,31 @@ const PractitionerTables = () => {
 								</div>
 							</td>
 
-							<td className='whitespace-nowrap border-b px-4 py-2 text-sm'>
+							<td
+								className='whitespace-nowrap border-b px-4 py-2 cursor-pointer text-sm'
+								onClick={handleView}
+							>
 								<div className='flex items-center gap-2'>{order.name}</div>
 							</td>
-							<td className='whitespace-nowrap border-b px-4 py-3 text-sm'>
+							<td
+								className='whitespace-nowrap border-b px-4 cursor-pointer py-3 text-sm'
+								onClick={handleView}
+							>
 								<div className='flex items-center gap-2'>{order.email}</div>
 							</td>
 
-							<td className='whitespace-nowrap border-b px-4 py-1 text-sm'>
+							<td
+								className='whitespace-nowrap border-b px-4 cursor-pointer py-1 text-sm'
+								onClick={handleView}
+							>
 								<div className='flex items-center gap-2 pr-4'>
 									{order.serviceType}
 								</div>
 							</td>
-							<td className='whitespace-nowrap border-b  px-4 py-3 text-sm'>
+							<td
+								className='whitespace-nowrap border-b cursor-pointer  px-4 py-3 text-sm'
+								onClick={handleView}
+							>
 								<div className='flex'>
 									<div
 										style={getStatusStyle(order.status)}

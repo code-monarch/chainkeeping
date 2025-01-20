@@ -4,22 +4,22 @@ import { Hidden } from "../hidden";
 import LoadingSpinner from "@/components/icons/loading-spinner";
 
 interface ISubmitButtonprops extends ButtonProps {
-    loading?: boolean;
+	loading?: boolean;
 }
 
 const SubmitButton: FC<ISubmitButtonprops> = ({
-    loading = false,
-    children,
-    ...props
+	loading = false,
+	children,
+	...props
 }) => {
-    return (
-        <Button {...props} type='submit'>
-            <Hidden isVisible={loading}>
-                <LoadingSpinner className='animate-spin' />
-            </Hidden>
-            <Hidden isVisible={!loading}>{children}</Hidden>
-        </Button>
-    );
+	return (
+		<Button {...props} type='submit'>
+			<Hidden isVisible={loading}>
+				<LoadingSpinner className='animate-spin' />
+			</Hidden>
+			<Hidden isVisible={!loading}>{children}</Hidden>
+		</Button>
+	);
 };
 
 export { SubmitButton };

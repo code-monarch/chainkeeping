@@ -4,10 +4,12 @@ import ReportIcons from "../atoms/reports-icon";
 import { Button } from "@chainkeeping/ui";
 import StarIcon from "../atoms/star-icon";
 import HalfStarIcon from "../atoms/half-star-icon";
-import EmptyStarIcon from "../atoms/empty-star-icon";
 import ArrowIcon from "../atoms/arrow-icon";
-import FilterIcon from "../atoms/filter-icon";
-import FilterSection from "../organisms/filter-section";
+import Link from "next/link";
+import LinkIcon from "../atoms/link-icon";
+import LinkedInIcon from "../atoms/linkedin-icon";
+import XIcon from "../atoms/x-icon";
+import FacebookIcon from "../atoms/facebook-icon";
 import { useRouter } from "next/navigation";
 
 const practitionersData = [
@@ -24,92 +26,40 @@ const practitionersData = [
 		accountManagementPrice: "80,000",
 		reportSigningPrice: "10,000",
 		avatar: "AA",
-	},
-	{
-		id: 2,
-		name: "Johnson & Partners",
-		description:
-			"Lorem ipsum dolor sit amet consectetur. Lorem ornare nullam integer porttitor nibh in elementum at...",
-		clients: 10,
-		reports: 150,
-		rating: 4.8,
-		reviews: 20,
-		status: "online",
-		accountManagementPrice: "100,000",
-		reportSigningPrice: "15,000",
-		avatar: "JP",
-	},
-	{
-		id: 3,
-		name: "Kalu Consulting Firm",
-		description:
-			"Lorem ipsum dolor sit amet consectetur. Lorem ornare nullam integer porttitor nibh in elementum at...",
-		clients: 5,
-		reports: 80,
-		rating: 4.2,
-		reviews: 8,
-		status: "offline",
-		accountManagementPrice: "60,000",
-		reportSigningPrice: "8,000",
-		avatar: "KC",
-	},
-	{
-		id: 4,
-		name: "Kalu Consulting Firm",
-		description:
-			"Lorem ipsum dolor sit amet consectetur. Lorem ornare nullam integer porttitor nibh in elementum at...",
-		clients: 5,
-		reports: 80,
-		rating: 4.2,
-		reviews: 8,
-		status: "offline",
-		accountManagementPrice: "60,000",
-		reportSigningPrice: "8,000",
-		avatar: "KC",
+		website: "https://adegboakintax.com",
+		chainkeeping_id: "CK0002354",
+		staff: "5",
+		linkedIn: "https://adegboakintax.com",
+		twitter: "https://adegboakintax.com",
+		facebook: "https://adegboakintax.com",
 	},
 ];
 
-const ListOfPractitioners = () => {
+const SinglePractitioner = () => {
 	const router = useRouter();
-
-	// Function to handle login click
-	const handleHire = () => {
-		router.push("/practitioner/practitioner-info");
-	};
 	const [isFilterOpen, setIsFilterOpen] = useState(false);
 
 	const toggleFilter = () => {
 		setIsFilterOpen(!isFilterOpen);
 	};
+
+	const handleHire = () => {
+		router.push("/practitioner/order-configuration");
+	};
 	return (
-		<div className='flex w-full h-screen max-sm:flex-col'>
+		<div className='flex flex-col pt-10 px-16 w-full max-sm:px-4'>
 			{/* Main Content */}
-			<div
-				className={`flex-1 px-16 pt-10 w-full max-sm:px-4 ${
-					isFilterOpen ? "mr-0" : ""
-				}`}
-			>
+			<div className='flex flex-col  w-full '>
 				<div className='flex justify-between items-center mb-5'>
-					<div className='gap-2 flex items-center'>
-						<p className='text-[#94A3B8] text-sm'>Practitioner</p>
+					<div className='gap-2 flex items-center text-sm'>
+						<p className='text-[#94A3B8]'>Practitioner</p>
 						<ArrowIcon />
-						<p>P2B</p>
+						<p className='text-[#94A3B8]'>P2B</p>
+						<ArrowIcon />
+						<p>Adegboyega & Akinsanya LLC</p>
 					</div>
-					<Button
-						onClick={toggleFilter}
-						variant='default'
-						size='sm'
-						className='text-base px-2 gap-2 bg-[#E5EBEF] text-[#4F627D]'
-					>
-						<FilterIcon />
-						Filter
-					</Button>
 				</div>
-				<div
-					className={`grid 2xl:grid-cols-4 w-full   gap-4 lg:grid-cols-3 max-sm:grid-cols-1 max-sm:px-4 ${
-						isFilterOpen ? "2xl:grid-cols-3 lg-grid-cols-2" : ""
-					}`}
-				>
+				<div className='flex max-sm:flex-col items-start w-full gap-6'>
 					{practitionersData.map((practitioner) => (
 						<div
 							key={practitioner.id}
@@ -182,7 +132,7 @@ const ListOfPractitioners = () => {
 								</div>
 							</div>
 
-							<div className='bg-[#F5F8FA] rounded-md p-3 mt-4 text-[#384860]'>
+							<div className='bg-gray-100 rounded-md p-3 mt-4 text-[#384860]'>
 								<div className='flex justify-between text-sm '>
 									<span>Account Management:</span>
 									<span className='text-[#94A3B8]'>
@@ -204,23 +154,99 @@ const ListOfPractitioners = () => {
 									</span>
 								</div>
 							</div>
+						</div>
+					))}
 
-							<Button
-								variant='default'
-								size='md'
-								className='text-base px-3 mt-4 gap-1'
-								onClick={handleHire}
-							>
-								Hire Practitioner
-							</Button>
+					{practitionersData.map((practitioner) => (
+						<div
+							key={practitioner.id}
+							className='bg-[#EBEFF3]  flex w-full flex-col rounded-lg gap-4 p-8'
+						>
+							<div className='flex w-full justify-between md:gap-4 max-sm:flex-col'>
+								<div className='flex-1'>
+									<h3 className='font-bold text-lg '>{practitioner.name}</h3>
+									<p className=' lg:w-[454px] text-[#384860]'>
+										Lorem ipsum dolor sit amet consectetur. Lorem ornare nullam
+										integer porttitor nibh in elementum at libero. Gravida at
+										sit et.
+									</p>
+								</div>
+								<Button
+									variant='secondary'
+									size='md'
+									className='text-base px-3 mt-4 gap-1'
+									onClick={handleHire}
+								>
+									Hire Practitioner
+								</Button>
+							</div>
+							<div className='flex gap-2  text-sm text-[#384860]'>
+								<div className='rounded-md bg-[#CBD5E1]  px-2 py-1'>
+									<p>Financial reporting</p>
+								</div>
+								<div className='rounded-md bg-[#CBD5E1] px-2 py-1'>
+									<p>Audit & Assurance</p>
+								</div>
+								<div className='rounded-md bg-[#CBD5E1] px-2 py-1'>
+									<p>Tax</p>
+								</div>
+								<div className='rounded-md bg-[#CBD5E1] px-2 py-1'>
+									<p>Advisory</p>
+								</div>
+							</div>
+
+							<div className='flex w-full p-2 bg-[#DDE2E9]'>
+								<p className='text-[#384860] text-sm'>BASIC INFO</p>
+							</div>
+
+							<div className=' rounded-md   text-[#384860] '>
+								<div className='flex justify-between border-b py-2'>
+									<span>Website:</span>
+									<span className='text-[#202B3C]   hover:text-[#D82E2E] cursor-pointer transition-all ease-in-out duration-300'>
+										<Link
+											className='flex gap-1 items-center'
+											target='_blank'
+											href={practitioner.website}
+										>
+											{practitioner.website}
+
+											<LinkIcon />
+										</Link>
+									</span>
+								</div>
+								<div className='flex justify-between border-b py-2'>
+									<span>Chainkeeping ID:</span>
+									<span className='text-[#202B3C] '>
+										{practitioner.chainkeeping_id}
+									</span>
+								</div>
+								<div className='flex justify-between border-b py-2'>
+									<span>Staff:</span>
+									<span className='text-[#202B3C] '>{practitioner.staff}</span>
+								</div>
+								<div className='flex flex-col  gap-4 py-2'>
+									<span>Socials:</span>
+									<div className='flex gap-1'>
+										<Link href={practitioner.linkedIn}>
+											<LinkedInIcon />
+										</Link>
+
+										<Link href={practitioner.twitter}>
+											<XIcon />
+										</Link>
+
+										<Link href={practitioner.facebook}>
+											<FacebookIcon />
+										</Link>
+									</div>
+								</div>
+							</div>
 						</div>
 					))}
 				</div>
 			</div>
-			{/* Filter Panel */}
-			<FilterSection isFilterOpen={isFilterOpen} toggleFilter={toggleFilter} />
 		</div>
 	);
 };
 
-export default ListOfPractitioners;
+export default SinglePractitioner;
