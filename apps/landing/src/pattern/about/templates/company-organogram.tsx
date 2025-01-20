@@ -12,6 +12,7 @@ import CharlesPhoto from "@/public/company/charles-photo.png"
 import JoelPhoto from "@/public/company/joel-photo.png"
 import OnyinyePhoto from "@/public/company/onyinye-photo.png"
 import OlayinkaPhoto from "@/public/company/olayinka-photo.png"
+import EnoPhoto from "@/public/company/eno-photo.png"
 
 const stakeholders = [
     {
@@ -60,10 +61,15 @@ const stakeholders = [
         image: JoelPhoto,
     },
     {
+        name: 'Eno Peters Akpan',
+        position: 'Product Manager',
+        image: EnoPhoto,
+    },
+    {
         name: 'Onyinye Evelyn Eze',
         position: 'Accountant',
         image: OnyinyePhoto,
-    },
+    }
 ]
 
 const CompanyOrganogram = () => {
