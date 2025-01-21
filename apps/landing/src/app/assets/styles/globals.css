@@ -3,93 +3,93 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 0, 0%, 100%, 1;
-    --topbar-height: 72px;
-  }
+	:root {
+		--background: 0, 0%, 100%, 1;
+		--topbar-height: 72px;
+	}
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background) !important;
+	color: var(--foreground);
+	background: var(--background) !important;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
-  .next-error-h1 {
-    color: #000 !important;
-    border-right: 1px solid #000 !important;
-  }
+	.next-error-h1 {
+		color: #000 !important;
+		border-right: 1px solid #000 !important;
+	}
 }
 
 /* Shadow styles for Pricing Cards */
 .card-shadow {
-  box-shadow: 0px 4px 8px 0px hsla(194, 90%, 12%, 0.05);
-  box-shadow: 1px -4px 8px 0px hsla(194, 90%, 12%, 0.05);
+	box-shadow: 0px 4px 8px 0px hsla(194, 90%, 12%, 0.05);
+	box-shadow: 1px -4px 8px 0px hsla(194, 90%, 12%, 0.05);
 }
 /* Custom Scrollbar style */
 .custom_scollbar::-webkit-scrollbar {
-  width: 8px !important;
-  height: 12px;
-  padding-top: 10px;
+	width: 8px !important;
+	height: 12px;
+	padding-top: 10px;
 }
 
 .custom_scollbar::-webkit-scrollbar-track {
-  border-radius: 4px !important;
-  background-color: transparent;
+	border-radius: 4px !important;
+	background-color: transparent;
 }
 
 .custom_scollbar::-webkit-scrollbar-thumb {
-  background-color: hsla(213, 27%, 84%, 1);
-  border-radius: 4px !important;
+	background-color: hsla(213, 27%, 84%, 1);
+	border-radius: 4px !important;
 }
 
 ::-webkit-scrollbar {
-  width: 8px !important;
-  height: 12px;
-  padding-top: 10px;
+	width: 8px !important;
+	height: 12px;
+	padding-top: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 4px !important;
-  background-color: transparent;
+	border-radius: 4px !important;
+	background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsla(210, 40%, 96%, 1);
-  border-radius: 4px !important;
+	background-color: hsla(210, 40%, 96%, 1);
+	border-radius: 4px !important;
 }
 
 /* PhoneNumber Input */
 .selected-flag {
-  background-color: hsla(204, 33%, 97%, 1) !important;
-  border-top-left-radius: 6px !important;
-  border-bottom-left-radius: 6px !important;
+	background-color: hsla(204, 33%, 97%, 1) !important;
+	border-top-left-radius: 6px !important;
+	border-bottom-left-radius: 6px !important;
 }
 .selected-flag:hover {
-  background-color: hsla(204, 33%, 97%, 1) !important;
+	background-color: hsla(204, 33%, 97%, 1) !important;
 }
 
-  select option {
-    color: hsla(216, 30%, 18%, 1);
-    background-color: transparent;
-    padding: 8px;
-  }
+select option {
+	color: hsla(216, 30%, 18%, 1);
+	background-color: transparent;
+	padding: 8px;
+}
 
-  select option:hover {
-    background-color: hsla(204, 33%, 97%, 1);
-  }
+select option:hover {
+	background-color: hsla(204, 33%, 97%, 1);
+}

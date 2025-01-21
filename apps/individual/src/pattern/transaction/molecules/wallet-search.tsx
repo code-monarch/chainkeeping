@@ -3,7 +3,7 @@ import React, { FC, useState } from "react";
 import { cn, Input } from "@chainkeeping/ui";
 import SearchInputIcon from "../atoms/searc-input-icon";
 
-const SearchInput: FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
+const WalletSearch: FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
 	name,
 	placeholder,
 	onChange,
@@ -22,7 +22,7 @@ const SearchInput: FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
 				onFocus={() => setIsFocus(true)}
 				onBlur={() => setIsFocus(false)}
 				placeholder={placeholder ?? "Search"}
-				className={cn("pl-[56px] w-[300px] h-[44px]", className)}
+				className={cn("pl-[56px] flex w-[400px] h-[44px]", className)}
 				{...props}
 			/>
 			{/* prefix Icon */}
@@ -33,4 +33,4 @@ const SearchInput: FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
 	);
 };
 
-export default SearchInput;
+export default WalletSearch;
