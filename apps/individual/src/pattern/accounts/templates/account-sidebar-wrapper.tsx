@@ -1,22 +1,24 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import Sidebar from "../organisms/sidebar";
-import { cn } from "@chainkeeping/ui";
 
-// Wrapper for pages that are not authentication pages
+import { cn } from "@chainkeeping/ui";
+import Sidebar from "../organisms/sidebar";
+
 const PageWrapper = ({ children }: { children: ReactNode }) => {
 	return (
 		<div
 			className={cn(
-				"relative bg-accent w-full h-full flex items-start transition-all duration-200 ease-in-out"
+				"relative bg-accent w-full min-h-screen flex transition-all duration-200 ease-in-out"
 			)}
 		>
+			{/* Sidebar */}
 			<Sidebar />
+
+			{/* Main Content */}
 			<main
-				className={cn(
-					"bg-accent w-full min-h-full h-fit flex flex-col space-y-[20px] ml-[--sidebar-width] mt-[--topbar-height] p-[32px]"
-				)}
+				className='w-full pl-8 flex items-center justify-center'
+				style={{ marginLeft: "18rem" }} // Sidebar width = 72px * 4 = 18rem
 			>
 				{children}
 			</main>

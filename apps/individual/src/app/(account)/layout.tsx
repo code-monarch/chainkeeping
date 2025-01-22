@@ -12,11 +12,17 @@ export default function MainLayout({
 	return (
 		<div
 			className={cn(
-				"relative bg-[#F8F9FA] w-screen min-h-svh h-fit flex flex-col  gap-[12px] font-dmsans transition-all duration-200 ease-in-out"
+				"relative bg-[#F8F9FA] w-screen min-h-screen h-auto flex flex-col font-dmsans"
 			)}
 		>
+			{/* Topbar */}
 			<Topbar />
-			<PageWrapper>{children}</PageWrapper>
+
+			{/* Main Content Wrapper */}
+			<div className='flex w-full flex-1 overflow-hidden'>
+				{/* Sidebar is part of PageWrapper */}
+				<PageWrapper>{children}</PageWrapper>
+			</div>
 		</div>
 	);
 }
