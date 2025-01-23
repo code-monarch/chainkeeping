@@ -1,8 +1,6 @@
 import Link from "next/link";
 import TradesIcon from "@/pattern/transaction/atoms/trades-icon";
 import IncomingIcon from "@/pattern/transaction/atoms/incoming-icon";
-import BCWIcon from "@/pattern/transaction/atoms/bcw-icon";
-import { BinanceAccount } from "./icons";
 import BinanceIcon from "@/pattern/common/atoms/crypto-platforms/binance-icon";
 
 const assetStats = [
