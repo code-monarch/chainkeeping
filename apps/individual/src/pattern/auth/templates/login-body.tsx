@@ -27,10 +27,10 @@ const LoginBody = () => {
 				</Link>
 				<p className='max-sm:mt-14 font-bold'>Log in to your account</p>
 				<div className='w-full border-b my-2 flex border-[#21293412]'></div>
-				<button className='w-full max-sm:justify-center border focus:border-[#D82E2E] shadow-sm hover:shadow-none transition-all duration-200 ease-in-out gap-2 flex h-12 rounded-md items-center px-4 border-[#21293412] my-4'>
-					<GoogleIcon /> <p className='text-[#202B3C]'>Sign in with Google</p>
+				<button className='w-full max-sm:justify-center border focus:border-destructive shadow-sm hover:shadow-none transition-all duration-200 ease-in-out gap-2 flex h-12 rounded-md items-center px-4 border-[#21293412] my-4'>
+					<GoogleIcon /> <p className='text-foreground'>Sign in with Google</p>
 				</button>
-				<button className='w-full max-sm:justify-center border focus:border-[#D82E2E] shadow-sm hover:shadow-none transition-all duration-200 ease-in-out gap-2 flex h-12 rounded-md items-center px-4 border-[#21293412] '>
+				<button className='w-full max-sm:justify-center border focus:border-destructive shadow-sm hover:shadow-none transition-all duration-200 ease-in-out gap-2 flex h-12 rounded-md items-center px-4 border-[#21293412] '>
 					<Appleicon /> <p className='text-[#202B3C]'>Sign in with Apple</p>
 				</button>
 				<div className='py-3 flex w-full gap-3 items-center'>

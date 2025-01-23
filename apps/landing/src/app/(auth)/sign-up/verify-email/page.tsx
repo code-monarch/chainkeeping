@@ -6,7 +6,7 @@ import VerifyEmailTemp from '@/pattern/auth/templates/verify-email-temp'
 const VerifyEmail = () => {
   return (
     <>
-          <VerifyEmailTemp />
+      <VerifyEmailTemp />
     </>
   )
 }
