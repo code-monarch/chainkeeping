@@ -1,8 +1,15 @@
+"use client";
+
 import React from 'react'
+import FAQsHeroSection from '@/pattern/resources/templates/FAQs-hero-section'
+import FAQsTemp from '@/pattern/resources/templates/FAQs-temp';
 
 const FaqsPage = () => {
   return (
-    <div>FaqsPage</div>
+    <div className='w-full flex flex-col items-center gap-y-12 lg:gap-y-[88px] lg:mb-[144px]'>
+      <FAQsHeroSection />
+      <FAQsTemp />
+    </div>
   )
 }
 

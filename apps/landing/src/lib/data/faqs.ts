@@ -1,6 +1,6 @@
 import { IFaqs } from "../types";
 
-export const generalFAQs: IFaqs[] = [
+export const GeneralFAQs: IFaqs[] = [
     {
         question: "What is Chainkeeping?",
         answer: "Chainkeeping is a comprehensive crypto financial reporting and tax platform designed to assist individuals, businesses, accounting practitioners, and tax authorities in managing and complying with crypto-related accounting and tax obligations. It provides robust features for tracking crypto transactions, generating tax reports, and ensuring regulatory compliance.",

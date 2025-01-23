@@ -20,3 +20,14 @@ export interface IInputIconProps extends IIconProps {
     focus?: boolean; // input focus state
     toggle?: boolean; // toggle password input visible state
 }
+export interface GlossaryItem {
+    question: string;
+    answer: string;
+}
+
+export interface GlossarySection {
+    [key: string]: GlossaryItem[];
+}
+
+export type GlossaryData = GlossarySection[];
+

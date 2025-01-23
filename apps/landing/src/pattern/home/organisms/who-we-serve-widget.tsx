@@ -16,7 +16,7 @@ const WhoWeServeWidget: FC<IWhoWeServeWidgetProps> = ({ description, href, icon,
     return (
         <>
             <Card
-                className="col-span-1 h-[364pxpx] flex flex-col gap-3 p-8 border-none shadow-none">
+                className="col-span-1 h-[364pxpx] flex flex-col gap-3 p-0 py-3 lg:p-8 lg:py-8 border-none shadow-none">
                 <CardHeader className='w-full flex flex-col gap-3'>
                     <div className='flex items-center gap-3'>
                         <span>
@@ -27,7 +27,7 @@ const WhoWeServeWidget: FC<IWhoWeServeWidgetProps> = ({ description, href, icon,
                             {label}
                         </p>
                     </div>
-                    <CardTitle className='text-2xl font-bold font-rubik'>
+                    <CardTitle className='text-xl lg:text-2xl font-bold font-rubik'>
                         {title}
                     </CardTitle>
                 </CardHeader>

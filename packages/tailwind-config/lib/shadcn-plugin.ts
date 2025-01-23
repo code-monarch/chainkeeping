@@ -193,6 +193,9 @@ export const shadcnPlugin = plugin(
                         ring: 'hsl(var(--sidebar-ring))',
                     },
                 },
+                boxShadow: {
+                    'card-shadow': 'box-shadow: 0px 4px 8px 0px hsla(194, 90%, 12%, 0.05), 1px -4px 8px 0px hsla(194, 90%, 12%, 0.05)'
+                },
                 borderRadius: {
                     xl: `calc(var(--radius) + 4px)`,
                     lg: `var(--radius)`,

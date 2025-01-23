@@ -10,7 +10,7 @@ const OurVisionStatementWidget = () => {
             <div className='w-full space-y-[18px]'>
                 <div className='w-full text-left space-y-[4px]'>
                     <HeaderLabel className='text-left text-white'>Our Vision</HeaderLabel>
-                    <Typography className='w-fit text-left text-[2rem] text-white font-rubik leading-[37.97px]'>We aim global adoption</Typography>
+                    <Typography className='w-fit text-left text-2xl lg:text-[2rem] text-white font-rubik leading-[28.44px] lg:leading-[37.97px] after:w-[273px] lg:after:w-[368px] after:left-0'>We aim global adoption</Typography>
                 </div>
                 <p className='w-full text-white text-2xl leading-[31.25px] font-dmsans'>“ To be the most trusted and adopted global cryptocurrency accounting and tax platform by both crypto users, practitioners and tax authorities.”</p>
             </div>

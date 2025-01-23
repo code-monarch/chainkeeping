@@ -5,6 +5,7 @@ import hardSet from "redux-persist/lib/stateReconciler/hardSet";
 import howItWorksReducer from './slices/how-it-works.slice';
 import featuresReducer from './slices/features.slice';
 import integrationsReducer from './slices/integrations.slice';
+import glossaryReducer from './slices/glossary.slice';
 
 import storage from "redux-persist/lib/storage";
 
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
     howItWorks: howItWorksReducer,
     features: featuresReducer,
     integrations: integrationsReducer,
+    glossary: glossaryReducer,
 });
 
 export default rootReducer;

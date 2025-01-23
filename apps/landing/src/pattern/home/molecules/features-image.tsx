@@ -16,33 +16,110 @@ const FeaturesImage: FC<IProps> = ({ feature }) => {
     const renderImage = () => {
         switch (feature) {
             case "tax-computation":
-                return <Image src={TaxComputationImage} alt="Tax Computation" width={408.15} height={318.87} />;
+                return <>
+                    <Image
+                        src={TaxComputationImage} alt="Tax Computation"
+                        fill
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        priority
+                    />
+                </>
 
             case "practioners":
-                return <Image src={PractitionersImage} alt="Account Practitioners" width={408.15} height={294.68} />;
+                return <>
+                    <Image
+                        src={PractitionersImage} alt="Account Practitioners"
+                        fill
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        priority
+                    />
+                </>
 
             case "payroll":
-                return <Image src={PayrollImage} alt="Crypto Payroll" width={408.15} height={337.01} />;
+                return <>
+                    <Image
+                        src={PayrollImage} alt="Crypto Payroll"
+                        fill
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        priority
+                    />
+                </>
 
             case "payments":
-                return <Image src={PaymentImage} alt="Crypto Payment" width={408.15} height={421.84} />;
+                return <>
+                    <Image
+                        src={PaymentImage} alt="Crypto Payment"
+                        fill
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        priority
+                    />
+                </>
 
             case "invoicing":
-                return <div className='relative w-full h-full'>
-                    <Image src={InvoicingImage} alt="Crypto Invoicing" width={494} height={556.96} className="absolute top-[64.5px] left-[29.14px]" />
-                </div>;
+                return <>
+                    <Image
+                        src={InvoicingImage} alt="Crypto Invoicing"
+                        fill
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        priority
+                    />
+                </>
 
             case "reporting":
-                return <div className='relative w-full h-full'>
-                    <Image src={OtherIcomeImage} alt="Other Income" width={317.37} height={271.64} className="absolute top-[56.99px] left-[79.06px]" />
-                    <Image src={TaxesImage} alt="Taxes" width={317.37} height={205.43} className="absolute top-[169.14px] left-[153.52px]" />
-                </div>;
+                return <>
+                    <Image src={OtherIcomeImage} alt="Other Income" fill
+                        style={{
+                            objectFit: 'cover',
+                            position: "absolute",
+                            top: "0%",
+                            left: "0%"
+                        }}
+                        priority
+                    />
+                    <Image src={TaxesImage} alt="Taxes" style={{
+                        objectFit: 'cover',
+                        position: "absolute",
+                        top: "45%",
+                        left: "25%"
+                    }}
+                        priority
+                    />
+                </>;
             default:
-                return <Image src={PractitionersImage} alt="Account Practitioners" width={408.15} height={318.87} className="w-[408.15px] h-[318.87px]" />;
+                return <>
+                    <Image
+                        src={PractitionersImage} alt="Account Practitioners"
+                        fill
+                        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{
+                            objectFit: 'cover',
+                        }}
+                        priority
+                    />
+                </>
         }
     };
 
-    return <div className="bg-[hsla(240,4%,5%,1)] w-[549.71px] h-[444px] flex items-center justify-center rounded-xl transition-all duration-300 ease-in-out overflow-hidden">{renderImage()}</div>;
+    return (
+        <div className='bg-[hsla(240,4%,5%,1)] w-full h-full lg:max-w-[549.71px] lg:h-[444px] flex items-center justify-center rounded-xl transition-all duration-300 ease-in-out overflow-hidden'>
+            <div className="relative w-[215.84px] h-[250.18px] lg:w-[408.15px] lg:h-[318.87px]">{renderImage()}</div>
+        </div>
+    )
 };
 
 export default FeaturesImage;

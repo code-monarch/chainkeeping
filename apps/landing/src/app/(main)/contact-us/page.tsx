@@ -8,14 +8,11 @@ import ContactForm from '@/pattern/contact-us/templates/contact-us-form';
 const ContactUsPage = () => {
   return (
     <>
-      <div className='relative w-full'>
+      <div className='relative w-full space-y-[32px] lg:space-y-0 lg:mb-[617px]'>
         <ContactUsHeroSection />
-        <div className='absolute top-[223px] left-1/2 -translate-x-1/2'>
+        <div className='lg:absolute lg:top-[223px] lg:left-1/2 lg:-translate-x-1/2'>
           <ContactForm />
         </div>
-      </div>
-      <div className='w-full mt-[700px] mb-[144px]'>
-        <JoinUsWidget />
       </div>
     </>
   )

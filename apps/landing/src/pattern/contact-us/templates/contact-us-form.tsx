@@ -7,11 +7,11 @@ import { Facebook, Linkedin } from 'lucide-react'
 
 export default function ContactForm() {
     return (
-        <div className="w-full lg:w-[701px] min-h-[442px] h-fit mx-auto space-y-[32px]">
+        <div className="w-full lg:w-[701px] h-fit lg:min-h-[442px] px-[18px] lg:px-0 lg:mx-auto space-y-[32px]">
             <Card className='card-shadow'>
                 <CardContent>
                     <form className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                             <div className="space-y-2">
                                 <label htmlFor="email" className="text-sm">
                                     Email Address
@@ -67,8 +67,8 @@ export default function ContactForm() {
                                 className="min-h-[96px]"
                             />
                         </div>
-                        <div className="flex justify-end">
-                            <Button>
+                        <div className="w-full lg:flex lg:justify-end">
+                            <Button className='w-full lg:w-fit'>
                                 Submit
                             </Button>
                         </div>
@@ -76,7 +76,7 @@ export default function ContactForm() {
                 </CardContent>
             </Card>
 
-            <div className="w-full h-[80px] flex justify-center gap-4">
+            <div className="w-full h-fit lg:h-[80px] flex flex-col lg:flex-row lg:justify-center gap-4">
                 <a
                     href={SOCIALS.facebook}
                     className="w-full h-full flex items-center justify-center gap-2 text-sm text-gray-600 p-6 border rounded-[8px]"
@@ -93,8 +93,10 @@ export default function ContactForm() {
                 </a>
             </div>
 
-            <div className="h-[80px] w-full flex justify-center items-center gap-2 text-sm text-gray-600 border rounded-[8px]">
-                <MapPinIcon />
+            <div className="h-fit lg:h-[80px] w-full flex justify-center items-start lg:items-center gap-2 text-sm text-gray-600 p-6 border rounded-[8px]">
+                <div>
+                    <MapPinIcon />
+                </div>
                 <p>No. 3, Rabat Street, off Herbert Macaulay way, Wuse Zone 6, Abuja, Nigeria</p>
             </div>
         </div>
