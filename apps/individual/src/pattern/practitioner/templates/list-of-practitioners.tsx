@@ -8,6 +8,7 @@ import EmptyStarIcon from "../atoms/empty-star-icon";
 import ArrowIcon from "../atoms/arrow-icon";
 import FilterIcon from "../atoms/filter-icon";
 import FilterSection from "../organisms/filter-section";
+import { useRouter } from "next/navigation";
 
 const practitionersData = [
 	{
@@ -69,6 +70,12 @@ const practitionersData = [
 ];
 
 const ListOfPractitioners = () => {
+	const router = useRouter();
+
+	// Function to handle login click
+	const handleHire = () => {
+		router.push("/practitioner/practitioner-info");
+	};
 	const [isFilterOpen, setIsFilterOpen] = useState(false);
 
 	const toggleFilter = () => {
@@ -175,7 +182,7 @@ const ListOfPractitioners = () => {
 								</div>
 							</div>
 
-							<div className='bg-gray-100 rounded-md p-3 mt-4 text-[#384860]'>
+							<div className='bg-[#F5F8FA] rounded-md p-3 mt-4 text-[#384860]'>
 								<div className='flex justify-between text-sm '>
 									<span>Account Management:</span>
 									<span className='text-[#94A3B8]'>
@@ -202,6 +209,7 @@ const ListOfPractitioners = () => {
 								variant='default'
 								size='md'
 								className='text-base px-3 mt-4 gap-1'
+								onClick={handleHire}
 							>
 								Hire Practitioner
 							</Button>

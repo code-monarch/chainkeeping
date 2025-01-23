@@ -14,6 +14,8 @@
 		"@chainkeeping/ui": "workspace:*",
 		"@ebay/nice-modal-react": "^1.2.13",
 		"@reduxjs/toolkit": "^2.5.0",
+		"@tanstack/react-table": "^8.20.6",
+		"clsx": "^2.1.1",
 		"country-flag-icons": "^1.5.13",
 		"lucide-react": "^0.456.0",
 		"next": "15.1.0",
