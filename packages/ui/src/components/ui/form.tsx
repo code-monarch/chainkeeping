@@ -1,4 +1,4 @@
-import React, { createContext, forwardRef, useContext, useId } from "react"
+import { createContext, forwardRef, useContext, useId } from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { Slot } from "@radix-ui/react-slot"
 import {
@@ -89,7 +89,7 @@ const FormLabel = forwardRef<
     React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & {
         required?: boolean
     }
-    >(({ className, required, ...props }, ref) => {
+>(({ className, required, ...props }, ref) => {
     const { error, formItemId } = useFormField()
 
     return (
