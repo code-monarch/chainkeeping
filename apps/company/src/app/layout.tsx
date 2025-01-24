@@ -1,16 +1,13 @@
+import "@chainkeeping/ui/dist/index.css";
+import "./assets/styles/globals.css";
+
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { dmsans, inter, rubik, sen, space_Grotesk } from "./assets/fonts";
+import { Providers } from "../redux/provider";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
+import { Provider as RollbarProvider } from '@rollbar/react';
+import { clientConfig } from "@/lib/utils/rollbar";
 
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -23,12 +20,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
-				{children}
+		// <RollbarProvider config={clientConfig}>
+		<html lang="en">
+			<body className={`${sen.variable} ${inter.variable} ${dmsans.variable} ${rubik.variable} ${space_Grotesk.variable} antialiased relative bg-accent w-screen min-h-svh h-fit m-0 p-0 overflow-x-hidden`} >
+				<Providers>{children}</Providers>
 			</body>
 		</html>
+		// </RollbarProvider >
 	);
 }

@@ -1,28 +1,13 @@
-import { ReactElement } from "react";
-import {
-    BrandLogo,
-    Button,
-    Hidden,
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-} from "@chainkeeping/ui";
-import SolutionsNavContent from "../organisms/solutions-nav-content";
-import IntegrationsNavContent from "../organisms/integrations-nav-content";
-import CustomNavLink from "../molecules/custom-nav-link";
-import ResourcesNavContent from "../organisms/resources-nav-content";
-import { CountrySelect } from "../organisms/country-selector";
 import Link from "next/link";
 import { APP_ROUTES } from "@/lib/routes";
-import QuickActionIcon from "../atoms/quick-action-icon";
-import UserProfileIcon from "../atoms/user-profile-icon";
+import { BrandLogo, NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@chainkeeping/ui";
+import CustomNavLink from "../molecules/custom-nav-link";
+import { QuickActionPopover } from "../organisms/quick-action-popover";
+import { AccountQuickActionPopover } from "../organisms/account-quick-action-popover";
 
 interface INavigation {
     title: string;
     href?: string;
-    content?: ReactElement;
 }
 
 const navigation: INavigation[] = [
@@ -47,8 +32,8 @@ const navigation: INavigation[] = [
         href: "/reports",
     },
     {
-        title: "Bulk Payment",
-        href: "/bulk-payments",
+        title: "Business",
+        href: "/business",
     },
     {
         title: "Practitioner",
@@ -58,9 +43,9 @@ const navigation: INavigation[] = [
 
 export const Topbar = () => {
     return (
-        <div className='bg-background fixed inset-0 w-full h-[var(--topbar-height)] flex items-center justify-center px-[24px] md:px-0 border-b z-[25]'>
-            <div className='h-full relative md:px-16 w-full flex items-center justify-between'>
-                <div className='flex items-center  gap-7'>
+        <div className='bg-white fixed inset-0 w-full h-[--topbar-height] flex items-center justify-between px-0 md:px-8 border-b z-[25]'>
+            <div className='relative h-[40px] w-full flex items-center justify-between'>
+                <div className='flex items-center gap-7'>
                     <Link href={APP_ROUTES.index}>
                         <BrandLogo />
                     </Link>
@@ -68,25 +53,12 @@ export const Topbar = () => {
                     <div className='h-[22px] pl-7  border-l-2  flex items-center gap-[27px]'>
                         {/* Navigation */}
                         <NavigationMenu>
-                            <NavigationMenuList className='h-[var(--topbar-height)]'>
-                                {navigation.map(({ title, content, href }, idx) => (
+                            <NavigationMenuList className='h-full'>
+                                {navigation.map(({ title, href }, idx) => (
                                     <div key={idx} className='h-full'>
-                                        <Hidden isVisible={content ? true : false}>
-                                            <NavigationMenuItem className='h-full'>
-                                                <NavigationMenuTrigger className='py-2 px-3'>
-                                                    {title}
-                                                </NavigationMenuTrigger>
-                                                <NavigationMenuContent asChild>
-                                                    {content}
-                                                </NavigationMenuContent>
-                                            </NavigationMenuItem>
-                                        </Hidden>
-
-                                        <Hidden isVisible={!content}>
-                                            <NavigationMenuItem className='h-full'>
-                                                <CustomNavLink href={href as string} title={title} />
-                                            </NavigationMenuItem>
-                                        </Hidden>
+                                        <NavigationMenuItem className='h-full'>
+                                            <CustomNavLink href={href as string} title={title} />
+                                        </NavigationMenuItem>
                                     </div>
                                 ))}
                             </NavigationMenuList>
@@ -96,10 +68,8 @@ export const Topbar = () => {
 
                 <div className='h-full flex items-center gap-[27px]'>
                     <div className='flex items-center gap-4'>
-                        <QuickActionIcon />
-                        <UserProfileIcon />
-
-                        {/* <CountrySelect /> */}
+                        <QuickActionPopover />
+                        <AccountQuickActionPopover />
                     </div>
                 </div>
             </div>

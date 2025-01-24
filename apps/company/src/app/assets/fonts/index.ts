@@ -37,7 +37,6 @@ export const space_Grotesk = Space_Grotesk({
     subsets: ['latin-ext', 'latin'],
     variable: '--font-space_Grotesk',
 });
-
 export const dmsans = DM_Sans({
     weight: ['300', '400', '500', '600', '700'],
     style: 'normal',

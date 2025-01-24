@@ -1,5 +1,5 @@
 import { IIconProps } from "@chainkeeping/ui";
-import { ReactElement, ReactNode } from "react";
+import { ReactElement } from "react";
 import { FieldError } from "react-hook-form";
 export interface INavListItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     href: string
