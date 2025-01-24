@@ -1,11 +1,7 @@
 import BinanceIcon from "@/pattern/common/atoms/crypto-platforms/binance-icon";
 
-import BusdIcon from "@/pattern/individual/atoms/transactionsIcons/busd-icon";
-
-import TrustWalletIcon from "@/pattern/individual/atoms/transactionsIcons/trust-wallet-icon";
 import EthIcon from "@/pattern/individual/atoms/eth-icon";
 import MaticIcon from "@/pattern/practitioner/atoms/matic-icon";
-import TradeIcon from "@/pattern/individual/atoms/transactionsIcons/trade-icon";
 import TetherIcon from "@/pattern/transaction/atoms/tether-icon";
 import FanthomIcon from "@/pattern/transaction/atoms/fanthom-icon";
 import ArrowDownIcon from "@/pattern/transaction/atoms/arrow-down";
@@ -24,6 +20,9 @@ import SwapIcon from "@/pattern/transaction/atoms/swap-icon";
 import MetamaskIcon from "@/pattern/transaction/atoms/metamask-icon";
 import UniIcon from "@/pattern/transaction/atoms/uni-icon";
 import PolsIcon from "@/pattern/transaction/atoms/pols-icon";
+import TradeIcon from "@/pattern/transaction/atoms/trade-icon";
+import BusdIcon from "@/pattern/individual/atoms/transactions-icons/busd-icon";
+import TrustWalletIcon from "@/pattern/individual/atoms/transactions-icons/trust-wallet-icon";
 
 export const transactionData = [
 	{

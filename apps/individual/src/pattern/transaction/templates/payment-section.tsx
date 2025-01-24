@@ -74,7 +74,7 @@ const PaymentSection = () => {
 	const renderUploadFile = () => (
 		<div>
 			<h2 className='text-xl font-semibold mb-2'>Upload bulk payment file</h2>
-			<p className='text-[#384860] text-sm mb-4 max-w-md'>
+			<p className='text-grey-600 text-sm mb-4 max-w-md'>
 				Download our custom excel template, if you don’t already have it. File
 				upload may take a few minutes.
 			</p>

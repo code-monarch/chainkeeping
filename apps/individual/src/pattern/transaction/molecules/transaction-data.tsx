@@ -7,8 +7,6 @@ import BTCIcon from "../atoms/btc-icon";
 import ArrowUp from "../atoms/arrow-up";
 import LinkIcon from "../atoms/link-icon";
 import WalletIcon from "../atoms/wallet-icon";
-
-import BusdIcon from "@/pattern/individual/atoms/transactionsIcons/busd-icon";
 import KucionIcon from "../atoms/kucion-icon";
 import XtzIcon from "../atoms/xtz-icon";
 import FiatIcon from "../atoms/fiat-icon";
@@ -20,9 +18,10 @@ import SwapIcon from "../atoms/swap-icon";
 import MetamaskIcon from "../atoms/metamask-icon";
 import UniIcon from "../atoms/uni-icon";
 import PolsIcon from "../atoms/pols-icon";
-import TrustWalletIcon from "@/pattern/individual/atoms/transactionsIcons/trust-wallet-icon";
 import EthIcon from "@/pattern/individual/atoms/eth-icon";
 import MaticIcon from "@/pattern/practitioner/atoms/matic-icon";
+import TrustWalletIcon from "@/pattern/individual/atoms/transactions-icons/trust-wallet-icon";
+import BusdIcon from "@/pattern/individual/atoms/transactions-icons/busd-icon";
 
 export const transactionData = [
 	{

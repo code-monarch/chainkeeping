@@ -67,7 +67,7 @@ const SinglePractitioner = () => {
 						>
 							<div className='flex gap-4 '>
 								<div className='h-[52px] w-[52px] relative'>
-									<div className=' w-[48px] h-[48px] rounded-md bg-[#F5F8FA] flex items-center justify-center font-medium text-[#384860]'>
+									<div className=' w-[48px] h-[48px] rounded-md bg-[#F5F8FA] flex items-center justify-center font-medium text-grey-600'>
 										{practitioner.avatar}
 									</div>
 									<div
@@ -132,7 +132,7 @@ const SinglePractitioner = () => {
 								</div>
 							</div>
 
-							<div className='bg-gray-100 rounded-md p-3 mt-4 text-[#384860]'>
+							<div className='bg-gray-100 rounded-md p-3 mt-4 text-grey-600'>
 								<div className='flex justify-between text-sm '>
 									<span>Account Management:</span>
 									<span className='text-[#94A3B8]'>
@@ -165,7 +165,7 @@ const SinglePractitioner = () => {
 							<div className='flex w-full justify-between md:gap-4 max-sm:flex-col'>
 								<div className='flex-1'>
 									<h3 className='font-bold text-lg '>{practitioner.name}</h3>
-									<p className=' lg:w-[454px] text-[#384860]'>
+									<p className=' lg:w-[454px] text-grey-600'>
 										Lorem ipsum dolor sit amet consectetur. Lorem ornare nullam
 										integer porttitor nibh in elementum at libero. Gravida at
 										sit et.
@@ -180,7 +180,7 @@ const SinglePractitioner = () => {
 									Hire Practitioner
 								</Button>
 							</div>
-							<div className='flex gap-2  text-sm text-[#384860]'>
+							<div className='flex gap-2  text-sm text-grey-600'>
 								<div className='rounded-md bg-[#CBD5E1]  px-2 py-1'>
 									<p>Financial reporting</p>
 								</div>
@@ -196,10 +196,10 @@ const SinglePractitioner = () => {
 							</div>
 
 							<div className='flex w-full p-2 bg-[#DDE2E9]'>
-								<p className='text-[#384860] text-sm'>BASIC INFO</p>
+								<p className='text-grey-600 text-sm'>BASIC INFO</p>
 							</div>
 
-							<div className=' rounded-md   text-[#384860] '>
+							<div className=' rounded-md   text-grey-600 '>
 								<div className='flex justify-between border-b py-2'>
 									<span>Website:</span>
 									<span className='text-[#202B3C]   hover:text-[#D82E2E] cursor-pointer transition-all ease-in-out duration-300'>

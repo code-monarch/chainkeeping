@@ -117,7 +117,7 @@ const ListOfPractitioners = () => {
 						>
 							<div className='flex gap-4 '>
 								<div className='h-[52px] w-[52px] relative'>
-									<div className=' w-[48px] h-[48px] rounded-md bg-[#F5F8FA] flex items-center justify-center font-medium text-[#384860]'>
+									<div className=' w-[48px] h-[48px] rounded-md bg-[#F5F8FA] flex items-center justify-center font-medium text-grey-600'>
 										{practitioner.avatar}
 									</div>
 									<div
@@ -182,7 +182,7 @@ const ListOfPractitioners = () => {
 								</div>
 							</div>
 
-							<div className='bg-[#F5F8FA] rounded-md p-3 mt-4 text-[#384860]'>
+							<div className='bg-[#F5F8FA] rounded-md p-3 mt-4 text-grey-600'>
 								<div className='flex justify-between text-sm '>
 									<span>Account Management:</span>
 									<span className='text-[#94A3B8]'>

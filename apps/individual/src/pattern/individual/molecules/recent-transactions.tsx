@@ -64,7 +64,7 @@ const TransactionsTable: React.FC<TransactionsTableProps> = ({
 								<td className='py-2 px-4 whitespace-nowrap'>
 									<div className='flex justify-center items-center gap-1 bg-[#F5F8FA] px-2 py-1 rounded-md'>
 										<TradeIcon />
-										<p className='text-[#384860] text-sm'>{transaction.type}</p>
+										<p className='text-grey-600 text-sm'>{transaction.type}</p>
 									</div>
 								</td>
 								<td className='py-2 px-4 whitespace-nowrap'>

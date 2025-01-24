@@ -296,7 +296,7 @@ const BulkPaymentTable: React.FC<UnresolvedTransactionsTableProps> = ({
 								{row.getVisibleCells().map((cell) => (
 									<td
 										key={cell.id}
-										className='px-6 py-4 border-b border-gray-300 text-sm text-[#384860]'
+										className='px-6 py-4 border-b border-gray-300 text-sm text-grey-600'
 									>
 										{flexRender(cell.column.columnDef.cell, cell.getContext())}
 									</td>

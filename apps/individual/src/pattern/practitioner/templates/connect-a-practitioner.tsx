@@ -17,7 +17,7 @@ const ConnectAPractioner = () => {
 				<div className='w-full flex max-sm:flex-col-reverse justify-between bg-white py-6 px-8 max-sm:px-6 max-sm:rounded-lg sm:rounded-l-lg gap-14'>
 					<div className='flex flex-col gap-4'>
 						<h6 className='font-bold '>Connect to a practitioner</h6>
-						<p className='text-[#384860] md:max-w-[400px]  '>
+						<p className='text-grey-600 md:max-w-[400px]  '>
 							Simplify your tax management with the help of a professional, let
 							our network of certified practitioners take care of your account.
 						</p>
@@ -39,7 +39,7 @@ const ConnectAPractioner = () => {
 				<div className='px-8 py-6 bg-[#E6E9EE] max-sm:rounded-lg max-sm:px-6 rounded-r-lg'>
 					<div className='flex flex-col gap-4'>
 						<h6 className='font-bold '>Already have a practitioner?</h6>
-						<p className='text-[#384860] sm:w-[400px]'>
+						<p className='text-grey-600 sm:w-[400px]'>
 							Well, that’s not an issue, if they are already on Chainkeeping,
 							provide their user ID or else, their email address to invite them
 							to manage your account.

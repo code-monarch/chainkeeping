@@ -5,22 +5,26 @@ import {
 	getPaginationRowModel,
 	flexRender,
 	Table,
+	ColumnDef,
 } from "@tanstack/react-table";
-
-import SortIcon from "../atoms/sort-icon";
-import PrevIcon from "../atoms/prev-icon";
-import NextIcon from "../atoms/next-icon";
-import { Button, Checkbox } from "@chainkeeping/ui";
-import { useRouter } from "next/navigation";
-import TetherIcon from "@/pattern/individual/atoms/tether-icon";
-import EditIcon from "../atoms/edit-icon";
-import DeleteIcon from "../atoms/delete-icon";
-import Modal from "@/pattern/taxes/molecules/modal-compoent";
-import SuccesIcon from "@/pattern/taxes/atoms/success-icon";
-import PaymentSuccessModal from "../molecules/payment-success-modal";
-import ApprovePaymentModal from "../molecules/approve-payment-modal";
-import DeletePaymentModal from "../molecules/delete-payment-modal";
-import EditPaymentModal from "../molecules/edit-payment-modal";
+import {
+	Button,
+	Checkbox,
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from "@chainkeeping/ui";
+import SortIcon from "@/pattern/transaction/atoms/sort-icon";
+import PrevIcon from "@/pattern/transaction/atoms/prev-icon";
+import NextIcon from "@/pattern/transaction/atoms/next-icon";
+import ExportIcon from "@/pattern/transaction/atoms/export-icon";
+import BinanceIcon from "@/pattern/common/atoms/crypto-platforms/binance-icon";
+import MetamaskAccountIcon from "../atoms/metamask-account-icon";
+import AvalancheAccountIcon from "../atoms/avalanche-account-icon";
+import CoinbaseAccountIcon from "../atoms/coinbase-account-icon";
+import SearchInput from "@/pattern/transaction/molecules/search-input";
 
 interface Transaction {
 	id: string | number;
@@ -51,7 +55,7 @@ interface UnresolvedTransactionsTableProps {
 	data: Transaction[];
 }
 
-const PreviewPayment: React.FC<UnresolvedTransactionsTableProps> = ({
+const AssetsHoldingsTable: React.FC<UnresolvedTransactionsTableProps> = ({
 	data,
 }) => {
 	const [selectedRows, setSelectedRows] = useState<
@@ -61,10 +65,8 @@ const PreviewPayment: React.FC<UnresolvedTransactionsTableProps> = ({
 	const [isFilterOpen, setIsFilterOpen] = useState(false);
 	const [search, setSearch] = useState("");
 
-	const router = useRouter();
-
-	const handleAddAccount = () => {
-		router.push("bulk-payments/transaction");
+	const toggleFilter = () => {
+		setIsFilterOpen(!isFilterOpen);
 	};
 
 	// Handle individual checkbox change
@@ -109,30 +111,8 @@ const PreviewPayment: React.FC<UnresolvedTransactionsTableProps> = ({
 		console.log("Filtered Data:", filtered);
 		return filtered;
 	}, [data, search]);
-	const [loading, setLoading] = useState(false);
-	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-	const [isEditModalOpen, setIsEditodalOpen] = useState(false);
-	const [isApproveModalOpen, setIsApproveModalOpen] = useState(false);
 
-	const openApproveModal = () => setIsApproveModalOpen(true);
-	const openDeleteModal = () => setIsDeleteModalOpen(true);
-	const openEditModal = () => setIsEditodalOpen(true);
-	const closeEditModal = () => setIsEditodalOpen(false);
-	const closeDeleteModal = () => setIsDeleteModalOpen(false);
-	const closeApproveModal = () => setIsApproveModalOpen(false);
-	const closeModal = () => setIsModalOpen(false);
-
-	const handleApproveClick = async () => {
-		setLoading(true);
-		setIsApproveModalOpen(false);
-
-		setTimeout(() => {
-			setLoading(false);
-			setIsModalOpen(true);
-		}, 2000);
-	};
-
+	// Define columns
 	const columns = React.useMemo(
 		() => [
 			{
@@ -168,12 +148,16 @@ const PreviewPayment: React.FC<UnresolvedTransactionsTableProps> = ({
 					/>
 				),
 			},
+
 			{
-				header: "Transaction ID",
-				accessorKey: "transaction_id",
+				header: "Asset",
+				accessorKey: "assets",
 				cell: (info: any) => (
-					<div className='flex w-[300px] items-center gap-2'>
-						<span className='text-sm'>{info.getValue()}</span>
+					<div className='flex'>
+						<div className='text-grey-600 text-sm flex items-center gap-1 w-auto '>
+							{info.getValue().icon}
+							<span>{info.getValue().title}</span>
+						</div>
 					</div>
 				),
 			},
@@ -181,91 +165,71 @@ const PreviewPayment: React.FC<UnresolvedTransactionsTableProps> = ({
 				header: "Amount",
 				accessorKey: "amount",
 				cell: (info: any) => (
-					<div className='flex w-full'>
-						<div className='text-sm justify-end flex items-end gap-1 w-[50%] text-end'>
+					<div className='flex items-center gap-2'>
+						<span className='text-sm text-[#222222]'>{info.getValue()}</span>
+					</div>
+				),
+			},
+
+			{
+				header: "Change 24h",
+				accessorKey: "change_24h",
+				cell: (info: any) => (
+					<div className='flex'>
+						<div className='text-sm flex gap-1 items-center border border-border px-2 py-1 rounded-full'>
+							<span
+								className={`h-2 w-2 flex rounded-full ${
+									info.getValue().startsWith("-")
+										? "bg-destructive"
+										: "bg-[#27AE60] h-2 w-2 "
+								}`}
+							></span>
 							{info.getValue()}
 						</div>
 					</div>
 				),
-				headerClassName: "text-end item-end justify-end", // Right-align the header
 			},
 			{
-				header: "Currency",
-				accessorKey: "currency",
-				cell: (info: any) => {
-					const value = info.getValue();
-
-					return (
-						<div className='flex'>
-							<div className='flex gap-1 text-xs items-center'>
-								<TetherIcon />
-								{value}
-							</div>
+				header: "Change 30d",
+				accessorKey: "change_30d",
+				cell: (info: any) => (
+					<div className='flex'>
+						<div className='text-sm flex gap-1 items-center border border-border px-2 py-1 rounded-full'>
+							<span
+								className={`h-2 w-2 flex rounded-full ${
+									info.getValue().startsWith("-")
+										? "bg-destructive"
+										: "bg-[#27AE60] h-2 w-2 "
+								}`}
+							></span>
+							{info.getValue()}
 						</div>
-					);
-				},
-			},
-
-			{
-				header: "Recipient",
-				accessorKey: "recipient",
-				cell: (info: any) => (
-					<div className='flex gap-1 w-full items-center'>
-						<span className='text-[#222222] text-sm'>{info.getValue()}</span>
 					</div>
 				),
-				headerClassName: "text-end item-end justify-end", // Right-align the header
 			},
 			{
-				header: "Recipient Email",
-				accessorKey: "recipient_email",
+				header: "Change 1yr",
+				accessorKey: "change_1year",
 				cell: (info: any) => (
-					<div className='flex gap-1 w-full items-center'>
-						<span className='text-[#222222] text-sm'>{info.getValue()}</span>
-					</div>
-				),
-				headerClassName: "text-end item-end justify-end", // Right-align the header
-			},
-			{
-				header: "Payment Description",
-				accessorKey: "payment_description",
-				cell: (info: any) => (
-					<div className='flex gap-1 w-full items-center'>
-						<span className='text-[#222222] text-sm'>{info.getValue()}</span>
-					</div>
-				),
-				headerClassName: "text-end item-end justify-end", // Right-align the header
-			},
-
-			{
-				id: "actions",
-				accessorKey: "action",
-				cell: (info: any) => {
-					const actionValue = info.getValue();
-					return (
-						<div className='flex gap-4 w-full items-center justify-start'>
-							<button
-								onClick={openEditModal}
-								className=' flex items-center gap-1 text-[#94A3B8]'
-							>
-								<EditIcon />
-								Edit
-							</button>
-							<button
-								onClick={openDeleteModal}
-								className='flex items-center gap-1 text-[#94A3B8]'
-							>
-								<DeleteIcon />
-								Delete
-							</button>
+					<div className='flex'>
+						<div className='text-sm flex gap-1 items-center border border-border px-2 py-1 rounded-full'>
+							<span
+								className={`h-2 w-2 flex rounded-full ${
+									info.getValue().startsWith("-")
+										? "bg-destructive"
+										: "bg-[#27AE60] h-2 w-2 "
+								}`}
+							></span>
+							{info.getValue()}
 						</div>
-					);
-				},
+					</div>
+				),
 			},
 		],
 		[selectedRows]
 	);
 
+	// Use React Table instance
 	const table = useReactTable({
 		data: filteredData,
 		columns,
@@ -277,22 +241,51 @@ const PreviewPayment: React.FC<UnresolvedTransactionsTableProps> = ({
 		<div>
 			<div className='flex justify-between mb-10'>
 				<div className='flex gap-3 '>
-					<div className='flex bg-[#E5EBEF] py-[10px] px-5 rounded-md'>
-						<p className='font-medium text-black'>Binance Mainnet</p>
-					</div>
-					<div className='flex bg-[#E5EBEF] items-center gap-2 py-[10px] px-5 rounded-md'>
-						<img src='/Base.svg' alt='' />
-						<p className='font-medium'>0x2c9b...fa23bc093ae3b282c0</p>
+					<div className='lg:w-[300px]'>
+						<Select>
+							<SelectTrigger>
+								<SelectValue placeholder='Binance' />
+							</SelectTrigger>
+
+							<SelectContent>
+								<SearchInput
+									value={search}
+									onChange={(e) => setSearch(e.target.value)}
+									placeholder='Search...'
+								/>
+								<SelectItem value='all-transactions'>
+									<div className='flex gap-2 items-center'>
+										<BinanceIcon /> Binance
+									</div>
+								</SelectItem>
+								<SelectItem value='trade'>
+									<div className='flex gap-2 items-center'>
+										<BinanceIcon /> Binance 2
+									</div>
+								</SelectItem>
+								<SelectItem value='deposit'>
+									<div className='flex gap-2 items-center'>
+										<MetamaskAccountIcon /> Metamask
+									</div>
+								</SelectItem>
+								<SelectItem value='withdrawal'>
+									<div className='flex gap-2 items-center'>
+										<AvalancheAccountIcon /> Avalancher C-Chain
+									</div>
+								</SelectItem>
+								<SelectItem value='airdrop'>
+									<div className='flex gap-2 items-center'>
+										<CoinbaseAccountIcon /> Coinbase
+									</div>
+								</SelectItem>
+							</SelectContent>
+						</Select>
 					</div>
 				</div>
 				<div className='flex gap-3'>
-					<Button
-						variant='secondary'
-						size='md'
-						className='text-base gap-2'
-						onClick={openApproveModal}
-					>
-						Approve transaction
+					<Button variant='default' size='md' className='text-base px-2 gap-2'>
+						<ExportIcon />
+						Export
 					</Button>
 				</div>
 			</div>
@@ -387,21 +380,8 @@ const PreviewPayment: React.FC<UnresolvedTransactionsTableProps> = ({
 					</div>
 				</div>
 			</div>
-
-			<PaymentSuccessModal isOpen={isModalOpen} onClose={closeModal} />
-			<DeletePaymentModal
-				isOpen={isDeleteModalOpen}
-				onClose={closeDeleteModal}
-			/>
-			<EditPaymentModal isOpen={isDeleteModalOpen} onClose={closeDeleteModal} />
-			<ApprovePaymentModal
-				isOpen={isApproveModalOpen}
-				onClose={closeApproveModal}
-				onApprove={handleApproveClick}
-				loading={loading}
-			/>
 		</div>
 	);
 };
 
-export default PreviewPayment;
+export default AssetsHoldingsTable;

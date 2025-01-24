@@ -82,7 +82,7 @@ const TransactionCard = () => {
 						<div className='border-b border-[#E6E9EE]'></div>
 						<div className='flex justify-between pt-4 flex-col gap-4'>
 							<div className='flex items-center gap-1 justify-between w-full text-sm'>
-								<p className='text-[#384860] '>{asset.basis}</p>
+								<p className='text-grey-600 '>{asset.basis}</p>
 								<p className='font-bold flex items-center '>
 									{asset.value}
 									{asset.rate && (
@@ -96,7 +96,7 @@ const TransactionCard = () => {
 								</p>
 							</div>
 							<div className='flex items-center justify-between w-full gap-1 text-sm'>
-								<p className='text-[#384860] '>{asset.volume_name}</p>
+								<p className='text-grey-600 '>{asset.volume_name}</p>
 								<p className='font-bold'>
 									<span className='font-normal text-[#94A3B8]'>NGN</span>{" "}
 									{asset.total}

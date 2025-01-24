@@ -19,7 +19,7 @@ function ConnectToPractioner() {
 						<p className='font-bold text-[#202B3C]'>
 							Connect to a practitioner
 						</p>
-						<p className='text-sm text-[#384860] lg:max-w-[250px]'>
+						<p className='text-sm text-grey-600 lg:max-w-[250px]'>
 							Simplify your tax management with the help of a professional, let
 							our network of certified practitioners take care of your account.
 						</p>
