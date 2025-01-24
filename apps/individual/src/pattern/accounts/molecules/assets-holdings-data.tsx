@@ -61,3 +61,96 @@ export const AssetsHoldingData = [
 		change_1year: "-17%",
 	},
 ];
+
+export const ImportHistoryData = [
+	{
+		dateTime: {
+			date: "Jan 31, 2023 ",
+			time: "07:20 AM",
+		},
+		assets: {
+			title: "Binance",
+			icon: <BinanceIcon />,
+		},
+		import_mode: "API connected",
+		transactions_added: "1,345",
+		trade: "1,345",
+		incoming: "1,345",
+		outgoing: "1,345",
+	},
+	{
+		dateTime: {
+			date: "Jan 31, 2023 ",
+			time: "07:20 AM",
+		},
+		assets: {
+			title: "Binance",
+			icon: <BinanceIcon />,
+		},
+		import_mode: "API connected",
+		transactions_added: "102",
+		trade: "102",
+		incoming: "102",
+		outgoing: "102",
+	},
+	{
+		dateTime: {
+			date: "Jan 31, 2023 ",
+			time: "07:20 AM",
+		},
+		assets: {
+			title: "Binance",
+			icon: <BinanceIcon />,
+		},
+		import_mode: "API connected",
+		transactions_added: "34",
+		trade: "34",
+		incoming: "34",
+		outgoing: "34",
+	},
+	{
+		dateTime: {
+			date: "Jan 31, 2023 ",
+			time: "07:20 AM",
+		},
+		assets: {
+			title: "Binance",
+			icon: <BinanceIcon />,
+		},
+		import_mode: "API connected",
+		transactions_added: "293",
+		trade: "293",
+		incoming: "293",
+		outgoing: "293",
+	},
+	{
+		dateTime: {
+			date: "Jan 31, 2023 ",
+			time: "07:20 AM",
+		},
+		assets: {
+			title: "Binance",
+			icon: <BinanceIcon />,
+		},
+		import_mode: "API connected",
+		transactions_added: "29",
+		trade: "29",
+		incoming: "29",
+		outgoing: "29",
+	},
+	{
+		dateTime: {
+			date: "Jan 31, 2023 ",
+			time: "07:20 AM",
+		},
+		assets: {
+			title: "Binance",
+			icon: <BinanceIcon />,
+		},
+		import_mode: "0x5830...5Da9",
+		transactions_added: "10",
+		trade: "10",
+		incoming: "10",
+		outgoing: "10",
+	},
+];
