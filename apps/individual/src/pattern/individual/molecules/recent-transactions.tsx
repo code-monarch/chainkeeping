@@ -56,7 +56,7 @@ const TransactionsTable: React.FC<TransactionsTableProps> = ({
 								{/* Sticky column */}
 								<td className='py-4 pr-4 text-[#222222] sticky whitespace-nowrap left-0 bg-white z-10 shadow-[3px 0px 5px rgba(0,0,0,1)]'>
 									<p className='text-sm'>{transaction.date}</p>
-									<p className='text-[10px] text-[#64748B]'>
+									<p className='text-[10px] text-grey-400'>
 										{transaction.time}
 									</p>
 								</td>
@@ -79,7 +79,7 @@ const TransactionsTable: React.FC<TransactionsTableProps> = ({
 											<p className='text-sm'>
 												{transaction.sentAmount} {transaction.sentAsset}
 											</p>
-											<p className='text-[10px] text-[#64748B] font-medium'>
+											<p className='text-[10px] text-grey-400 font-medium'>
 												{transaction.costBasis}
 											</p>
 										</div>
@@ -96,7 +96,7 @@ const TransactionsTable: React.FC<TransactionsTableProps> = ({
 											<p className='text-sm'>
 												{transaction.receivedAmount} {transaction.receivedAsset}
 											</p>
-											<p className='text-[10px] text-[#64748B]'>
+											<p className='text-[10px] text-grey-400'>
 												≈ {transaction.approx}
 											</p>
 										</div>

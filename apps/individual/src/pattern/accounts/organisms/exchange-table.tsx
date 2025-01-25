@@ -19,13 +19,13 @@ import {
 import ArrowIcon from "@/pattern/transaction/atoms/arrow-icon";
 import MoreIcon from "@/pattern/transaction/atoms/more-icon";
 import SearchInput from "@/pattern/transaction/molecules/search-input";
-import FilterIcon from "@/pattern/practitioner/atoms/filter-icon";
 import PrevIcon from "@/pattern/transaction/atoms/prev-icon";
 import NextIcon from "@/pattern/transaction/atoms/next-icon";
 import SortIcon from "@/pattern/transaction/atoms/sort-icon";
 import HistoryIcon from "../atoms/history-icon";
 import NoAccountIcon from "@/pattern/individual/atoms/no-account-icon";
 import { useRouter } from "next/navigation";
+import AddTransactionModalComponent from "./add-transaction-modal";
 
 interface Transaction {
 	id: string | number;
@@ -64,10 +64,24 @@ const ExchangeTable: React.FC<TransactionsTableProps> = ({ data }) => {
 	const [search, setSearch] = useState("");
 	const [selectedYear, setSelectedYear] = useState("all-year");
 	const [selectedType, setSelectedType] = useState("all-transactions");
+	const [isTransactionModalOpen, setIsTransactionModalOpen] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const openModal = () => {
+		setIsModalOpen(true);
+	};
+
+	const closeModal = () => {
+		setIsModalOpen(false);
+	};
 	const router = useRouter();
 
-	const toggleFilter = () => {
-		setIsFilterOpen(!isFilterOpen);
+	const OpenTransactionModal = () => {
+		setIsTransactionModalOpen(true);
+	};
+
+	const CloseTransactionModal = () => {
+		setIsTransactionModalOpen(false);
 	};
 
 	const handleImportHistory = () => {
@@ -175,7 +189,7 @@ const ExchangeTable: React.FC<TransactionsTableProps> = ({ data }) => {
 						<span className='text-[#222222] text-sm'>
 							{info.getValue().date}
 						</span>
-						<span className='text-[#64748B] text-xs'>
+						<span className='text-grey-400 text-xs'>
 							{info.getValue().time}
 						</span>
 					</div>
@@ -203,7 +217,7 @@ const ExchangeTable: React.FC<TransactionsTableProps> = ({ data }) => {
 							<span className='text-[#222222] text-sm'>
 								{info.getValue().amount}
 							</span>
-							<span className='text-[#64748B] text-xs'>
+							<span className='text-grey-400 text-xs'>
 								{info.getValue().details}
 							</span>
 						</div>
@@ -232,7 +246,7 @@ const ExchangeTable: React.FC<TransactionsTableProps> = ({ data }) => {
 							<span className='text-[#222222] text-sm'>
 								{info.getValue().amount}
 							</span>
-							<span className='text-[#64748B] text-xs'>
+							<span className='text-grey-400 text-xs'>
 								{info.getValue().details}
 							</span>
 						</div>
@@ -357,6 +371,7 @@ const ExchangeTable: React.FC<TransactionsTableProps> = ({ data }) => {
 						""
 					)}
 					<Button
+						onClick={OpenTransactionModal}
 						variant='secondaryOutline'
 						size='sm'
 						className='text-base gap-2'
@@ -443,7 +458,7 @@ const ExchangeTable: React.FC<TransactionsTableProps> = ({ data }) => {
 					<div className='flex items-center gap-1'>
 						{/* Previous Page Button */}
 						<button
-							className='px-3 py-1 text-[#64748B] flex gap-1 items-center rounded disabled:opacity-50'
+							className='px-3 py-1 text-grey-400 flex gap-1 items-center rounded disabled:opacity-50'
 							onClick={() => table.previousPage()}
 							disabled={!table.getCanPreviousPage()}
 						>
@@ -468,7 +483,7 @@ const ExchangeTable: React.FC<TransactionsTableProps> = ({ data }) => {
 
 						{/* Next Page Button */}
 						<button
-							className='px-3 py-1 text-[#64748B] flex gap-1 items-center rounded disabled:opacity-50'
+							className='px-3 py-1 text-grey-400 flex gap-1 items-center rounded disabled:opacity-50'
 							onClick={() => table.nextPage()}
 							disabled={!table.getCanNextPage()}
 						>
@@ -478,6 +493,10 @@ const ExchangeTable: React.FC<TransactionsTableProps> = ({ data }) => {
 					</div>
 				</div>
 			</div>
+			<AddTransactionModalComponent
+				isOpen={isTransactionModalOpen}
+				onClose={CloseTransactionModal}
+			/>
 		</div>
 	);
 };

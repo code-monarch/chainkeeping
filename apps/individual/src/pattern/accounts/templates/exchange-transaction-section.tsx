@@ -30,7 +30,7 @@ const ExchangeTransactionSection = () => {
 					<p className='text-sm font-bold text-accent-foreground mt-6'>
 						No transaction yet
 					</p>
-					<p className='text-sm text-[#64748B] pt-1 pb-8 sm:max-w-[420px] text-center'>
+					<p className='text-sm text-grey-400 pt-1 pb-8 sm:max-w-[420px] text-center'>
 						Account transaction data will show up here when you add an exchange,
 						wallet or make imports.
 					</p>

@@ -175,7 +175,7 @@ const OrderConfiguration = () => {
 										>
 											<div>
 												<p className='font-medium mb-1'>{service.name}</p>
-												<p className='text-sm text-[#64748B]'>
+												<p className='text-sm text-grey-400'>
 													{service.pricePerYear
 														? `(NGN ${service.pricePerYear.toLocaleString()} /year)`
 														: service.pricePerSession

@@ -49,7 +49,7 @@ const ResetPassword = () => {
 				</div>
 			</div>
 			<div className='mt-6 sm:w-[438px] max-sm:px-6'>
-				<p className='text-[#64748B]'>
+				<p className='text-grey-400'>
 					Didn’t receive the email? Please check your spam folder or try to
 					resend.
 				</p>

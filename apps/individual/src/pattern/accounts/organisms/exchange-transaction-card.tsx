@@ -70,6 +70,7 @@ const ExchangeTransactionCard = () => {
 	};
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [isExchangeModalOpen, setIsExchangeModalOpen] = useState(false);
+	const [isTransactionModalOpen, setIsTransactionModalOpen] = useState(false);
 
 	const openExchangeModal = () => {
 		setIsExchangeModalOpen(true);

@@ -58,7 +58,7 @@ const AssetsCard = () => {
 					<div className='space-y-2 bg-[#FFFFFF] rounded-lg p-4' key={asset.id}>
 						<div className='flex items-center gap-2 w-full mb-3'>
 							{asset.icon}
-							<p className='text-[#64748B] text-sm'>{asset.title}</p>
+							<p className='text-grey-400 text-sm'>{asset.title}</p>
 							<p className='text-[#202B3C]'>{asset.basis}</p>
 						</div>
 						<div className='border-b border-[#E6E9EE]'></div>

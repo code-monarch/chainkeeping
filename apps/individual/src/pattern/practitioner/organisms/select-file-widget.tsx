@@ -8,7 +8,7 @@ const SelectFileWidget = () => {
 				<FileIcon />
 				<p className='font-bold'>
 					Select File{" "}
-					<span className='text-[#64748B]'>
+					<span className='text-grey-400'>
 						(supports .jpg, .png, .pdf. files up to 20MB)
 					</span>
 				</p>

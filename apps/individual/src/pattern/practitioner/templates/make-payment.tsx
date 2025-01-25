@@ -291,7 +291,7 @@ const MakePayment = () => {
 			>
 				<div className='p-4 flex flex-col gap-7 items-center'>
 					<SuccesIcon />
-					<p className='text-[#64748B] text-sm text-center'>
+					<p className='text-grey-400 text-sm text-center'>
 						[Practitioner_name] has been added to your account, they’ll now have
 						full access to your Chainkeeping profile.
 					</p>

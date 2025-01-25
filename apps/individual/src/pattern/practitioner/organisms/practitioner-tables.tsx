@@ -224,7 +224,7 @@ const PractitionerTables = () => {
 				title='Revoke Practitioner Access'
 			>
 				<div className='p-4 flex flex-col gap-7 items-center'>
-					<p className='text-[#64748B] text-sm text-center'>
+					<p className='text-grey-400 text-sm text-center'>
 						[Tax_Pro Fname_Lname] will no longer have access to manage your
 						account. This action cannot be undone.
 					</p>

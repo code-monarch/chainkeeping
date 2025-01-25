@@ -37,7 +37,7 @@ const ReportChecklist: React.FC = () => {
 						return (
 							<li key={index} className='flex justify-between pb-3 pt-1 mt-6'>
 								<p className='text-sm font-bold gap-1 flex'>
-									<span className='text-[#64748B] font-normal'>
+									<span className='text-grey-400 font-normal'>
 										Calculation Method
 									</span>
 									({item.label})

@@ -315,7 +315,7 @@ const BulkPaymentTable: React.FC<UnresolvedTransactionsTableProps> = ({
 					<div className='flex items-center gap-1'>
 						{/* Previous Page Button */}
 						<button
-							className='px-3 py-1 text-[#64748B] flex gap-1 items-center rounded disabled:opacity-50'
+							className='px-3 py-1 text-grey-400 flex gap-1 items-center rounded disabled:opacity-50'
 							onClick={() => table.previousPage()}
 							disabled={!table.getCanPreviousPage()}
 						>
@@ -340,7 +340,7 @@ const BulkPaymentTable: React.FC<UnresolvedTransactionsTableProps> = ({
 
 						{/* Next Page Button */}
 						<button
-							className='px-3 py-1 text-[#64748B] flex gap-1 items-center rounded disabled:opacity-50'
+							className='px-3 py-1 text-grey-400 flex gap-1 items-center rounded disabled:opacity-50'
 							onClick={() => table.nextPage()}
 							disabled={!table.getCanNextPage()}
 						>

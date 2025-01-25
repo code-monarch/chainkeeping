@@ -96,7 +96,7 @@ const PaymentSection = () => {
 					<div className='w-full gap-1 border border-dashed rounded-md border-[#CBD5E1] flex items-center justify-center flex-col h-[120px] transition-all ease-in-out duration-300 hover:bg-[#FDF3F3] hover:border-[#D82E2E]'>
 						<DocIcon />
 						<h6 className='text-xs font-bold'>Drag & drop file or select</h6>
-						<p className='text-[10px] text-[#64748B]'>
+						<p className='text-[10px] text-grey-400'>
 							Supports .csv, .xls, .xlsx files up to 20MB
 						</p>
 					</div>

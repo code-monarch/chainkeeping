@@ -139,7 +139,7 @@ const ListOfPractitioners = () => {
 								<div className='flex items-center gap-2'>
 									<div className='flex items-center gap-1'>
 										<ClientsIcon />
-										<span className='text-[#64748B]'>Clients:</span>
+										<span className='text-grey-400'>Clients:</span>
 										<span className='font-medium'>{practitioner.clients}</span>
 									</div>
 								</div>
@@ -162,7 +162,7 @@ const ListOfPractitioners = () => {
 							<div className='mt-2 flex items-center gap-2 text-sm justify-between'>
 								<div className='flex items-center gap-2'>
 									<ReportIcons />
-									<span className='text-[#64748B]'>Reports:</span>
+									<span className='text-grey-400'>Reports:</span>
 									<span className='font-medium'>{practitioner.reports}</span>
 								</div>
 								<div className='text-yellow-400 flex gap-1'>

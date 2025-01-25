@@ -175,7 +175,7 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 						<span className='text-[#222222] text-sm'>
 							{info.getValue().date}
 						</span>
-						<span className='text-[#64748B] text-xs'>
+						<span className='text-grey-400 text-xs'>
 							{info.getValue().time}
 						</span>
 					</div>
@@ -203,7 +203,7 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 							<span className='text-[#222222] text-sm'>
 								{info.getValue().amount}
 							</span>
-							<span className='text-[#64748B] text-xs'>
+							<span className='text-grey-400 text-xs'>
 								{info.getValue().details}
 							</span>
 						</div>
@@ -232,7 +232,7 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 							<span className='text-[#222222] text-sm'>
 								{info.getValue().amount}
 							</span>
-							<span className='text-[#64748B] text-xs'>
+							<span className='text-grey-400 text-xs'>
 								{info.getValue().details}
 							</span>
 						</div>
@@ -443,7 +443,7 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 					<div className='flex items-center gap-1'>
 						{/* Previous Page Button */}
 						<button
-							className='px-3 py-1 text-[#64748B] flex gap-1 items-center rounded disabled:opacity-50'
+							className='px-3 py-1 text-grey-400 flex gap-1 items-center rounded disabled:opacity-50'
 							onClick={() => table.previousPage()}
 							disabled={!table.getCanPreviousPage()}
 						>
@@ -468,7 +468,7 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 
 						{/* Next Page Button */}
 						<button
-							className='px-3 py-1 text-[#64748B] flex gap-1 items-center rounded disabled:opacity-50'
+							className='px-3 py-1 text-grey-400 flex gap-1 items-center rounded disabled:opacity-50'
 							onClick={() => table.nextPage()}
 							disabled={!table.getCanNextPage()}
 						>

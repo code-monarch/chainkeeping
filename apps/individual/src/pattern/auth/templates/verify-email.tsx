@@ -43,7 +43,7 @@ const VerifyEmailBody = () => {
 				</Link>
 
 				<p className='max-sm:mt-14 font-bold'>Email Verification</p>
-				<p className='mt-4  text-sm text-[#64748B]'>
+				<p className='mt-4  text-sm text-grey-400'>
 					We’ve sent a verification code to your email address{" "}
 					<b className='text-[#202B3C]'>example@gmail.com</b>, enter
 					verification code here.
@@ -70,7 +70,7 @@ const VerifyEmailBody = () => {
 				</Button>
 			</div>
 			<div className='mt-6 sm:w-[438px] max-sm:px-6'>
-				<p className='text-[#64748B]'>
+				<p className='text-grey-400'>
 					Didn’t receive the email? Please check your spam folder or try to
 					resend.
 				</p>
