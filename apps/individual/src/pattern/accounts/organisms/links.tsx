@@ -25,22 +25,22 @@ const links = [
 	{ name: "Metamask", href: "/accounts/metamask", icon: MetamaskAccount },
 	{
 		name: "Avalanche C-Chain",
-		href: "accounts/avalanche",
+		href: "/accounts/avalanche",
 		icon: AvalancheAccount,
 	},
-	{ name: "CoinBase", href: "accounts/coinbase", icon: CoinBaseAccount },
+	{ name: "CoinBase", href: "/accounts/coinbase", icon: CoinBaseAccount },
 	{
 		name: "Trust Wallet",
-		href: "accounts/trust-wallet",
+		href: "/accounts/trust-wallet",
 		icon: TrustwalletAccount,
 	},
 	{ name: "Trust Wallet 2", href: "/trust-wallet-2", icon: TrustwalletAccount },
-	{ name: "Fantom", href: "accounts/fantom", icon: FanthomAccount },
-	{ name: "Kucoin", href: "accounts/kucoin", icon: KucionAccount },
-	{ name: "Ledger", href: "accounts/ledger", icon: LedgerAccount },
-	{ name: "Optimism", href: "accounts/optimism", icon: OptimismAccount },
-	{ name: "Gemini", href: "accounts/gemini", icon: GeminiAccount },
-	{ name: "Bitmex", href: "accounts/bitmex", icon: BitmexAccount },
+	{ name: "Fantom", href: "/accounts/fantom", icon: FanthomAccount },
+	{ name: "Kucoin", href: "/accounts/kucoin", icon: KucionAccount },
+	{ name: "Ledger", href: "/accounts/ledger", icon: LedgerAccount },
+	{ name: "Optimism", href: "/accounts/optimism", icon: OptimismAccount },
+	{ name: "Gemini", href: "/accounts/gemini", icon: GeminiAccount },
+	{ name: "Bitmex", href: "/accounts/bitmex", icon: BitmexAccount },
 ];
 
 export function Links() {

@@ -377,3 +377,5 @@ export const transactionData = [
 		profitLoss: "NGN 14,192,250.50",
 	},
 ];
+
+export const exchangeData = [];

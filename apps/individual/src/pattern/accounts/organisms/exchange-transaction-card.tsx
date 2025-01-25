@@ -11,18 +11,18 @@ import ImportIcon from "../atoms/import-icon";
 import CmdIcon from "../atoms/cmd-icon";
 import NofileIcon from "../atoms/nofile-icon";
 import ApiIcon from "../atoms/api-icon";
-import Modal from "../molecules/import-file-modal";
-import { Button, Input } from "@chainkeeping/ui";
-import DocIcon from "@/pattern/practitioner/atoms/doc-icon";
-import FileIcon from "../atoms/file-icon";
-import CopyIcon from "../atoms/copy-icon";
 import { useRouter } from "next/navigation";
+import CoinbaseAccountIcon from "../atoms/coinbase-account-icon";
+import ExchangeIcon from "../atoms/exchange-icon";
+import LinkIcon2 from "../atoms/link-icon2";
+import ModalComponent from "./import-file-modal-body";
+import ConnectExchangeModal from "./connect-exchange-modal";
 
 const assetStats = [
 	{
-		title: "Binance",
+		title: "Coinbase",
 		added: "Feb 2, 2023",
-		icon: <BinanceIcon />,
+		icon: <CoinbaseAccountIcon />,
 		basis: "Total Transactions:",
 		value: "0",
 		volume_name: "Asset Count:",
@@ -33,10 +33,10 @@ const assetStats = [
 
 const syncImports = [
 	{
-		title: "Sync Imports",
+		title: "Connect Exchange",
 		last_updated: "Feb 2, 2023",
-		text: "Get your imported API transactions up to date.",
-		connected: true,
+		text: "Connect and sync your exchange account via read only API.",
+		connected: false,
 	},
 ];
 
@@ -49,7 +49,7 @@ const importsFiles = [
 	},
 ];
 
-const AccountTransactionCard = () => {
+const ExchangeTransactionCard = () => {
 	const router = useRouter();
 	const formatTotal = (total: string) => {
 		const [whole, decimal] = total.split(".");
@@ -69,6 +69,15 @@ const AccountTransactionCard = () => {
 		}, 5000); // 5 seconds
 	};
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [isExchangeModalOpen, setIsExchangeModalOpen] = useState(false);
+
+	const openExchangeModal = () => {
+		setIsExchangeModalOpen(true);
+	};
+
+	const closeExchangeModal = () => {
+		setIsExchangeModalOpen(false);
+	};
 
 	const openModal = () => {
 		setIsModalOpen(true);
@@ -145,24 +154,33 @@ const AccountTransactionCard = () => {
 						<div>
 							<div className='flex w-full justify-between gap-2 items-start'>
 								<div className='flex items-start gap-2 w-full mb-3'>
-									<div
-										onClick={handleClick}
-										className={` ${
-											isCompleted
-												? "bg-[#27AE60]" // Green background for success
-												: isScanning
-													? "bg-[#F9CC59]" // Yellow background during scanning
-													: "bg-accent hover:bg-destructive"
-										} flex cursor-pointer hover:bg-destructive transition-all ease-in-out duration-300 rounded-full min-h-11 min-w-11 items-center justify-center group`}
-									>
-										{isCompleted ? (
-											<SuccessIcon />
-										) : isScanning ? (
-											<SpinnerIcon className='animate-spin text-white' />
-										) : (
-											<RefreshIcon className='transform transition-transform duration-300 ease-in-out group-hover:rotate-90 group-hover:text-white' />
-										)}
-									</div>
+									{asset.connected ? (
+										<div
+											onClick={handleClick}
+											className={` ${
+												isCompleted
+													? "bg-[#27AE60]" // Green background for success
+													: isScanning
+														? "bg-[#F9CC59]" // Yellow background during scanning
+														: "bg-accent hover:bg-destructive"
+											} flex cursor-pointer hover:bg-destructive transition-all ease-in-out duration-300 rounded-full min-h-11 min-w-11 items-center justify-center group`}
+										>
+											{isCompleted ? (
+												<SuccessIcon />
+											) : isScanning ? (
+												<SpinnerIcon className='animate-spin text-white' />
+											) : (
+												<RefreshIcon className='transform transition-transform duration-300 ease-in-out group-hover:rotate-90 group-hover:text-white' />
+											)}
+										</div>
+									) : (
+										<div
+											onClick={openExchangeModal}
+											className='bg-accent flex cursor-pointer hover:bg-destructive transition-all ease-in-out duration-300 rounded-full min-h-11 min-w-11 items-center justify-center group'
+										>
+											<LinkIcon2 className='transform transition-transform duration-300 ease-in-out group-hover:text-white' />
+										</div>
+									)}
 
 									<div>
 										<p className='font-medium'>
@@ -182,7 +200,7 @@ const AccountTransactionCard = () => {
 									</div>
 								</div>
 								<div className='flex gap-2 bg-accent h-9 w-9 rounded-md items-center justify-center'>
-									<CommandIcon />
+									<ExchangeIcon />
 								</div>
 							</div>
 							<div className='border-b border-[#E6E9EE]'></div>
@@ -199,8 +217,8 @@ const AccountTransactionCard = () => {
 										</div>
 									) : (
 										<div className='bg-destructive-foreground flex gap-1 items-center px-2 py-1 rounded-md text-destructive'>
-											<ApiIcon className='text-destructive-foreground' />
-											<p>API connected</p>
+											<ApiIcon className='text-destructive' />
+											<p>Not Connected</p>
 										</div>
 									)}
 								</p>
@@ -271,45 +289,13 @@ const AccountTransactionCard = () => {
 					</div>
 				);
 			})}
-			<Modal isOpen={isModalOpen} onClose={closeModal} title='Tax Processed'>
-				<div className='p-4 flex flex-col gap-4 items-center'>
-					<div className='flex w-full rounded-lg bg-accent py-4 px-3 justify-between items-center'>
-						<div className='flex gap-2 items-center'>
-							<FileIcon />
-							<p className='text-sm font-bold'>
-								[Exchange_Name] transaction history file import guide
-							</p>
-						</div>
-						<CopyIcon />
-					</div>
-					<div className='space-y-2 w-full '>
-						<label htmlFor='exchange_name' className='text-sm'>
-							Account Name / Alias
-						</label>
-						<Input
-							id='exchange_name'
-							type='text'
-							placeholder='[Exchange_Name]'
-						/>
-					</div>
-					<div className='mb-4 p-4 flex w-full bg-[#F8F9FA] rounded-md hover:bg-transparent transition-all ease-in-out duration-300'>
-						<div className='w-full gap-1 border border-dashed rounded-md border-[#CBD5E1] flex items-center justify-center flex-col h-[120px] transition-all ease-in-out duration-300 hover:bg-[#FDF3F3] hover:border-[#D82E2E]'>
-							<DocIcon />
-							<h6 className='text-xs font-bold'>Drag & drop file or select</h6>
-							<p className='text-[10px] text-[#64748B]'>
-								Supports .csv, .xls, .xlsx files up to 20MB
-							</p>
-						</div>
-					</div>
-
-					<Button onClick={closeModal} className='w-full gap-2 text-base'>
-						<ImportIcon className='text-white' />
-						Upload file & Import transactions
-					</Button>
-				</div>
-			</Modal>
+			<ModalComponent isOpen={isModalOpen} onClose={closeModal} />
+			<ConnectExchangeModal
+				isOpen={isExchangeModalOpen}
+				onClose={closeExchangeModal}
+			/>
 		</div>
 	);
 };
 
-export default AccountTransactionCard;
+export default ExchangeTransactionCard;
