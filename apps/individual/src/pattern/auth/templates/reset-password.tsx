@@ -32,7 +32,7 @@ const ResetPassword = () => {
 				</Link>
 
 				<p className='max-sm:mt-14 font-bold'>Forgot password</p>
-				<p className='mt-4  text-sm text-[#4F627D]'>
+				<p className='mt-4  text-sm text-grey-500'>
 					Click on the password reset link from your email to change your
 					password.
 				</p>
