@@ -5,7 +5,7 @@ import { IoMdAdd } from "react-icons/io";
 
 const links = [
 	{ name: "Profile", href: "/settings" },
-	{ name: "Password", href: "/settings/password" },
+	{ name: "Password", href: "/settings/change-password" },
 	{
 		name: "Tax settings",
 		href: "/settings/tax-settings",

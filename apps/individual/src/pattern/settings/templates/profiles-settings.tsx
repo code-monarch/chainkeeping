@@ -88,16 +88,16 @@ const ProfileSettings = () => {
 	};
 	return (
 		<div className='w-fit flex  pt-24 flex-col items-center  px-[18px] pb-[144px]'>
-			<Card className='bg-white w-fit max-w-[850px] lg:w-[850px] h-fit lg:h-[622px] flex flex-col p-6 rounded-[8px] sahdow-md border-none'>
-				<CardHeader className='h-fit lg:h-[30px] flex items-start justify-start pb-2 border-b'>
-					<CardTitle className='text-base font-bold font-sen'>
-						Create Account
+			<Card className='bg-white w-fit max-w-[850px] lg:w-[850px] h-fit  flex flex-col p-6 rounded-[8px] sahdow-md border-none'>
+				<CardHeader className='h-fit lg:h-[30px] flex items-start justify-start pb-2 '>
+					<CardTitle className='text-base font-bold font-sen text-grey-300'>
+						BASIC INFORMATION
 					</CardTitle>
 				</CardHeader>
 				<CardContent className='w-full h-full flex flex-col  !mt-0'>
 					<Form {...form}>
 						<form onSubmit={handleSubmit(onSubmit)}>
-							<div className='grid grid-cols-2 gap-4 mt-5 '>
+							<div className='grid grid-cols-2 gap-4 my-5 '>
 								{/* Email */}
 
 								<FormField
@@ -170,9 +170,10 @@ const ProfileSettings = () => {
 										</FormItem>
 									)}
 								/>
+
+								{/* Country */}
 							</div>
 
-							{/* Country */}
 							<FormField
 								control={form.control}
 								name='country'
@@ -194,13 +195,62 @@ const ProfileSettings = () => {
 								)}
 							/>
 
+							<CardHeader className='h-fit my-5 lg:h-[30px] flex items-start justify-start pb-2 '>
+								<CardTitle className='text-base font-bold font-sen text-grey-300'>
+									OTHER INFORMATION
+								</CardTitle>
+							</CardHeader>
+
+							<div className='grid grid-cols-2 gap-4 mb-5 '>
+								{/* Email */}
+
+								<FormField
+									name='nin'
+									render={({ field }) => (
+										<FormItem className='w-full grid gap-2'>
+											<FormLabel htmlFor='nin'>
+												National Identity Number (NIN)
+											</FormLabel>
+											<FormControl>
+												<Input
+													id='nin'
+													placeholder='0123456789'
+													type='text'
+													autoComplete='nin'
+													{...field}
+												/>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
+								/>
+								<FormField
+									name='id'
+									render={({ field }) => (
+										<FormItem className='w-full grid gap-2'>
+											<FormLabel htmlFor='id'>Registration ID</FormLabel>
+											<FormControl>
+												<Input
+													id='id'
+													placeholder='TW0000001'
+													type='text'
+													autoComplete='id'
+													{...field}
+												/>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
+								/>
+							</div>
+
 							<SubmitButton
-								size='lg'
+								size='sm'
 								type='submit'
 								disabled={!isDirty}
-								className='w-full text-base font-medium mt-[8px]'
+								className='bg-destructive text-base font-medium mt-[8px]'
 							>
-								Continue
+								Save
 							</SubmitButton>
 						</form>
 						<div className='w-full flex items-center justify-center gap-x-2 font-dmsans text-base'>
