@@ -7,9 +7,11 @@ import {
 	CardTitle,
 } from "@chainkeeping/ui";
 import TwoFAModal from "../organisms/2FA-modal";
+import EmailAuthModal from "../organisms/email-auth-modal";
 
 const SecuritySettings = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
 
 	const openModal = () => {
 		setIsModalOpen(true);
@@ -17,6 +19,14 @@ const SecuritySettings = () => {
 
 	const closeModal = () => {
 		setIsModalOpen(false);
+	};
+
+	const openEmailModal = () => {
+		setIsEmailModalOpen(true);
+	};
+
+	const closeEmailModal = () => {
+		setIsEmailModalOpen(false);
 	};
 	return (
 		<div className='w-fit flex  pt-24 flex-col items-center  px-[18px] pb-[144px]'>
@@ -54,13 +64,13 @@ const SecuritySettings = () => {
 								</p>
 							</div>
 							<Button
-								onClick={openModal}
+								onClick={openEmailModal}
 								size='sm'
 								variant='secondaryOutline'
 								type='button'
 								className=' text-base font-medium mt-[8px]'
 							>
-								Save
+								Set Up
 							</Button>
 						</div>
 
@@ -103,6 +113,7 @@ const SecuritySettings = () => {
 				</CardContent>
 			</Card>
 			<TwoFAModal isOpen={isModalOpen} onClose={closeModal} />
+			<EmailAuthModal isOpen={isEmailModalOpen} onClose={closeEmailModal} />
 		</div>
 	);
 };
