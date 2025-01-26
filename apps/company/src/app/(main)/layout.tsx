@@ -12,7 +12,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
           <Topbar />
           <main className='bg-inherit w-full h-fit flex flex-col items-center gap-y-[62px] lg:gap-y-[144px] mt-[var(--topbar-height)]'>
               <div className="w-full h-fit flex flex-col gap-y-[48px] lg:gap-y-[88px]">
-                  {children}
+                  {childrenjk}
               </div>
           </main>
       </div >

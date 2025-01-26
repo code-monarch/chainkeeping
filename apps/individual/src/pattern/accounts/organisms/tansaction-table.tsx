@@ -24,6 +24,8 @@ import PrevIcon from "@/pattern/transaction/atoms/prev-icon";
 import NextIcon from "@/pattern/transaction/atoms/next-icon";
 import SortIcon from "@/pattern/transaction/atoms/sort-icon";
 import HistoryIcon from "../atoms/history-icon";
+import NoAccountIcon from "@/pattern/individual/atoms/no-account-icon";
+import { useRouter } from "next/navigation";
 
 interface Transaction {
 	id: string | number;
@@ -62,9 +64,14 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 	const [search, setSearch] = useState("");
 	const [selectedYear, setSelectedYear] = useState("all-year");
 	const [selectedType, setSelectedType] = useState("all-transactions");
+	const router = useRouter();
 
 	const toggleFilter = () => {
 		setIsFilterOpen(!isFilterOpen);
+	};
+
+	const handleImportHistory = () => {
+		router.push("/import-history");
 	};
 
 	// Handle individual checkbox change
@@ -168,7 +175,7 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 						<span className='text-[#222222] text-sm'>
 							{info.getValue().date}
 						</span>
-						<span className='text-[#64748B] text-xs'>
+						<span className='text-grey-400 text-xs'>
 							{info.getValue().time}
 						</span>
 					</div>
@@ -179,23 +186,14 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 				accessorKey: "label",
 				cell: (info: any) => (
 					<div className='flex'>
-						<div className='bg-[#F5F8FA] text-[#384860] text-sm flex items-center gap-1 w-auto px-2 py-1 rounded-md text-center'>
+						<div className='bg-[#F5F8FA] text-grey-600 text-sm flex items-center gap-1 w-auto px-2 py-1 rounded-md text-center'>
 							{info.getValue().icon}
 							<span>{info.getValue().title}</span>
 						</div>
 					</div>
 				),
 			},
-			// {
-			// 	header: "Account",
-			// 	accessorKey: "account",
-			// 	cell: (info: any) => (
-			// 		<div className='flex items-center gap-2'>
-			// 			{info.row.original.accountIcon}
-			// 			<span className='text-sm text-[#222222]'>{info.getValue()}</span>
-			// 		</div>
-			// 	),
-			// },
+
 			{
 				header: "Out / Sold / From",
 				accessorKey: "outFrom",
@@ -205,7 +203,7 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 							<span className='text-[#222222] text-sm'>
 								{info.getValue().amount}
 							</span>
-							<span className='text-[#64748B] text-xs'>
+							<span className='text-grey-400 text-xs'>
 								{info.getValue().details}
 							</span>
 						</div>
@@ -234,7 +232,7 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 							<span className='text-[#222222] text-sm'>
 								{info.getValue().amount}
 							</span>
-							<span className='text-[#64748B] text-xs'>
+							<span className='text-grey-400 text-xs'>
 								{info.getValue().details}
 							</span>
 						</div>
@@ -286,67 +284,78 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 		<div>
 			<div className='flex items-center justify-between my-10'>
 				<div className='flex gap-3 items-center'>
-					<div>
-						<SearchInput
-							value={search}
-							onChange={(e) => setSearch(e.target.value)}
-							placeholder='Search...'
-						/>
-					</div>
-					<div>
-						<Select
-							value={selectedYear}
-							onValueChange={(value) => setSelectedYear(value)}
-						>
-							<SelectTrigger>
-								<SelectValue placeholder='All years' />
-							</SelectTrigger>
-							<SelectContent>
-								<SelectItem value='all-year'>All years</SelectItem>
-								<SelectItem value='2025'>2025</SelectItem>
-								<SelectItem value='2024'>2024</SelectItem>
-								<SelectItem value='2023'>2023</SelectItem>
-								<SelectItem value='2022'>2022</SelectItem>
-								<SelectItem value='2021'>2021</SelectItem>
-							</SelectContent>
-						</Select>
-					</div>
-					<div>
-						<Select
-							value={selectedType}
-							onValueChange={(value) => setSelectedType(value)}
-						>
-							<SelectTrigger>
-								<SelectValue placeholder='All transactions' />
-							</SelectTrigger>
-							<SelectContent>
-								<SelectItem value='all-transactions'>
-									All transactions
-								</SelectItem>
-								<SelectItem value='trade'>Trade</SelectItem>
-								<SelectItem value='deposit'>Deposit</SelectItem>
-								<SelectItem value='withdrawal'>Withdrawal</SelectItem>
-								<SelectItem value='airdrop'>Airdrop</SelectItem>
-								<SelectItem value='fiat buy'>Fiat Buy</SelectItem>
-								<SelectItem value='fiat sell'>Fiat Sell</SelectItem>
-								<SelectItem value='investment loss'>Investment Loss</SelectItem>
-								<SelectItem value='swap'>Swap</SelectItem>
-								<SelectItem value='donation'>Donation</SelectItem>
-							</SelectContent>
-						</Select>
-					</div>
+					{table.getRowModel().rows.length > 0 ? (
+						<>
+							<div>
+								<SearchInput
+									value={search}
+									onChange={(e) => setSearch(e.target.value)}
+									placeholder='Search...'
+								/>
+							</div>
+							<div>
+								<Select
+									value={selectedYear}
+									onValueChange={(value) => setSelectedYear(value)}
+								>
+									<SelectTrigger>
+										<SelectValue placeholder='All years' />
+									</SelectTrigger>
+									<SelectContent>
+										<SelectItem value='all-year'>All years</SelectItem>
+										<SelectItem value='2025'>2025</SelectItem>
+										<SelectItem value='2024'>2024</SelectItem>
+										<SelectItem value='2023'>2023</SelectItem>
+										<SelectItem value='2022'>2022</SelectItem>
+										<SelectItem value='2021'>2021</SelectItem>
+									</SelectContent>
+								</Select>
+							</div>
+							<div>
+								<Select
+									value={selectedType}
+									onValueChange={(value) => setSelectedType(value)}
+								>
+									<SelectTrigger>
+										<SelectValue placeholder='All transactions' />
+									</SelectTrigger>
+									<SelectContent>
+										<SelectItem value='all-transactions'>
+											All transactions
+										</SelectItem>
+										<SelectItem value='trade'>Trade</SelectItem>
+										<SelectItem value='deposit'>Deposit</SelectItem>
+										<SelectItem value='withdrawal'>Withdrawal</SelectItem>
+										<SelectItem value='airdrop'>Airdrop</SelectItem>
+										<SelectItem value='fiat buy'>Fiat Buy</SelectItem>
+										<SelectItem value='fiat sell'>Fiat Sell</SelectItem>
+										<SelectItem value='investment loss'>
+											Investment Loss
+										</SelectItem>
+										<SelectItem value='swap'>Swap</SelectItem>
+										<SelectItem value='donation'>Donation</SelectItem>
+									</SelectContent>
+								</Select>
+							</div>
+						</>
+					) : (
+						""
+					)}
 				</div>
 				<div className='flex gap-3'>
-					<Button
-						onClick={toggleFilter}
-						variant='default'
-						size='sm'
-						className='text-base gap-2 bg-[#E5EBEF] text-[#4F627D]'
-					>
-						<HistoryIcon />
-						Import History
-					</Button>
-
+					{table.getRowModel().rows.length > 0 ? (
+						<Button
+							onClick={handleImportHistory}
+							variant='default'
+							size='sm'
+							className='text-base gap-2 bg-[#E5EBEF] text-[#4F627D]'
+						>
+							<HistoryIcon />
+							Import History
+						</Button>
+					) : (
+						""
+					)}
 					<Button
 						variant='secondaryOutline'
 						size='sm'
@@ -384,21 +393,44 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 						))}
 					</thead>
 					<tbody>
-						{table.getRowModel().rows.map((row) => (
-							<tr
-								key={row.id}
-								className='bg-[#ffffff] whitespace-nowrap hover:bg-gray-50 transition duration-150'
-							>
-								{row.getVisibleCells().map((cell) => (
-									<td
-										key={cell.id}
-										className='px-6 py-4 border-b border-gray-300 text-sm text-[#384860]'
-									>
-										{flexRender(cell.column.columnDef.cell, cell.getContext())}
-									</td>
-								))}
+						{table.getRowModel().rows.length > 0 ? (
+							table.getRowModel().rows.map((row) => (
+								<tr
+									key={row.id}
+									className='bg-[#ffffff] whitespace-nowrap hover:bg-gray-50 transition duration-150'
+								>
+									{row.getVisibleCells().map((cell) => (
+										<td
+											key={cell.id}
+											className='px-6 py-4 border-b border-gray-300 text-sm text-grey-600'
+										>
+											{flexRender(
+												cell.column.columnDef.cell,
+												cell.getContext()
+											)}
+										</td>
+									))}
+								</tr>
+							))
+						) : (
+							<tr className='bg-white h-[465px] items-center'>
+								<td
+									colSpan={columns.length} // Make sure the message spans all columns
+									className='px-6 py-4 text-center  text-sm text-grey-600'
+								>
+									<div className='flex w-full items-center flex-col gap-3 justify-center'>
+										<NoAccountIcon />
+										<p className='font-bold'>
+											Your transactions will show up here
+										</p>
+										<p className='w-[420px] text-center text-grey-400 text-sm'>
+											Connect exchange or add wallet, Import transaction history
+											file or manually add transactions.
+										</p>
+									</div>
+								</td>
 							</tr>
-						))}
+						)}
 					</tbody>
 				</table>
 
@@ -411,7 +443,7 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 					<div className='flex items-center gap-1'>
 						{/* Previous Page Button */}
 						<button
-							className='px-3 py-1 text-[#64748B] flex gap-1 items-center rounded disabled:opacity-50'
+							className='px-3 py-1 text-grey-400 flex gap-1 items-center rounded disabled:opacity-50'
 							onClick={() => table.previousPage()}
 							disabled={!table.getCanPreviousPage()}
 						>
@@ -436,7 +468,7 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 
 						{/* Next Page Button */}
 						<button
-							className='px-3 py-1 text-[#64748B] flex gap-1 items-center rounded disabled:opacity-50'
+							className='px-3 py-1 text-grey-400 flex gap-1 items-center rounded disabled:opacity-50'
 							onClick={() => table.nextPage()}
 							disabled={!table.getCanNextPage()}
 						>

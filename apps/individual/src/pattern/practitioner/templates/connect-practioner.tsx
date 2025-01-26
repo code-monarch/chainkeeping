@@ -25,7 +25,7 @@ const ConnectPractioner = () => {
 				/>
 				<div className='flex flex-col gap-4'>
 					<h6 className='font-bold '>Connect to a practitioner</h6>
-					<p className='text-[#384860]'>
+					<p className='text-grey-600'>
 						Simplify your tax management with the help of a professional, let
 						our network of certified practitioners take care of your account.
 					</p>

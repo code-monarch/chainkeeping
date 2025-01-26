@@ -5,9 +5,6 @@ import type { Metadata } from "next";
 import { dmsans, inter, rubik, sen, space_Grotesk } from "./assets/fonts";
 import { Providers } from "../redux/provider";
 
-import { Provider as RollbarProvider } from '@rollbar/react';
-import { clientConfig } from "@/lib/utils/rollbar";
-
 
 export const metadata: Metadata = {
 	title: "Create Next App",

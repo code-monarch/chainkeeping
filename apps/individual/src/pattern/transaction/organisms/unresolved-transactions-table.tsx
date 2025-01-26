@@ -149,7 +149,7 @@ const UnresolvedTransactionsTable: React.FC<
 						<span className='text-[#222222] text-sm'>
 							{info.getValue().date}
 						</span>
-						<span className='text-[#64748B] text-xs'>
+						<span className='text-grey-400 text-xs'>
 							{info.getValue().time}
 						</span>
 					</div>
@@ -160,7 +160,7 @@ const UnresolvedTransactionsTable: React.FC<
 				accessorKey: "label",
 				cell: (info: any) => (
 					<div className='flex'>
-						<div className='bg-[#F5F8FA] text-[#384860] text-sm flex items-center gap-1 w-auto px-2 py-1 rounded-md text-center'>
+						<div className='bg-[#F5F8FA] text-grey-600 text-sm flex items-center gap-1 w-auto px-2 py-1 rounded-md text-center'>
 							{info.getValue().icon}
 							<span>{info.getValue().title}</span>
 						</div>
@@ -186,7 +186,7 @@ const UnresolvedTransactionsTable: React.FC<
 							<span className='text-[#222222] text-sm'>
 								{info.getValue().amount}
 							</span>
-							<span className='text-[#64748B] text-xs'>
+							<span className='text-grey-400 text-xs'>
 								{info.getValue().details}
 							</span>
 						</div>
@@ -215,7 +215,7 @@ const UnresolvedTransactionsTable: React.FC<
 							<span className='text-[#222222] text-sm'>
 								{info.getValue().amount}
 							</span>
-							<span className='text-[#64748B] text-xs'>
+							<span className='text-grey-400 text-xs'>
 								{info.getValue().details}
 							</span>
 						</div>
@@ -337,7 +337,7 @@ const UnresolvedTransactionsTable: React.FC<
 								{row.getVisibleCells().map((cell) => (
 									<td
 										key={cell.id}
-										className='px-6 py-4 border-b border-gray-300 text-sm text-[#384860]'
+										className='px-6 py-4 border-b border-gray-300 text-sm text-grey-600'
 									>
 										{flexRender(cell.column.columnDef.cell, cell.getContext())}
 									</td>
@@ -356,7 +356,7 @@ const UnresolvedTransactionsTable: React.FC<
 					<div className='flex items-center gap-1'>
 						{/* Previous Page Button */}
 						<button
-							className='px-3 py-1 text-[#64748B] flex gap-1 items-center rounded disabled:opacity-50'
+							className='px-3 py-1 text-grey-400 flex gap-1 items-center rounded disabled:opacity-50'
 							onClick={() => table.previousPage()}
 							disabled={!table.getCanPreviousPage()}
 						>
@@ -381,7 +381,7 @@ const UnresolvedTransactionsTable: React.FC<
 
 						{/* Next Page Button */}
 						<button
-							className='px-3 py-1 text-[#64748B] flex gap-1 items-center rounded disabled:opacity-50'
+							className='px-3 py-1 text-grey-400 flex gap-1 items-center rounded disabled:opacity-50'
 							onClick={() => table.nextPage()}
 							disabled={!table.getCanNextPage()}
 						>

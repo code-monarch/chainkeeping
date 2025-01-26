@@ -76,7 +76,7 @@ const SelectAccountTypes = () => {
 										{account.title}
 									</p>
 									<p
-										className={`text-sm text-[#64748B] ${
+										className={`text-sm text-grey-400 ${
 											selectedAccount === account.id ? "text-[#202B3C]" : ""
 										}`}
 									>

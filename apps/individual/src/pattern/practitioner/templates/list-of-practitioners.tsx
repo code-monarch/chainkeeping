@@ -117,7 +117,7 @@ const ListOfPractitioners = () => {
 						>
 							<div className='flex gap-4 '>
 								<div className='h-[52px] w-[52px] relative'>
-									<div className=' w-[48px] h-[48px] rounded-md bg-[#F5F8FA] flex items-center justify-center font-medium text-[#384860]'>
+									<div className=' w-[48px] h-[48px] rounded-md bg-[#F5F8FA] flex items-center justify-center font-medium text-grey-600'>
 										{practitioner.avatar}
 									</div>
 									<div
@@ -139,7 +139,7 @@ const ListOfPractitioners = () => {
 								<div className='flex items-center gap-2'>
 									<div className='flex items-center gap-1'>
 										<ClientsIcon />
-										<span className='text-[#64748B]'>Clients:</span>
+										<span className='text-grey-400'>Clients:</span>
 										<span className='font-medium'>{practitioner.clients}</span>
 									</div>
 								</div>
@@ -162,7 +162,7 @@ const ListOfPractitioners = () => {
 							<div className='mt-2 flex items-center gap-2 text-sm justify-between'>
 								<div className='flex items-center gap-2'>
 									<ReportIcons />
-									<span className='text-[#64748B]'>Reports:</span>
+									<span className='text-grey-400'>Reports:</span>
 									<span className='font-medium'>{practitioner.reports}</span>
 								</div>
 								<div className='text-yellow-400 flex gap-1'>
@@ -182,7 +182,7 @@ const ListOfPractitioners = () => {
 								</div>
 							</div>
 
-							<div className='bg-[#F5F8FA] rounded-md p-3 mt-4 text-[#384860]'>
+							<div className='bg-[#F5F8FA] rounded-md p-3 mt-4 text-grey-600'>
 								<div className='flex justify-between text-sm '>
 									<span>Account Management:</span>
 									<span className='text-[#94A3B8]'>

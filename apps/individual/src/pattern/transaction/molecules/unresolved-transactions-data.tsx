@@ -4,12 +4,11 @@ import FanthomIcon from "../atoms/fanthom-icon";
 import BTCIcon from "../atoms/btc-icon";
 import LinkIcon from "../atoms/link-icon";
 import WalletIcon from "../atoms/wallet-icon";
-
-import BusdIcon from "@/pattern/individual/atoms/transactionsIcons/busd-icon";
 import KucionIcon from "../atoms/kucion-icon";
 import XtzIcon from "../atoms/xtz-icon";
 import MaticIcon from "@/pattern/practitioner/atoms/matic-icon";
 import UnknownIcon from "../atoms/unknown-icon";
+import BusdIcon from "@/pattern/individual/atoms/transactions-icons/busd-icon";
 
 export const UnresolvedTransactionData = [
 	{

@@ -101,24 +101,24 @@ const MakePayment = () => {
 							<div className='flex gap-3 my-5'>
 								<div className='flex bg-[#F5F8FA]  rounded-md items-center gap-1 py-1 px-2'>
 									<StarRatingIcon />
-									<p className='text-[#384860]'>Rating</p>
+									<p className='text-grey-600'>Rating</p>
 									<p className='font-medium'>{practitioner.rating}</p>
 								</div>
 
 								<div className='flex bg-[#F5F8FA]  rounded-md items-center gap-1 py-1 px-2'>
 									<ClientsIcon />
-									<p className='text-[#384860]'>Clients</p>
+									<p className='text-grey-600'>Clients</p>
 									<p className='font-medium'>{practitioner.clients}</p>
 								</div>
 								<div className='flex bg-[#F5F8FA]  rounded-md items-center gap-1 py-1 px-2'>
 									<ReportIcons />
-									<p className='text-[#384860]'>Reports</p>
+									<p className='text-grey-600'>Reports</p>
 									<p className='font-medium'>{practitioner.reports}</p>
 								</div>
 							</div>
 
 							<div className='flex w-full p-2 bg-[#DDE2E9]'>
-								<p className='text-[#384860]'>BOOK SERVICES</p>
+								<p className='text-grey-600'>BOOK SERVICES</p>
 							</div>
 
 							<Button
@@ -140,12 +140,12 @@ const MakePayment = () => {
 								className='bg-[#EBEFF3] w-full flex flex-col rounded-lg gap-4 p-8'
 							>
 								<div className='flex w-full p-2 bg-[#DDE2E9]'>
-									<p className='text-[#384860] text-sm'>
+									<p className='text-grey-600 text-sm'>
 										ORDER SUMMARY / PAYMENT
 									</p>
 								</div>
 
-								<div className='rounded-md text-[#384860]'>
+								<div className='rounded-md text-grey-600'>
 									<div className='flex justify-between border-b py-2'>
 										<span>Tax Management x 12:</span>
 										<span className='text-[#202B3C] hover:text-[#D82E2E] cursor-pointer transition-all ease-in-out duration-300'>
@@ -188,7 +188,7 @@ const MakePayment = () => {
 												<>
 													<div className='flex bg-[#F5F8FA] text-sm flex-col gap-3 p-4 rounded-md'>
 														<div className='flex justify-between items-center'>
-															<p className='text-[#384860]'>Account Name:</p>
+															<p className='text-grey-600'>Account Name:</p>
 															<div className='flex items-center gap-1'>
 																<p className='font-bold'>
 																	Adegboyega & Akinsanya LLC
@@ -197,7 +197,7 @@ const MakePayment = () => {
 															</div>
 														</div>
 														<div className='flex justify-between items-center'>
-															<p className='text-[#384860]'>Account Number:</p>
+															<p className='text-grey-600'>Account Number:</p>
 															<div className='flex items-center gap-1'>
 																<p className='font-bold'>0234632030</p>
 																<CopyIcon />
@@ -205,7 +205,7 @@ const MakePayment = () => {
 														</div>
 
 														<div className='flex justify-between items-center'>
-															<p className='text-[#384860]'>Bank Name:</p>
+															<p className='text-grey-600'>Bank Name:</p>
 															<div className='flex items-center gap-1'>
 																<p className='font-bold'>GTCO</p>
 															</div>
@@ -291,7 +291,7 @@ const MakePayment = () => {
 			>
 				<div className='p-4 flex flex-col gap-7 items-center'>
 					<SuccesIcon />
-					<p className='text-[#64748B] text-sm text-center'>
+					<p className='text-grey-400 text-sm text-center'>
 						[Practitioner_name] has been added to your account, they’ll now have
 						full access to your Chainkeeping profile.
 					</p>

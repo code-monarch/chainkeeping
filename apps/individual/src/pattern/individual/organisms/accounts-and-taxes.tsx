@@ -51,13 +51,13 @@ const AccountsAndTaxes = () => {
 						</div>
 
 						<div className='justify-between items-end flex pt-3'>
-							<p className='text-[#64748B] text-sm'>
+							<p className='text-grey-400 text-sm'>
 								Connected accounts{" "}
 								<span className='font-bold text-[#202B3C]'>
 									({asset.connected_accounts})
 								</span>
 							</p>
-							<p className='text-[#64748B] text-sm'>
+							<p className='text-grey-400 text-sm'>
 								Total Transactions{" "}
 								<span className='font-bold text-[#202B3C]'>
 									({asset.total_transactions})
@@ -76,13 +76,13 @@ const AccountsAndTaxes = () => {
 						</div>
 						<div className='border-b border-[#E6E9EE]'></div>
 						<div className='flex justify-between py-5'>
-							<p className='text-[#64748B] text-sm'>
+							<p className='text-grey-400 text-sm'>
 								Reports{" "}
 								<span className='font-bold text-[#202B3C]'>
 									({asset.reports})
 								</span>
 							</p>
-							<p className='text-[#64748B] text-sm'>
+							<p className='text-grey-400 text-sm'>
 								Concluded Taxes{" "}
 								<span className='font-bold text-[#202B3C]'>
 									({asset.concluded_taxes})

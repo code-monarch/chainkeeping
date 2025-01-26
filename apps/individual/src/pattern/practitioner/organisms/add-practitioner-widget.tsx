@@ -72,7 +72,7 @@ const AddPractitionerWidget = () => {
 			>
 				<div className='p-4 flex flex-col gap-7 items-center'>
 					<SuccesIcon />
-					<p className='text-[#64748B] text-sm text-center'>
+					<p className='text-grey-400 text-sm text-center'>
 						Your reports have beed signed
 					</p>
 					<Button

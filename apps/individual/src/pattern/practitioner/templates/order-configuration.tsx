@@ -148,18 +148,18 @@ const OrderConfiguration = () => {
 							<div className='flex gap-3 my-5'>
 								<div className='flex bg-[#F5F8FA]  rounded-md items-center gap-1 py-1 px-2'>
 									<StarRatingIcon />
-									<p className='text-[#384860]'>Rating</p>
+									<p className='text-grey-600'>Rating</p>
 									<p className='font-medium'>{practitioner.rating}</p>
 								</div>
 
 								<div className='flex bg-[#F5F8FA]  rounded-md items-center gap-1 py-1 px-2'>
 									<ClientsIcon />
-									<p className='text-[#384860]'>Clients</p>
+									<p className='text-grey-600'>Clients</p>
 									<p className='font-medium'>{practitioner.clients}</p>
 								</div>
 								<div className='flex bg-[#F5F8FA]  rounded-md items-center gap-1 py-1 px-2'>
 									<ReportIcons />
-									<p className='text-[#384860]'>Reports</p>
+									<p className='text-grey-600'>Reports</p>
 									<p className='font-medium'>{practitioner.reports}</p>
 								</div>
 							</div>
@@ -175,7 +175,7 @@ const OrderConfiguration = () => {
 										>
 											<div>
 												<p className='font-medium mb-1'>{service.name}</p>
-												<p className='text-sm text-[#64748B]'>
+												<p className='text-sm text-grey-400'>
 													{service.pricePerYear
 														? `(NGN ${service.pricePerYear.toLocaleString()} /year)`
 														: service.pricePerSession
@@ -201,7 +201,7 @@ const OrderConfiguration = () => {
 					{/* Order Configuration */}
 					<div className='bg-[#EBEFF3] flex lg:w-[60%] flex-col rounded-lg p-6 transition-all ease-in-out duration-300'>
 						<div className='flex w-full p-2 bg-[#DDE2E9]'>
-							<p className='text-[#384860] text-sm'>ORDER CONFIGURATION</p>
+							<p className='text-grey-600 text-sm'>ORDER CONFIGURATION</p>
 						</div>
 
 						<div className='mt-4 space-y-4'>
@@ -263,7 +263,7 @@ const OrderConfiguration = () => {
 														className={`px-4 py-2 rounded-full text-sm ${
 															service.selectedYears.includes(year)
 																? "bg-[#FDF3F3] text-[#D82E2E]"
-																: "bg-[#DDE2E9] text-[#384860]"
+																: "bg-[#DDE2E9] text-grey-600"
 														}`}
 														onClick={() =>
 															toggleYearSelection(service.id, year)
