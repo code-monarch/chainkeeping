@@ -10,7 +10,7 @@ const TaxesTabs = () => {
 		switch (activeTab) {
 			case "Taxes Due":
 				return (
-					<div className=' gap-4 w-full items-start mt-14'>
+					<div className=' gap-4 w-full items-start mt-4'>
 						<p className='font-sen font-bold mb-6 text-[#202B3C]'>
 							Taxes - Due
 						</p>
@@ -19,7 +19,7 @@ const TaxesTabs = () => {
 				);
 			case "Unfilled Taxes":
 				return (
-					<div className=' gap-4 w-full items-start mt-14'>
+					<div className=' gap-4 w-full items-start mt-4'>
 						<p className='font-sen font-bold mb-6 text-[#202B3C]'>
 							Taxes - Unfilled
 						</p>
@@ -28,7 +28,7 @@ const TaxesTabs = () => {
 				);
 			case "Concluded Taxes":
 				return (
-					<div className=' gap-4 w-full items-start mt-14'>
+					<div className=' gap-4 w-full items-start mt-4'>
 						<p className='font-sen font-bold mb-6 text-[#202B3C]'>
 							Taxes - Concluded
 						</p>
