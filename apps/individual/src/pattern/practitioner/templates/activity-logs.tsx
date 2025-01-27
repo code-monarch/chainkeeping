@@ -267,7 +267,7 @@ const ActivityLogs = () => {
 										<div key={index} className='mb-6 relative'>
 											{/* Activity Entry */}
 											<div>
-												<p className='text-sm text-[#4F627D]'>
+												<p className='text-sm text-grey-500'>
 													<span>{entry.time}</span> &bull;{" "}
 													<span className='text-[#D82E2E] font-semibold'>
 														{entry.category}
@@ -277,7 +277,7 @@ const ActivityLogs = () => {
 													<UserIcon />
 													<p className='text-sm'>
 														{entry.name}
-														<span className='text-[#4F627D]'>
+														<span className='text-grey-500'>
 															{" "}
 															{entry.description}
 														</span>{" "}

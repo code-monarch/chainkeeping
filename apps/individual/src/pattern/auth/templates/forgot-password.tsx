@@ -25,7 +25,7 @@ const ForgotPassword = () => {
 				</Link>
 
 				<p className='max-sm:mt-14 font-bold'>Forgot password</p>
-				<p className='mt-4  text-sm text-[#4F627D]'>
+				<p className='mt-4  text-sm text-grey-500'>
 					Can’t remember your password? enter your registered email address and
 					we’ll send you a password reset link.
 				</p>

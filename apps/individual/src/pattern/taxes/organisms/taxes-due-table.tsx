@@ -252,7 +252,7 @@ const TaxesDueTable = () => {
 						pay.
 					</p>
 					<div className='flex w-full rounded-lg border border-dashed py-4 px-3 justify-between items-center'>
-						<p className='text-sm text-[#4F627D]'>0123-5678-9012</p>
+						<p className='text-sm text-grey-500'>0123-5678-9012</p>
 						<CopyIcon />
 					</div>
 					<Button onClick={closeModal} className='w-full text-base'>

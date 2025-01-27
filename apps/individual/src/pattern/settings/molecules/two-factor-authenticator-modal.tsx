@@ -34,7 +34,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }) => {
 			onClick={onClose}
 		>
 			<div
-				className={`bg-white rounded-lg w-11/12 sm:w-1/2 lg:w-[1000px] shadow-lg transform transition-all duration-300 ease-in-out ${
+				className={`bg-white rounded-lg w-11/12 sm:w-1/2 lg:w-[717px] shadow-lg transform transition-all duration-300 ease-in-out ${
 					isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
 				}`}
 				onClick={(e) => e.stopPropagation()}

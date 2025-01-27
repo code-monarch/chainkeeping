@@ -1,7 +1,5 @@
 "use client";
-import AccountTransactionSection from "@/pattern/accounts/templates/account-section";
 import ChangePasswordSettings from "@/pattern/settings/templates/change-password";
-import ProfileSettings from "@/pattern/settings/templates/profiles-settings";
 import { Sidebar, SidebarProvider } from "@chainkeeping/ui";
 
 const ChangePassword = () => {

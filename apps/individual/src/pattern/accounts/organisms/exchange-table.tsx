@@ -362,7 +362,7 @@ const ExchangeTable: React.FC<TransactionsTableProps> = ({ data }) => {
 							onClick={handleImportHistory}
 							variant='default'
 							size='sm'
-							className='text-base gap-2 bg-[#E5EBEF] text-[#4F627D]'
+							className='text-base gap-2 bg-[#E5EBEF] text-grey-500'
 						>
 							<HistoryIcon />
 							Import History

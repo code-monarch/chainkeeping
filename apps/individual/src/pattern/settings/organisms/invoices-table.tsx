@@ -8,16 +8,16 @@ import {
 	ColumnDef,
 } from "@tanstack/react-table";
 
-import SortIcon from "../atoms/sort-icon";
-
-import PrevIcon from "../atoms/prev-icon";
-import NextIcon from "../atoms/next-icon";
+import { useRouter } from "next/navigation";
 import { Button, Checkbox } from "@chainkeeping/ui";
-import MoreIcon from "../atoms/more-icon";
-import SearchInput from "../molecules/search-input";
-import FilterIcon from "@/pattern/practitioner/atoms/filter-icon";
-import ArrowIcon from "../atoms/arrow-icon";
-import InfoIcon from "../atoms/info-icon";
+import FileNameIcon from "@/pattern/transaction/atoms/file-name-icon";
+import SearchInput from "@/pattern/transaction/molecules/search-input";
+import Downloadicon from "@/pattern/transaction/atoms/download-icon";
+import AddIcon from "@/pattern/transaction/atoms/add-icon";
+import SortIcon from "@/pattern/transaction/atoms/sort-icon";
+import PrevIcon from "@/pattern/transaction/atoms/prev-icon";
+import NextIcon from "@/pattern/transaction/atoms/next-icon";
+import PdfIcon from "@/pattern/reports/atoms/pdf-icon";
 
 interface Transaction {
 	id: string | number;
@@ -48,9 +48,9 @@ interface UnresolvedTransactionsTableProps {
 	data: Transaction[];
 }
 
-const UnresolvedTransactionsTable: React.FC<
-	UnresolvedTransactionsTableProps
-> = ({ data }) => {
+const InvoicesTable: React.FC<UnresolvedTransactionsTableProps> = ({
+	data,
+}) => {
 	const [selectedRows, setSelectedRows] = useState<
 		Record<string | number, boolean>
 	>({});
@@ -60,6 +60,15 @@ const UnresolvedTransactionsTable: React.FC<
 
 	const toggleFilter = () => {
 		setIsFilterOpen(!isFilterOpen);
+	};
+	const router = useRouter();
+
+	const handleAddAccount = () => {
+		router.push("bulk-payments/transaction");
+	};
+
+	const handlePayment = () => {
+		router.push("bulk-payments/payment");
 	};
 
 	// Handle individual checkbox change
@@ -105,7 +114,6 @@ const UnresolvedTransactionsTable: React.FC<
 		return filtered;
 	}, [data, search]);
 
-	// Define columns
 	const columns = React.useMemo(
 		() => [
 			{
@@ -142,111 +150,45 @@ const UnresolvedTransactionsTable: React.FC<
 				),
 			},
 			{
-				header: "Date",
-				accessorKey: "dateTime",
+				header: "Invoices",
+				accessorKey: "invoices",
 				cell: (info: any) => (
-					<div className='flex flex-col'>
-						<span className='text-[#222222] text-sm'>
-							{info.getValue().date}
-						</span>
-						<span className='text-grey-400 text-xs'>
-							{info.getValue().time}
-						</span>
+					<div className='flex w-[300px] items-center gap-2'>
+						<PdfIcon />
+						<span className='text-[#222222] text-sm'>{info.getValue()}</span>
 					</div>
 				),
 			},
 			{
-				header: "Label",
-				accessorKey: "label",
+				header: "Amount",
+				accessorKey: "amount",
 				cell: (info: any) => (
-					<div className='flex'>
-						<div className='bg-[#F5F8FA] text-grey-600 text-sm flex items-center gap-1 w-auto px-2 py-1 rounded-md text-center'>
-							{info.getValue().icon}
-							<span>{info.getValue().title}</span>
+					<div className='flex w-full'>
+						<div className='text-sm  flex  gap-1 w-[50%] px-2 py-1 text-end'>
+							{info.getValue()}
 						</div>
-					</div>
-				),
-			},
-			{
-				header: "Account",
-				accessorKey: "account",
-				cell: (info: any) => (
-					<div className='flex items-center gap-2'>
-						{info.row.original.accountIcon}
-						<span className='text-sm text-[#222222]'>{info.getValue()}</span>
-					</div>
-				),
-			},
-			{
-				header: "Out / Sold / From",
-				accessorKey: "outFrom",
-				cell: (info: any) => (
-					<div className='flex gap-1 w-full items-center'>
-						<div className='flex flex-col  w-[150px] justify-end items-end'>
-							<span className='text-[#222222] text-sm'>
-								{info.getValue().amount}
-							</span>
-							<span className='text-grey-400 text-xs'>
-								{info.getValue().details}
-							</span>
-						</div>
-						{info.getValue().icon}
 					</div>
 				),
 				headerClassName: "text-end item-end justify-end", // Right-align the header
 			},
+
 			{
-				id: "actions",
-				cell: () => (
-					<div className='flex w-full'>
-						<button className='flex w-full '>
-							<ArrowIcon />
-						</button>
-					</div>
-				),
-			},
-			{
-				header: "In / Bought / To",
-				accessorKey: "inTo",
+				header: "Date",
+				accessorKey: "date",
 				cell: (info: any) => (
-					<div className='flex gap-1'>
-						{info.getValue().icon}
-						<div className='flex flex-col items-center justify-center'>
-							<span className='text-[#222222] text-sm'>
-								{info.getValue().amount}
-							</span>
-							<span className='text-grey-400 text-xs'>
-								{info.getValue().details}
-							</span>
-						</div>
+					<div className='flex gap-1 w-full items-center'>
+						<span className='text-[#222222] text-sm'>{info.getValue()}</span>
 					</div>
 				),
+				headerClassName: "text-end item-end justify-end", // Right-align the header
 			},
-			// {
-			// 	header: "Fees",
-			// 	accessorKey: "fees",
-			// },
-			{
-				header: "Profit / Loss",
-				accessorKey: "profitLoss",
-				cell: (info: any) => (
-					<div
-						className={`text-sm ${
-							info.getValue().startsWith("-")
-								? "text-[#F14848]"
-								: "text-[#27AE60]"
-						}`}
-					>
-						{info.getValue()}
-					</div>
-				),
-			},
+
 			{
 				id: "actions",
 				cell: () => (
 					<div className='flex w-full items-center justify-start'>
-						<button className='p-2 hover:bg-gray-100 rounded-full'>
-							<MoreIcon />
+						<button onClick={handleAddAccount} className='p-2 text-[#94A3B8]'>
+							Download
 						</button>
 					</div>
 				),
@@ -255,7 +197,6 @@ const UnresolvedTransactionsTable: React.FC<
 		[selectedRows]
 	);
 
-	// Use React Table instance
 	const table = useReactTable({
 		data: filteredData,
 		columns,
@@ -265,42 +206,23 @@ const UnresolvedTransactionsTable: React.FC<
 
 	return (
 		<div>
-			<div className='flex justify-between mb-10'>
+			<div className='flex justify-between items-center mb-10'>
 				<div className='flex gap-3 '>
-					<SearchInput
-						value={search}
-						onChange={(e) => setSearch(e.target.value)}
-						placeholder='Search...'
-					/>
+					<h6 className='text-base font-bold font-sen '>Billing History</h6>
 				</div>
 				<div className='flex gap-3'>
 					<Button
 						onClick={toggleFilter}
-						variant='default'
-						size='sm'
-						className='text-base h-[36px] px-2 gap-2 bg-[#E5EBEF] text-grey-500'
+						variant='secondaryOutline'
+						size='md'
+						className='text-base gap-2'
 					>
-						<FilterIcon />
-						Filter
-					</Button>
-
-					<Button
-						variant='secondary'
-						size='sm'
-						className='text-base px-2 gap-2'
-					>
-						Action
+						<Downloadicon />
+						Download
 					</Button>
 				</div>
 			</div>
-			<div className='bg-[#E9F2FE] p-3 flex gap-2 rounded-md  mb-4'>
-				<InfoIcon />
-				<p className='text-sm '>
-					The following transactions may have been classified wrongly or not
-					classified, resolve issues by changing or adding transaction type or
-					label
-				</p>
-			</div>
+
 			<div className='overflow-x-auto'>
 				<table className='min-w-full table-fixed border border-[red] shadow-md rounded-lg overflow-hidden'>
 					<thead className='bg-[#F5F8FA]'>
@@ -395,4 +317,4 @@ const UnresolvedTransactionsTable: React.FC<
 	);
 };
 
-export default UnresolvedTransactionsTable;
+export default InvoicesTable;

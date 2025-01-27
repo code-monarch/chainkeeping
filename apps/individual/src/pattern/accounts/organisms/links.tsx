@@ -78,7 +78,7 @@ export function Links() {
 						</Link>
 						{isActive && (
 							<div className='py-2 cursor-pointer px-10 flex text-center w-full items-center gap-3 group'>
-								<div className='p-1 text-[#4F627D] bg-[#F5F8FA] rounded transition-all ease-in-out duration-300 group-hover:bg-[#FDF3F3] group-hover:text-[#D82E2E]'>
+								<div className='p-1 text-grey-500 bg-[#F5F8FA] rounded transition-all ease-in-out duration-300 group-hover:bg-[#FDF3F3] group-hover:text-[#D82E2E]'>
 									<IoMdAdd />
 								</div>
 								<p className='text-center'>Add Account</p>

@@ -99,7 +99,7 @@ const ListOfPractitioners = () => {
 						onClick={toggleFilter}
 						variant='default'
 						size='sm'
-						className='text-base px-2 gap-2 bg-[#E5EBEF] text-[#4F627D]'
+						className='text-base px-2 gap-2 bg-[#E5EBEF] text-grey-500'
 					>
 						<FilterIcon />
 						Filter
