@@ -55,7 +55,7 @@ const navigation: INavigation[] = [
 const Topbar = () => {
 	return (
 		<div className='bg-background fixed inset-0 w-full h-[var(--topbar-height)] border-b flex items-center justify-center px-[24px] md:px-0  z-[25]'>
-			<div className='h-full relative md:px-16 w-full flex items-center justify-between'>
+			<div className='h-full relative md:px-8 w-full flex items-center justify-between'>
 				<div className='flex items-center  gap-7'>
 					<Link href={APP_ROUTES.index}>
 						<BrandLogo />

@@ -5,6 +5,7 @@
 @layer base {
 	:root {
 		--topbar-height: 72px;
+		--sidebar-width: 288px;
 	}
 }
 

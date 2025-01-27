@@ -1,9 +1,12 @@
-import React from 'react'
+"use client";
+import TaxesTabs from "@/pattern/taxes/templates/taxes-tabs";
 
-const TaxesPage = () => {
+const Taxes = () => {
   return (
-    <div>TaxesPage</div>
-  )
-}
+    <div className='w-full min-h-screen h-fit flex flex-col gap-y-[144px] mb-[144px]'>
+      <TaxesTabs />
+    </div>
+  );
+};
 
-export default TaxesPage
+export default Taxes;

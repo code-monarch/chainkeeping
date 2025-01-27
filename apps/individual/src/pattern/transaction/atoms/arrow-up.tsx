@@ -10,18 +10,18 @@ const ArrowUp = () => {
 			<path
 				d='M12.0467 6.38065L8.00001 2.33398L3.95334 6.38065'
 				stroke='#384860'
-				stroke-width='1.2'
+				strokeWidth='1.2'
 				stroke-miterlimit='10'
-				stroke-linecap='round'
-				stroke-linejoin='round'
+				strokeLinecap='round'
+				strokeLinejoin='round'
 			/>
 			<path
 				d='M8 13.6673V2.44727'
 				stroke='#384860'
-				stroke-width='1.2'
+				strokeWidth='1.2'
 				stroke-miterlimit='10'
-				stroke-linecap='round'
-				stroke-linejoin='round'
+				strokeLinecap='round'
+				strokeLinejoin='round'
 			/>
 		</svg>
 	);

@@ -1,9 +1,12 @@
-import React from 'react'
+"use client";
+import TaxReports from "@/pattern/reports/templates/tax-reports";
 
-const ReportsPage = () => {
+const Reports = () => {
   return (
-    <div>ReportsPage</div>
-  )
-}
+    <div className='w-full min-h-screen h-fit flex flex-col gap-y-[144px] mb-[144px]'>
+      <TaxReports />
+    </div>
+  );
+};
 
-export default ReportsPage
+export default Reports;

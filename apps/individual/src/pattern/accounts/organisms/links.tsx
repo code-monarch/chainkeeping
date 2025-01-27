@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -16,9 +15,8 @@ import {
 	TrustwalletAccount,
 } from "./icons";
 import SelectedIcon from "../atoms/selected-icon";
-import { Button } from "@chainkeeping/ui";
-import AddAccountIcon from "../atoms/add-account-icon";
 import { IoMdAdd } from "react-icons/io";
+import { cn } from "@chainkeeping/ui";
 
 const links = [
 	{ name: "Binance", href: "/accounts", icon: BinanceAccount },
@@ -64,7 +62,7 @@ export function Links() {
 							)}
 
 							<div
-								className={clsx(
+								className={cn(
 									"flex w-full justify-between items-center gap-2 px-6 py-5 border-l-[3px] transition-colors",
 									isActive
 										? "border-[#D82E2E] bg-[#FEFAFA]"

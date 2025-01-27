@@ -130,7 +130,7 @@ const PaymentSection = () => {
 	);
 
 	return (
-		<div className='md:px-16 flex h-full gap-4 justify-between pt-10 max-sm:px-4 max-sm:flex-col'>
+		<div className='md:px-8 flex h-full gap-4 justify-between pt-10 max-sm:px-4 max-sm:flex-col'>
 			{/* Steps Section */}
 			<div className='flex flex-col  max-sm:w-full relative'>
 				{/* Step 1 */}
@@ -189,9 +189,8 @@ const PaymentSection = () => {
 												? "default"
 												: "primaryOutline"
 										}
-										className={`flex w-full text-[#01092C] items-center justify-between px-4 py-3 ${
-											selectedWallet === wallet.name ? "bg-gray-100" : ""
-										}`}
+										className={`flex w-full text-[#01092C] items-center justify-between px-4 py-3 ${selectedWallet === wallet.name ? "bg-gray-100" : ""
+											}`}
 										onClick={() => setSelectedWallet(wallet.name)}
 									>
 										{wallet.name}

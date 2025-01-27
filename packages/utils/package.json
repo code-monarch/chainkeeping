@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@chainkeeping/eslint-config": "workspace:*",
-    "@chainkeeping/ui": "workspace:*",
     "@chainkeeping/typescript-config": "workspace:*"
   },
   "devDependencies": {

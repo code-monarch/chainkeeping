@@ -1,15 +1,14 @@
 "use client";
 import React from "react";
-import clsx from "clsx";
 import { Links } from "./links";
-import { Button } from "@chainkeeping/ui";
+import { Button, cn } from "@chainkeeping/ui";
 import SearchInput from "@/pattern/transaction/molecules/search-input";
 import AddIconW from "../atoms/add-icon-w";
 
 const SideBar = () => {
 	return (
 		<div
-			className={clsx(
+			className={cn(
 				"w-72 bg-white  fixed flex h-full flex-col border-0 border-[#424343] max-sm:hidden"
 			)}
 		>
@@ -22,7 +21,7 @@ const SideBar = () => {
 					<Links />
 				</div>
 			</div>
-			<div className='h-60 py-4 px-8 shadow-[0px_-4px_6px_rgba(0,0,0,0.1)]'>
+			<div className='h-50 w-full flex items-end py-4 px-8 shadow-md'>
 				<Button variant='secondary' size='md' className='w-full text-md'>
 					<AddIconW />
 					Add Account
