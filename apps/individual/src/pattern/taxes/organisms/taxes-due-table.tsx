@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Checkbox} from "@chainkeeping/ui";
+import { Button, Checkbox } from "@chainkeeping/ui";
 import SortIcon from "../atoms/sort-icon";
 import CopyIcon from "../atoms/copy-icon";
 import Modal from "../molecules/modal-compoent";
@@ -218,7 +218,7 @@ const TaxesDueTable = () => {
 							<td className='whitespace-nowrap border-b px-4 py-1 text-sm'>
 								<div className='flex flex-col items-start pr-4'>
 									<p>{order.dueDate}</p>
-									<p className='text-[10px] text-[#64748B]'>{order.dueTime}</p>
+									<p className='text-[10px] text-grey-400'>{order.dueTime}</p>
 								</div>
 							</td>
 							<td className='whitespace-nowrap border-b px-4 py-3 text-sm'>
@@ -246,13 +246,13 @@ const TaxesDueTable = () => {
 				<div className='p-4 flex flex-col gap-7 items-center'>
 					<SuccesIcon />
 
-					<p className='text-[#64748B] text-sm text-center'>
+					<p className='text-grey-400 text-sm text-center'>
 						Tax <span className='text-[#202B3C]'>#01234567</span> has been been
 						processed successfully, copy the RRR number below and proceed to
 						pay.
 					</p>
 					<div className='flex w-full rounded-lg border border-dashed py-4 px-3 justify-between items-center'>
-						<p className='text-sm text-[#4F627D]'>0123-5678-9012</p>
+						<p className='text-sm text-grey-500'>0123-5678-9012</p>
 						<CopyIcon />
 					</div>
 					<Button onClick={closeModal} className='w-full text-base'>

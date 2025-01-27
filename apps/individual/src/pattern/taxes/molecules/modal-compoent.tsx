@@ -20,7 +20,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }) => {
 		} else {
 			setTimeout(() => {
 				setShow(false);
-			}, 300); // Delay to allow animation before unmounting
+			}, 300);
 		}
 	}, [isOpen]);
 
@@ -41,7 +41,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, title }) => {
 			>
 				<div className='flex justify-between w-full items-center bg-[#F5F8FA] p-4 overflow-hidden rounded-t-lg'>
 					<p className='font-bold'>{title || "Default Title"}</p>{" "}
-					{/* Dynamic title */}
 					<button
 						className=' text-xl text-gray-500 hover:text-gray-700'
 						onClick={onClose}

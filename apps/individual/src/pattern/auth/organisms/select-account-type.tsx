@@ -46,7 +46,7 @@ const SelectAccountTypes = () => {
 				</Link>
 
 				<p className='max-sm:mt-14 font-bold'>Account Type</p>
-				<p className='text-sm text-[#4F627D]'>
+				<p className='text-sm text-grey-500'>
 					Select an account type that best describes you and how you intend to
 					use Chainkeeping.
 				</p>
@@ -76,7 +76,7 @@ const SelectAccountTypes = () => {
 										{account.title}
 									</p>
 									<p
-										className={`text-sm text-[#64748B] ${
+										className={`text-sm text-grey-400 ${
 											selectedAccount === account.id ? "text-[#202B3C]" : ""
 										}`}
 									>

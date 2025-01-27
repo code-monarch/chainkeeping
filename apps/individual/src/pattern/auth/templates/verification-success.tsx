@@ -28,7 +28,7 @@ const VerifySuccessBody = () => {
 				</div>
 
 				<p className='max-sm:mt-14 font-bold '>Email verified successfully</p>
-				<p className='mt-4  text-sm text-[#64748B]'>
+				<p className='mt-4  text-sm text-grey-400'>
 					Your email has been verified successfully, you’ll now be redirected to
 					your dashboard shortly.
 				</p>

@@ -17,7 +17,7 @@ const ReportChecklist: React.FC = () => {
 					<ReportChecklistIcon />
 					<h2 className='font-semibold'>Report checklist</h2>
 				</div>
-				<p className='text-sm text-[#384860] py-4'>
+				<p className='text-sm text-grey-600 py-4'>
 					For accurate computation of your tax reports, we’ll need your entire
 					transaction history from your wallets or exchanges.
 				</p>
@@ -37,7 +37,7 @@ const ReportChecklist: React.FC = () => {
 						return (
 							<li key={index} className='flex justify-between pb-3 pt-1 mt-6'>
 								<p className='text-sm font-bold gap-1 flex'>
-									<span className='text-[#64748B] font-normal'>
+									<span className='text-grey-400 font-normal'>
 										Calculation Method
 									</span>
 									({item.label})

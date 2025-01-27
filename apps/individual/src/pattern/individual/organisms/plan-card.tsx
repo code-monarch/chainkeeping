@@ -5,7 +5,7 @@ import PlanLabel from "../molecules/plans-types";
 
 function PlanCard() {
 	return (
-		<div className='bg-background rounded-lg p-4 flex flex-col w-full xl:min-w-[350px] 2xl:min-w-[400px] 3xl:min-w-[420px] lg:min-w-[300px] text-[#64748B] '>
+		<div className='bg-background rounded-lg p-4 flex flex-col w-full xl:min-w-[350px] 2xl:min-w-[400px] 3xl:min-w-[420px] lg:min-w-[300px] text-grey-400 '>
 			<div className='flex justify-between w-full'>
 				<div>
 					<PlanLabel type='Basic' />

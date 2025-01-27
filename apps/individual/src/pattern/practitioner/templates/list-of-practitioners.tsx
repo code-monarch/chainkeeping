@@ -8,6 +8,7 @@ import EmptyStarIcon from "../atoms/empty-star-icon";
 import ArrowIcon from "../atoms/arrow-icon";
 import FilterIcon from "../atoms/filter-icon";
 import FilterSection from "../organisms/filter-section";
+import { useRouter } from "next/navigation";
 
 const practitionersData = [
 	{
@@ -69,6 +70,12 @@ const practitionersData = [
 ];
 
 const ListOfPractitioners = () => {
+	const router = useRouter();
+
+	// Function to handle login click
+	const handleHire = () => {
+		router.push("/practitioner/practitioner-info");
+	};
 	const [isFilterOpen, setIsFilterOpen] = useState(false);
 
 	const toggleFilter = () => {
@@ -92,7 +99,7 @@ const ListOfPractitioners = () => {
 						onClick={toggleFilter}
 						variant='default'
 						size='sm'
-						className='text-base px-2 gap-2 bg-[#E5EBEF] text-[#4F627D]'
+						className='text-base px-2 gap-2 bg-[#E5EBEF] text-grey-500'
 					>
 						<FilterIcon />
 						Filter
@@ -110,7 +117,7 @@ const ListOfPractitioners = () => {
 						>
 							<div className='flex gap-4 '>
 								<div className='h-[52px] w-[52px] relative'>
-									<div className=' w-[48px] h-[48px] rounded-md bg-[#F5F8FA] flex items-center justify-center font-medium text-[#384860]'>
+									<div className=' w-[48px] h-[48px] rounded-md bg-[#F5F8FA] flex items-center justify-center font-medium text-grey-600'>
 										{practitioner.avatar}
 									</div>
 									<div
@@ -132,7 +139,7 @@ const ListOfPractitioners = () => {
 								<div className='flex items-center gap-2'>
 									<div className='flex items-center gap-1'>
 										<ClientsIcon />
-										<span className='text-[#64748B]'>Clients:</span>
+										<span className='text-grey-400'>Clients:</span>
 										<span className='font-medium'>{practitioner.clients}</span>
 									</div>
 								</div>
@@ -155,7 +162,7 @@ const ListOfPractitioners = () => {
 							<div className='mt-2 flex items-center gap-2 text-sm justify-between'>
 								<div className='flex items-center gap-2'>
 									<ReportIcons />
-									<span className='text-[#64748B]'>Reports:</span>
+									<span className='text-grey-400'>Reports:</span>
 									<span className='font-medium'>{practitioner.reports}</span>
 								</div>
 								<div className='text-yellow-400 flex gap-1'>
@@ -175,7 +182,7 @@ const ListOfPractitioners = () => {
 								</div>
 							</div>
 
-							<div className='bg-gray-100 rounded-md p-3 mt-4 text-[#384860]'>
+							<div className='bg-[#F5F8FA] rounded-md p-3 mt-4 text-grey-600'>
 								<div className='flex justify-between text-sm '>
 									<span>Account Management:</span>
 									<span className='text-[#94A3B8]'>
@@ -202,6 +209,7 @@ const ListOfPractitioners = () => {
 								variant='default'
 								size='md'
 								className='text-base px-3 mt-4 gap-1'
+								onClick={handleHire}
 							>
 								Hire Practitioner
 							</Button>

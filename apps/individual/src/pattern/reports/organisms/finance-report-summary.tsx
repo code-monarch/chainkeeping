@@ -35,7 +35,7 @@ const FinanceReportSummary: React.FC = () => {
 									key={index}
 									className='flex justify-between border-b pb-3 pt-1 mt-6'
 								>
-									<span className='text-sm text-[#4F627D]'>{item.label}</span>
+									<span className='text-sm text-grey-500'>{item.label}</span>
 									<span className='font-bold text-sm'>
 										<span className='text-[#94A3B8] pr-1 font-normal'>NGN</span>
 										<span>{integerPart}.</span>
@@ -69,7 +69,7 @@ const FinanceReportSummary: React.FC = () => {
 									key={index}
 									className='flex justify-between border-b pb-3 pt-1 mt-6'
 								>
-									<span className='text-sm text-[#4F627D]'>{item.label}</span>
+									<span className='text-sm text-grey-500'>{item.label}</span>
 									<span className='font-bold text-sm'>
 										<span className='text-[#94A3B8] pr-1 font-normal'>NGN</span>
 										<span>{integerPart}</span>

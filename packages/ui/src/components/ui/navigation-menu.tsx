@@ -49,7 +49,7 @@ const navigationMenulinkStyle = cva(
 );
 
 const navigationMenulinkStyleTwo = cva(
-	"inline-flex mt-4  h-10 min-w-[74px] gap-5 w-fit items-center justify-center rounded-lg bg-background px-[12px] py-[8px] text-sm text-gray-500 font-medium transition-colors whitespace-nowrap hover:text-secondary  hover:bg-[#FDF3F3] focus:bg-[#FDF3F3] focus:text-secondary data-[active]:text-secondary  data-[active]:bg-[#FDF3F3]  focus:outline-none  disabled:pointer-events-none disabled:opacity-50"
+	"inline-flex mt-4  h-10 min-w-[74px] gap-5 w-fit items-center justify-center rounded-lg bg-background px-[12px] py-[8px] text-sm text-gray-500 font-medium transition-colors whitespace-nowrap hover:text-primary  hover:bg-accent focus:bg-[#FDF3F3] focus:text-secondary data-[active]:text-secondary  data-[active]:bg-[#FDF3F3]  focus:outline-none  disabled:pointer-events-none disabled:opacity-50"
 );
 
 const navigationMenuListItemStyle = cva(
