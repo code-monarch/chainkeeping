@@ -1,6 +1,7 @@
-const VisaCardIcon = () => {
+const VisaCardIcon = ({ className }: { className?: string }) => {
 	return (
 		<svg
+			className={`${className}`}
 			width='36'
 			height='24'
 			viewBox='0 0 36 24'

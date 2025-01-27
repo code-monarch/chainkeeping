@@ -20,7 +20,7 @@ const ToggleIcon: React.FC<ToggleIconProps> = ({ toggled, onToggle }) => {
 				width='42'
 				height='24'
 				rx='12'
-				fill={toggled ? "#CBD5E1" : "#D82E2E"}
+				fill={toggled ? "#D82E2E" : "#CBD5E1"}
 			/>
 			<g filter='url(#filter0_d_441_2614)'>
 				<circle cx={toggled ? "14" : "34"} cy='30' r='9' fill='white' />
