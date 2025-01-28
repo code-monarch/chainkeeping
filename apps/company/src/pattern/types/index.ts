@@ -2,6 +2,12 @@ import { IIconProps } from "@chainkeeping/ui";
 import { ReactElement, ReactNode } from "react";
 import { FieldError } from "react-hook-form";
 import { z } from "zod"
+
+export interface INavigation {
+    title: string;
+    href?: string;
+}
+
 export interface INavListItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     href: string
     icon: React.ReactElement

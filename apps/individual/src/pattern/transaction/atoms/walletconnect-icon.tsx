@@ -8,8 +8,8 @@ const WalletConnectIcon = () => {
 			xmlns='http://www.w3.org/2000/svg'
 		>
 			<path
-				fill-rule='evenodd'
-				clip-rule='evenodd'
+				fillRule='evenodd'
+				clipRule='evenodd'
 				d='M16 0C24.8376 0 32.0001 7.1625 32.0001 16C32.0001 24.8375 24.8376 32 16 32C7.16252 32 0 24.8375 0 16C0 7.1625 7.16252 0 16 0Z'
 				fill='url(#paint0_radial_604_3576)'
 			/>

@@ -100,7 +100,7 @@ const TaxSettingsSettings = () => {
 					</CardTitle>
 				</CardHeader>
 				<CardContent className='w-full h-full flex flex-col !mt-0'>
-					{/* <Form {...form}> */}
+					<Form {...form}>
 						<form
 							onSubmit={handleSubmit(onSubmit)}
 							className='flex flex-col gap-3'
@@ -215,7 +215,7 @@ const TaxSettingsSettings = () => {
 								Save
 							</SubmitButton>
 						</form>
-					{/* </Form> */}
+					</Form>
 				</CardContent>
 			</Card>
 		</div>

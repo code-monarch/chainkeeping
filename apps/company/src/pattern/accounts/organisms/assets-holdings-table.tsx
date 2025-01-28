@@ -302,14 +302,14 @@ const AssetsHoldingsTable: React.FC<UnresolvedTransactionsTableProps> = ({
 						))}
 					</thead>
 					<tbody>
-						{table.getRowModel().rows.map((row) => (
+						{table.getRowModel().rows.map((row, idx) => (
 							<tr
-								key={row.id}
+								key={idx}
 								className='bg-[#ffffff] whitespace-nowrap hover:bg-gray-50 transition duration-150'
 							>
-								{row.getVisibleCells().map((cell) => (
+								{row.getVisibleCells().map((cell, idx) => (
 									<td
-										key={cell.id}
+										key={idx}
 										className='px-6 py-4 border-b border-gray-300 text-sm text-grey-600'
 									>
 										{flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -338,11 +338,11 @@ const AssetsHoldingsTable: React.FC<UnresolvedTransactionsTableProps> = ({
 						</button>
 
 						{/* Page Numbers */}
-						{table.getPageOptions().map((pageIndex) => (
+						{table.getPageOptions().map((pageIndex, idx) => (
 							<button
-								key={pageIndex}
+								key={idx}
 								className={`h-6 text-sm w-6 rounded-full ${pageIndex === table.getState().pagination.pageIndex
-									? "bg-[#D82E2E] text-white"
+									? "bg-destructive text-white"
 									: "bg-transparent text-gray-800"
 									}`}
 								onClick={() => table.setPageIndex(pageIndex)}

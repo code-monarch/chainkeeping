@@ -4,6 +4,7 @@ import ArrowRightIcon from "../atoms/arrow-right-icon";
 import PractitionerTables from "../organisms/practitioner-tables";
 import AddPractitionerWidget from "../organisms/add-practitioner-widget";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const ConnectPractioner = () => {
 	const router = useRouter();
@@ -16,7 +17,7 @@ const ConnectPractioner = () => {
 	return (
 		<div className='md:px-8 flex flex-col h-full gap-4 justify-between pt-10 max-sm:px-4 max-sm:flex-col '>
 			<div className='w-full flex max-sm:flex-col gap-4 bg-white py-6 px-8 rounded-lg'>
-				<img
+				<Image
 					src='/connect.gif'
 					height={124}
 					width={124}

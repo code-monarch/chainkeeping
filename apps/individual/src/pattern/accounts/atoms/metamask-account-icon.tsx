@@ -7,7 +7,7 @@ const MetamaskAccountIcon = () => {
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 		>
-			<g clip-path='url(#clip0_2787_21355)'>
+			<g clipPath='url(#clip0_2787_21355)'>
 				<path
 					d='M27.4326 3.33789L17.5262 11.2301L19.3689 6.57905L27.4326 3.33789Z'
 					fill='#E17726'

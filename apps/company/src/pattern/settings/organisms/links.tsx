@@ -5,10 +5,14 @@ import { usePathname } from "next/navigation";
 const links = [
 	{ name: "Profile", href: "/settings" },
 	{ name: "Password", href: "/settings/change-password" },
+	{ name: "Contact person", href: "/settings/contact-person" },
 	{
 		name: "Tax settings",
 		href: "/settings/tax-settings",
 	},
+	{ name: "Payroll settings", href: "/settings/contact-person" },
+	{ name: "Team & Roles", href: "/settings/team-and-roles" },
+	{ name: "Ledger settings", href: "/settings/ledger-settings" },
 	{ name: "Security", href: "/settings/security" },
 
 	{ name: "Billing", href: "/settings/billing" },
@@ -20,7 +24,7 @@ export function Links() {
 	const pathname = usePathname();
 
 	return (
-		<div className='flex h-full flex-row border-black  lg:flex-col'>
+		<div className='flex h-full flex-row border-black lg:flex-col'>
 			{links.map((link) => {
 				const isActive = pathname === link.href; // Check if the link is active
 
@@ -29,7 +33,7 @@ export function Links() {
 						<Link href={link.href}>
 							<div
 								className={cn(
-									"flex w-full justify-between  items-center gap-2 px-6 py-3 border-r-[3px] transition-colors",
+									"flex w-full justify-between items-center gap-2 pl-8 pr-6 py-3 border-r-[3px] transition-colors",
 									isActive
 										? "border-[#D82E2E] bg-[#FEFAFA]"
 										: "border-transparent text-black"

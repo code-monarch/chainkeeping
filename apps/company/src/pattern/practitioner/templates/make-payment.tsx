@@ -90,9 +90,9 @@ const MakePayment = () => {
 					</div>
 				</div>
 				<div className='flex max-sm:flex-col items-start w-full gap-6'>
-					{practitionersData.map((practitioner) => (
+					{practitionersData.map((practitioner, idx) => (
 						<div
-							key={practitioner.id}
+							key={idx}
 							className='bg-white lg:w-[60%] rounded-lg p-6'
 						>
 							<h3 className='font-bold text-lg'>{practitioner.name}</h3>
@@ -133,8 +133,8 @@ const MakePayment = () => {
 						</div>
 					))}
 
-					{practitionersData.map((practitioner) => (
-						<div className='flex flex-col gap-4 w-full lg:w-[40%]'>
+					{practitionersData.map((practitioner, idx) => (
+						<div key={idx} className='flex flex-col gap-4 w-full lg:w-[40%]'>
 							<div
 								key={practitioner.id}
 								className='bg-[#EBEFF3] w-full flex flex-col rounded-lg gap-4 p-8'
@@ -296,7 +296,7 @@ const MakePayment = () => {
 						full access to your Chainkeeping profile.
 					</p>
 					{/* <div className='flex w-full rounded-lg border border-dashed py-4 px-3 justify-between items-center'>
-						<p className='text-sm text-[#4F627D]'>0123-5678-9012</p>
+						<p className='text-sm text-grey-500'>0123-5678-9012</p>
 						<CopyIcon />
 					</div> */}
 					<Button

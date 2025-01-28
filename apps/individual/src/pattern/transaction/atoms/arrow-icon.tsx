@@ -11,7 +11,7 @@ const ArrowIcon = () => {
 				d='M14.43 5.92969L20.5 11.9997L14.43 18.0697'
 				stroke='#CBD5E1'
 				strokeWidth='1.5'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
@@ -19,7 +19,7 @@ const ArrowIcon = () => {
 				d='M3.5 12H20.33'
 				stroke='#CBD5E1'
 				strokeWidth='1.5'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>

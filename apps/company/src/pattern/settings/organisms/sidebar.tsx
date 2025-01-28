@@ -10,10 +10,10 @@ const SideBar = () => {
 				"w-72 bg-white  fixed flex h-full flex-col max-sm:hidden"
 			)}
 		>
-			<div className='py-4 px-8 mt-16 border-b'>
+			<div className='py-4 pl-8 pr-6 mt-[--topbar-height] border-b'>
 				<h6 className='font-sen font-bold'>Settings</h6>
 			</div>
-			<div className='h-full  overflow-y-auto scrollbar-hide justify-between border-0 lg:h-auto lg:space-y-4'>
+			<div className='h-full overflow-y-auto scrollbar-hide justify-between border-0 lg:h-auto lg:space-y-4'>
 				<div className='flex flex-col'>
 					<Links />
 				</div>

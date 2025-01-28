@@ -10,6 +10,7 @@ import {
 import {
 	Button,
 	Checkbox,
+	cn,
 	Select,
 	SelectContent,
 	SelectItem,
@@ -143,18 +144,6 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 							.rows.every(
 								(row: { id: string | number }) => selectedRows[row.id]
 							)}
-						indeterminate={
-							!table
-								.getRowModel()
-								.rows.every(
-									(row: { id: string | number }) => selectedRows[row.id]
-								) &&
-							table
-								.getRowModel()
-								.rows.some(
-									(row: { id: string | number }) => selectedRows[row.id]
-								)
-						}
 						onCheckedChange={(checked) => {
 							handleSelectAll(checked, table.getRowModel().rows);
 						}}
@@ -368,14 +357,12 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 			<div className='overflow-x-auto scrollbar-hide'>
 				<table className='min-w-full scrollbar-hide  border-collapse table-fixed border shadow-md rounded-lg overflow-hidden'>
 					<thead className='bg-[#F5F8FA]'>
-						{table.getHeaderGroups().map((headerGroup) => (
-							<tr key={headerGroup.id}>
-								{headerGroup.headers.map((header) => (
+						{table.getHeaderGroups().map((headerGroup, idx) => (
+							<tr key={idx}>
+								{headerGroup.headers.map((header, idx) => (
 									<th
-										key={header.id}
-										className={`text-left whitespace-nowrap px-6 py-3 border-b border-gray-300 text-sm font-semibold ${
-											header.column.columnDef.headerClassName || ""
-										}`}
+										key={idx}
+										className={cn("text-left whitespace-nowrap px-6 py-3 border-b border-gray-300 text-sm font-semibold")}
 									>
 										<div className='flex w-full items-center gap-1'>
 											{header.isPlaceholder
@@ -394,14 +381,14 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 					</thead>
 					<tbody>
 						{table.getRowModel().rows.length > 0 ? (
-							table.getRowModel().rows.map((row) => (
+							table.getRowModel().rows.map((row, idx) => (
 								<tr
-									key={row.id}
+									key={idx}
 									className='bg-[#ffffff] whitespace-nowrap hover:bg-gray-50 transition duration-150'
 								>
-									{row.getVisibleCells().map((cell) => (
+									{row.getVisibleCells().map((cell, idx) => (
 										<td
-											key={cell.id}
+											key={idx}
 											className='px-6 py-4 border-b border-gray-300 text-sm text-grey-600'
 										>
 											{flexRender(
@@ -452,9 +439,9 @@ const TransactionTable: React.FC<TransactionsTableProps> = ({ data }) => {
 						</button>
 
 						{/* Page Numbers */}
-						{table.getPageOptions().map((pageIndex) => (
+						{table.getPageOptions().map((pageIndex, idx) => (
 							<button
-								key={pageIndex}
+								key={idx}
 								className={`h-6 text-sm w-6 rounded-full ${
 									pageIndex === table.getState().pagination.pageIndex
 										? "bg-[#D82E2E] text-white"

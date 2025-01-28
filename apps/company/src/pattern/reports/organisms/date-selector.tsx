@@ -60,9 +60,9 @@ export function DateSelect({ value, setValue }: DateSelectProps) {
 				<Command>
 					<CommandEmpty>No date found.</CommandEmpty>
 					<CommandGroup>
-						{dates.map((date) => (
+						{dates.map((date, idx) => (
 							<CommandItem
-								key={date.name}
+								key={idx}
 								value={date.name}
 								onSelect={(currentValue) => {
 									setValue(currentValue === value ? "" : currentValue);

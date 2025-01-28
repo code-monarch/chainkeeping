@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Asset } from "@/types/finance"
+import { cn } from "@chainkeeping/ui"
 
 interface PortfolioHoldingsProps {
     assets: Asset[]
@@ -13,8 +14,8 @@ export function PortfolioHoldings({ assets }: PortfolioHoldingsProps) {
             </CardHeader>
             <CardContent>
                 <div className="space-y-4">
-                    {assets.map((asset) => (
-                        <div key={asset.symbol} className="flex items-center justify-between">
+                    {assets.map((asset, idx) => (
+                        <div key={idx} className="flex items-center justify-between">
                             <div className="flex items-center gap-2">
                                 <img src={`/tokens/${asset.symbol.toLowerCase()}.svg`} alt={asset.symbol} className="w-6 h-6" />
                                 <div>
@@ -25,7 +26,7 @@ export function PortfolioHoldings({ assets }: PortfolioHoldingsProps) {
                             <div className="text-right">
                                 <p className="font-medium">${asset.value}</p>
                                 {asset.change && (
-                                    <p className={`text-sm ${asset.change.startsWith("+") ? "text-green-600" : "text-red-600"}`}>
+                                    <p className={cn("text-sm", asset.change.startsWith("+") ? "text-green-600" : "text-red-600")}>
                                         {asset.change}
                                     </p>
                                 )}

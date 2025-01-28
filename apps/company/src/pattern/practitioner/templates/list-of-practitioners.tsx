@@ -99,7 +99,7 @@ const ListOfPractitioners = () => {
 						onClick={toggleFilter}
 						variant='default'
 						size='sm'
-						className='text-base px-2 gap-2 bg-[#E5EBEF] text-[#4F627D]'
+						className='text-base px-2 gap-2 bg-[#E5EBEF] text-grey-500'
 					>
 						<FilterIcon />
 						Filter
@@ -110,9 +110,9 @@ const ListOfPractitioners = () => {
 						isFilterOpen ? "2xl:grid-cols-3 lg-grid-cols-2" : ""
 					}`}
 				>
-					{practitionersData.map((practitioner) => (
+					{practitionersData.map((practitioner, idx) => (
 						<div
-							key={practitioner.id}
+							key={idx}
 							className='bg-white shadow-lg rounded-lg  p-4'
 						>
 							<div className='flex gap-4 '>
@@ -121,11 +121,11 @@ const ListOfPractitioners = () => {
 										{practitioner.avatar}
 									</div>
 									<div
-										className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white ${
+										className={cn("absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white", 
 											practitioner.status === "online"
-												? "bg-[#27AE60]"
+												? "bg-success"
 												: "bg-[#94A3B8]"
-										}`}
+										)}
 									></div>
 								</div>
 

@@ -60,9 +60,9 @@ const SinglePractitioner = () => {
 					</div>
 				</div>
 				<div className='flex max-sm:flex-col items-start w-full gap-6'>
-					{practitionersData.map((practitioner) => (
+					{practitionersData.map((practitioner, idx) => (
 						<div
-							key={practitioner.id}
+							key={idx}
 							className='bg-white shadow-lg rounded-lg  p-4'
 						>
 							<div className='flex gap-4 '>
@@ -157,9 +157,9 @@ const SinglePractitioner = () => {
 						</div>
 					))}
 
-					{practitionersData.map((practitioner) => (
+					{practitionersData.map((practitioner, idx) => (
 						<div
-							key={practitioner.id}
+							key={idx}
 							className='bg-[#EBEFF3]  flex w-full flex-col rounded-lg gap-4 p-8'
 						>
 							<div className='flex w-full justify-between md:gap-4 max-sm:flex-col'>

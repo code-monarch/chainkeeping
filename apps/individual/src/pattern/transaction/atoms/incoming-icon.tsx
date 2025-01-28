@@ -12,7 +12,7 @@ const IncomingIcon = () => {
 				d='M18.3525 14.8223L13.8 19.3748L9.24749 14.8223'
 				stroke='#27AE60'
 				strokeWidth='1.5'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
@@ -20,7 +20,7 @@ const IncomingIcon = () => {
 				d='M13.8 6.625V19.2475'
 				stroke='#27AE60'
 				strokeWidth='1.5'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>

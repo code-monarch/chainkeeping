@@ -117,9 +117,9 @@ const ActivityLogs = () => {
 					</div>
 				</div>
 				<div className='flex max-sm:flex-col items-start w-full gap-10 '>
-					{practitionersData.map((practitioner) => (
+					{practitionersData.map((practitioner, idx) => (
 						<div
-							key={practitioner.id}
+							key={idx}
 							className='bg-[#EBEFF3]  flex w-full flex-col rounded-lg gap-4 p-8'
 						>
 							<div className='flex w-full justify-between md:gap-4 max-sm:flex-col'>
@@ -259,15 +259,15 @@ const ActivityLogs = () => {
 							</div>
 						</div>
 
-						{activityData.map((activity, activityIndex) => (
-							<div key={activity.date} className='mb-6 relative'>
+						{activityData.map((activity, idx) => (
+							<div key={idx} className='mb-6 relative'>
 								<div className='relative pl-6 border-l '>
 									<p className='font-bold italic  mb-2'>{activity.date}</p>
-									{activity.entries.map((entry, index) => (
-										<div key={index} className='mb-6 relative'>
+									{activity.entries.map((entry, idx) => (
+										<div key={idx} className='mb-6 relative'>
 											{/* Activity Entry */}
 											<div>
-												<p className='text-sm text-[#4F627D]'>
+												<p className='text-sm text-grey-500'>
 													<span>{entry.time}</span> &bull;{" "}
 													<span className='text-[#D82E2E] font-semibold'>
 														{entry.category}
@@ -277,7 +277,7 @@ const ActivityLogs = () => {
 													<UserIcon />
 													<p className='text-sm'>
 														{entry.name}
-														<span className='text-[#4F627D]'>
+														<span className='text-grey-500'>
 															{" "}
 															{entry.description}
 														</span>{" "}

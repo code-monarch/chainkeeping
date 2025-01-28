@@ -11,7 +11,7 @@ const TradeIcon = () => {
 				d='M13.6667 9.99414L10.3267 13.3408'
 				stroke='#384860'
 				strokeWidth='1.2'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
@@ -19,7 +19,7 @@ const TradeIcon = () => {
 				d='M2.33334 9.99414H13.6667'
 				stroke='#384860'
 				strokeWidth='1.2'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
@@ -27,7 +27,7 @@ const TradeIcon = () => {
 				d='M2.33334 6.00682L5.67334 2.66016'
 				stroke='#384860'
 				strokeWidth='1.2'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
@@ -35,7 +35,7 @@ const TradeIcon = () => {
 				d='M13.6667 6.00586H2.33334'
 				stroke='#384860'
 				strokeWidth='1.2'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>

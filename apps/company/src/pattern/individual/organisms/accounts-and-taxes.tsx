@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import AccountIcon from "../atoms/account-icon";
 import WarningIcon from "../atoms/warning-icon";
 import TaxesIcon from "../atoms/taxes-icon";
@@ -30,9 +28,9 @@ const taxes = [
 const AccountsAndTaxes = () => {
 	return (
 		<div className='grid grid-cols-2 gap-4 w-full max-sm:grid-cols-1 font-dmsans'>
-			{assetStats.map((asset) => {
+			{assetStats.map((asset, idx) => {
 				return (
-					<div className='space-y-2 bg-[#FFFFFF] rounded-lg p-4'>
+					<div key={idx} className='space-y-2 bg-[#FFFFFF] rounded-lg p-4'>
 						<div className='flex items-center gap-2 w-full mb-3'>
 							{asset.icon}
 							<p className='text-[#202B3C] font-medium'>{asset.title}</p>
@@ -67,9 +65,9 @@ const AccountsAndTaxes = () => {
 					</div>
 				);
 			})}
-			{taxes.map((asset) => {
+			{taxes.map((asset, idx) => {
 				return (
-					<div className='space-y-2 bg-[#FFFFFF] rounded-lg p-4'>
+					<div key={idx} className='space-y-2 bg-[#FFFFFF] rounded-lg p-4'>
 						<div className='flex items-center gap-2 w-full mb-3'>
 							{asset.icon}
 							<p className='text-[#202B3C] font-medium'>{asset.title}</p>

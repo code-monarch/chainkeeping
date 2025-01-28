@@ -11,7 +11,7 @@ const SwapIcon = () => {
 				d='M6.00667 13.6662L2.66 10.3262'
 				stroke='#384860'
 				strokeWidth='1.2'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
@@ -19,7 +19,7 @@ const SwapIcon = () => {
 				d='M6.00665 2.33398V13.6673'
 				stroke='#384860'
 				strokeWidth='1.2'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
@@ -27,7 +27,7 @@ const SwapIcon = () => {
 				d='M9.99335 2.33398L13.34 5.67398'
 				stroke='#384860'
 				strokeWidth='1.2'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
@@ -35,7 +35,7 @@ const SwapIcon = () => {
 				d='M9.99335 13.6673V2.33398'
 				stroke='#384860'
 				strokeWidth='1.2'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>

@@ -138,9 +138,9 @@ const OrderConfiguration = () => {
 			<div className='flex flex-col w-full'>
 				<div className='flex max-sm:flex-col items-start w-full gap-6'>
 					{/* Practitioner Details */}
-					{practitionersData.map((practitioner) => (
+					{practitionersData.map((practitioner, idx) => (
 						<div
-							key={practitioner.id}
+							key={idx}
 							className='bg-white  shadow-lg rounded-lg p-6'
 						>
 							<h3 className='font-bold text-lg'>{practitioner.name}</h3>
@@ -164,13 +164,13 @@ const OrderConfiguration = () => {
 								</div>
 							</div>
 							<div className='mt-4'>
-								{practitioner.services.map((service) => {
+								{practitioner.services.map((service, idx) => {
 									const isSelected = selectedServices.some(
 										(s: any) => s.id === service.id
 									);
 									return (
 										<div
-											key={service.id}
+											key={idx}
 											className='flex justify-between items-center border-b pb-3 mt-2'
 										>
 											<div>
@@ -205,8 +205,8 @@ const OrderConfiguration = () => {
 						</div>
 
 						<div className='mt-4 space-y-4'>
-							{selectedServices.map((service: any) => (
-								<div key={service.id} className='flex flex-col gap-3'>
+							{selectedServices.map((service: any, idx) => (
+								<div key={idx} className='flex flex-col gap-3'>
 									<p className='font-bold'>{service.name}</p>
 									{service.id === "advisory" && (
 										<div>
@@ -257,9 +257,9 @@ const OrderConfiguration = () => {
 										<>
 											<p>Select your assessment year(s)</p>
 											<div className='flex gap-2 flex-wrap'>
-												{years.map((year) => (
+												{years.map((year, idx) => (
 													<button
-														key={year}
+														key={idx}
 														className={`px-4 py-2 rounded-full text-sm ${
 															service.selectedYears.includes(year)
 																? "bg-[#FDF3F3] text-[#D82E2E]"

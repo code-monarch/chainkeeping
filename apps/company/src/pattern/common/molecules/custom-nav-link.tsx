@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import { cn, NavigationMenuLink, navigationMenulinkStyleTwo } from '@chainkeeping/ui'
 import { INavListItemProps } from '@/pattern/types';
 
-const CustomNavLink = ({
+const CustomNavLink: FC<Omit<INavListItemProps, "description" | "icon">> = ({
     href,
     title,
     exact
-}: Omit<INavListItemProps, "description" | "icon">) => {
+}) => {
     const pathname = usePathname();
     const isActive = exact ? pathname === href : pathname.startsWith(href);
+    console.log("PATH NAME: ", pathname)
 
     return (
         <>

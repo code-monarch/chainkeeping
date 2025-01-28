@@ -144,18 +144,6 @@ const PreviewPayment: React.FC<UnresolvedTransactionsTableProps> = ({
 							.rows.every(
 								(row: { id: string | number }) => selectedRows[row.id]
 							)}
-						indeterminate={
-							!table
-								.getRowModel()
-								.rows.every(
-									(row: { id: string | number }) => selectedRows[row.id]
-								) &&
-							table
-								.getRowModel()
-								.rows.some(
-									(row: { id: string | number }) => selectedRows[row.id]
-								)
-						}
 						onCheckedChange={(checked) => {
 							handleSelectAll(checked, table.getRowModel().rows);
 						}}
@@ -305,17 +293,16 @@ const PreviewPayment: React.FC<UnresolvedTransactionsTableProps> = ({
 								{headerGroup.headers.map((header) => (
 									<th
 										key={header.id}
-										className={`text-left whitespace-nowrap px-6 py-3 border-b border-gray-300 text-sm font-semibold ${
-											header.column.columnDef.headerClassName || ""
-										}`}
+										className={`text-left whitespace-nowrap px-6 py-3 border-b border-gray-300 text-sm font-semibold ${header.column.columnDef.headerClassName || ""
+											}`}
 									>
 										<div className='flex w-full items-center gap-1'>
 											{header.isPlaceholder
 												? null
 												: flexRender(
-														header.column.columnDef.header,
-														header.getContext()
-													)}
+													header.column.columnDef.header,
+													header.getContext()
+												)}
 											{header.column.id !== "actions" &&
 												header.column.id !== "select" && <SortIcon />}
 										</div>
@@ -364,11 +351,10 @@ const PreviewPayment: React.FC<UnresolvedTransactionsTableProps> = ({
 						{table.getPageOptions().map((pageIndex) => (
 							<button
 								key={pageIndex}
-								className={`h-6 text-sm w-6 rounded-full ${
-									pageIndex === table.getState().pagination.pageIndex
+								className={`h-6 text-sm w-6 rounded-full ${pageIndex === table.getState().pagination.pageIndex
 										? "bg-[#D82E2E] text-white"
 										: "bg-transparent text-gray-800"
-								}`}
+									}`}
 								onClick={() => table.setPageIndex(pageIndex)}
 							>
 								{pageIndex + 1}

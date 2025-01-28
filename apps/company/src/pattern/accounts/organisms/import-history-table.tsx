@@ -10,6 +10,7 @@ import {
 import {
 	Button,
 	Checkbox,
+	cn,
 	Select,
 	SelectContent,
 	SelectItem,
@@ -126,18 +127,6 @@ const ImportHistoryTable: React.FC<UnresolvedTransactionsTableProps> = ({
 							.rows.every(
 								(row: { id: string | number }) => selectedRows[row.id]
 							)}
-						indeterminate={
-							!table
-								.getRowModel()
-								.rows.every(
-									(row: { id: string | number }) => selectedRows[row.id]
-								) &&
-							table
-								.getRowModel()
-								.rows.some(
-									(row: { id: string | number }) => selectedRows[row.id]
-								)
-						}
 						onCheckedChange={(checked) => {
 							handleSelectAll(checked, table.getRowModel().rows);
 						}}
@@ -298,22 +287,20 @@ const ImportHistoryTable: React.FC<UnresolvedTransactionsTableProps> = ({
 			<div className='overflow-x-auto'>
 				<table className='min-w-full table-fixed border border-[red] shadow-md rounded-lg overflow-hidden'>
 					<thead className='bg-[#F5F8FA]'>
-						{table.getHeaderGroups().map((headerGroup) => (
-							<tr key={headerGroup.id}>
-								{headerGroup.headers.map((header) => (
+						{table.getHeaderGroups().map((headerGroup, idx) => (
+							<tr key={idx}>
+								{headerGroup.headers.map((header, idx) => (
 									<th
 										key={header.id}
-										className={`text-left whitespace-nowrap px-6 py-3 border-b border-gray-300 text-sm font-semibold ${
-											header.column.columnDef.headerClassName || ""
-										}`}
+										className={cn("text-left whitespace-nowrap px-6 py-3 border-b border-gray-300 text-sm font-semibold")}
 									>
 										<div className='flex w-full items-center gap-1'>
 											{header.isPlaceholder
 												? null
 												: flexRender(
-														header.column.columnDef.header,
-														header.getContext()
-													)}
+													header.column.columnDef.header,
+													header.getContext()
+												)}
 											{header.column.id !== "actions" &&
 												header.column.id !== "select" && <SortIcon />}
 										</div>
@@ -323,14 +310,14 @@ const ImportHistoryTable: React.FC<UnresolvedTransactionsTableProps> = ({
 						))}
 					</thead>
 					<tbody>
-						{table.getRowModel().rows.map((row) => (
+						{table.getRowModel().rows.map((row, idx) => (
 							<tr
-								key={row.id}
+								key={idx}
 								className='bg-[#ffffff] whitespace-nowrap hover:bg-gray-50 transition duration-150'
 							>
-								{row.getVisibleCells().map((cell) => (
+								{row.getVisibleCells().map((cell, idx) => (
 									<td
-										key={cell.id}
+										key={idx}
 										className='px-6 py-4 border-b border-gray-300 text-sm text-grey-600'
 									>
 										{flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -359,14 +346,13 @@ const ImportHistoryTable: React.FC<UnresolvedTransactionsTableProps> = ({
 						</button>
 
 						{/* Page Numbers */}
-						{table.getPageOptions().map((pageIndex) => (
+						{table.getPageOptions().map((pageIndex, idx) => (
 							<button
-								key={pageIndex}
-								className={`h-6 text-sm w-6 rounded-full ${
-									pageIndex === table.getState().pagination.pageIndex
-										? "bg-[#D82E2E] text-white"
-										: "bg-transparent text-gray-800"
-								}`}
+								key={idx}
+								className={cn("h-6 text-sm w-6 rounded-full", pageIndex === table.getState().pagination.pageIndex
+									? "bg-destructive text-white"
+									: "bg-transparent text-gray-800"
+								)}
 								onClick={() => table.setPageIndex(pageIndex)}
 							>
 								{pageIndex + 1}

@@ -82,7 +82,7 @@ export default function ProfileSettings() {
 
 	return (
 		<div className="w-full min-h-screen">
-			<Card className="max-w-[850px] bg-white">
+			<Card className="max-w-[868px] bg-white">
 				<CardContent className="p-6">
 					<Form {...form}>
 						<form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -121,4 +121,3 @@ export default function ProfileSettings() {
 		</div>
 	)
 }
-

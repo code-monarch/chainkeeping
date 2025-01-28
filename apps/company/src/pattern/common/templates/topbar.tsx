@@ -3,12 +3,8 @@ import { APP_ROUTES } from "@/lib/routes";
 import { BrandLogo, NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@chainkeeping/ui";
 import CustomNavLink from "../molecules/custom-nav-link";
 import { QuickActionPopover } from "../organisms/quick-action-popover";
-import { AccountQuickActionPopover } from "../organisms/account-quick-action-popover";
-
-interface INavigation {
-    title: string;
-    href?: string;
-}
+import { ProfileMenuDropdown } from "../organisms/profile-menu-dropdown";
+import { INavigation } from "@/pattern/types";
 
 const navigation: INavigation[] = [
     {
@@ -69,7 +65,7 @@ export const Topbar = () => {
                 <div className='h-full flex items-center gap-[27px]'>
                     <div className='flex items-center gap-4'>
                         <QuickActionPopover />
-                        <AccountQuickActionPopover />
+                        <ProfileMenuDropdown email="example@gmail.com" username="Convexity" />
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ const ArrowUp = () => {
 				d='M12.0467 6.38065L8.00001 2.33398L3.95334 6.38065'
 				stroke='#384860'
 				strokeWidth='1.2'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>
@@ -19,7 +19,7 @@ const ArrowUp = () => {
 				d='M8 13.6673V2.44727'
 				stroke='#384860'
 				strokeWidth='1.2'
-				stroke-miterlimit='10'
+				strokeMiterlimit='10'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>

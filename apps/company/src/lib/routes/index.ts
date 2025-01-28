@@ -15,3 +15,5 @@ export const AUTH_ROUTES = {
     resetPassword: "/reset-password",
     resendResetEmail: "/reset-password/resend-reset-email",
 }
+
+export const SUPPORT_ROUTE = "www.chainkeeping-support.com"

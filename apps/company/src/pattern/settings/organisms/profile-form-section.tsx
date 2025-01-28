@@ -50,4 +50,3 @@ export function ProfileFormSection({ title, fields, form }: ProfileFormSectionPr
         </>
     )
 }
-
