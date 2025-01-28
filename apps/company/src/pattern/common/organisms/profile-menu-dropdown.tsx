@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+import { useRouter } from "next/navigation"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -16,7 +18,6 @@ import PricingMenuIcon from "../atoms/pricing-menu-icon"
 import SupportMenuIcon from "../atoms/support-menu-icon"
 import SettingsMenuIcon from "../atoms/settings-menu-icon"
 import LogoutIcon from "../atoms/logout-icon"
-import Link from "next/link"
 import { SUPPORT_ROUTE } from "@/lib/routes"
 import ExternalLinkIcon from "../atoms/external-link-icon"
 
@@ -49,6 +50,7 @@ const MenuLinks: IMenuLinks[] = [
 ];
 
 export const ProfileMenuDropdown = ({ username, email }: ProfileMenuProps) => {
+    const { push } = useRouter()
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -69,7 +71,7 @@ export const ProfileMenuDropdown = ({ username, email }: ProfileMenuProps) => {
                 <DropdownMenuSeparator className="my-0" />
                 <DropdownMenuGroup className="py-4 space-y-[8px]">
                     {MenuLinks?.map(({ title, href, Icon }, idx) => (
-                        <DropdownMenuItem key={idx} className="h-[34px] flex items-center gap-[10px] cursor-pointer py-[6px] px-4 rounded-none">
+                        <DropdownMenuItem key={idx} className="h-[34px] flex items-center gap-[10px] cursor-pointer py-[6px] px-4 rounded-none" onClick={()=>push(href as string)} >
                             <Icon />
                             <span className="text-base text-foreground font-dmsans">{title}</span>
                         </DropdownMenuItem>
